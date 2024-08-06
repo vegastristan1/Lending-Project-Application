@@ -30,10 +30,9 @@ Partial Class Borrowers
         Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnSideNavDashboard = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.btnAddNewBorrower = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnAddNewBorrower = New System.Windows.Forms.Button()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.colPicture = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -41,6 +40,7 @@ Partial Class Borrowers
         Me.colBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colAction = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -182,15 +182,23 @@ Partial Class Borrowers
         Me.btnSideNavDashboard.Text = "Dashboard"
         Me.btnSideNavDashboard.UseVisualStyleBackColor = False
         '
-        'Label1
+        'TextBox1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(15, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(393, 61)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Borrowers Lists"
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(26, 94)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(741, 38)
+        Me.TextBox1.TabIndex = 3
+        '
+        'btnAddNewBorrower
+        '
+        Me.btnAddNewBorrower.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNewBorrower.Location = New System.Drawing.Point(1123, 86)
+        Me.btnAddNewBorrower.Name = "btnAddNewBorrower"
+        Me.btnAddNewBorrower.Size = New System.Drawing.Size(258, 46)
+        Me.btnAddNewBorrower.TabIndex = 2
+        Me.btnAddNewBorrower.Text = "Add New Borrower"
+        Me.btnAddNewBorrower.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -205,24 +213,6 @@ Partial Class Borrowers
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(1355, 791)
         Me.DataGridView1.TabIndex = 1
-        '
-        'btnAddNewBorrower
-        '
-        Me.btnAddNewBorrower.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddNewBorrower.Location = New System.Drawing.Point(1123, 86)
-        Me.btnAddNewBorrower.Name = "btnAddNewBorrower"
-        Me.btnAddNewBorrower.Size = New System.Drawing.Size(258, 46)
-        Me.btnAddNewBorrower.TabIndex = 2
-        Me.btnAddNewBorrower.Text = "Add New Borrower"
-        Me.btnAddNewBorrower.UseVisualStyleBackColor = True
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(26, 94)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(741, 38)
-        Me.TextBox1.TabIndex = 3
         '
         'colPicture
         '
@@ -267,6 +257,16 @@ Partial Class Borrowers
         Me.colAction.MinimumWidth = 100
         Me.colAction.Name = "colAction"
         Me.colAction.Width = 115
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(393, 61)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Borrowers Lists"
         '
         'Borrowers
         '

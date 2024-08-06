@@ -1,6 +1,11 @@
-﻿Public Class Borrowers
+﻿Public Class Add_New_Borrower
     Private Sub btnSideNavDashboard_Click(sender As Object, e As EventArgs) Handles btnSideNavDashboard.Click
         Dashboard.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btnSideNavBorrowers_Click(sender As Object, e As EventArgs) Handles btnSideNavBorrowers.Click
+        Borrowers.Show()
         Me.Hide()
     End Sub
 
@@ -24,8 +29,8 @@
         Me.Hide()
     End Sub
 
-    Private Sub btnAddNewBorrower_Click(sender As Object, e As EventArgs) Handles btnAddNewBorrower.Click
-        Add_New_Borrower.Show()
+    Private Sub btnBackToBorrowersList_Click(sender As Object, e As EventArgs) Handles btnBackToBorrowersList.Click
+        Borrowers.Show()
         Me.Hide()
     End Sub
 End Class
