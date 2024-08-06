@@ -30,10 +30,23 @@ Partial Class Borrowers
         Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnSideNavDashboard = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.btnAddNewBorrower = New System.Windows.Forms.Button()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.colPicture = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colName = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colEmail = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colAction = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
+        Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplitContainer1
@@ -52,6 +65,13 @@ Partial Class Borrowers
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavBorrowers)
         Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox1)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavDashboard)
+        '
+        'SplitContainer1.Panel2
+        '
+        Me.SplitContainer1.Panel2.Controls.Add(Me.TextBox1)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.btnAddNewBorrower)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.DataGridView1)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.Label1)
         Me.SplitContainer1.Size = New System.Drawing.Size(1664, 961)
         Me.SplitContainer1.SplitterDistance = 250
         Me.SplitContainer1.TabIndex = 1
@@ -162,6 +182,92 @@ Partial Class Borrowers
         Me.btnSideNavDashboard.Text = "Dashboard"
         Me.btnSideNavDashboard.UseVisualStyleBackColor = False
         '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(393, 61)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Borrowers Lists"
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colPicture, Me.colID, Me.colName, Me.colEmail, Me.colBalance, Me.colStatus, Me.colAction})
+        Me.DataGridView1.Location = New System.Drawing.Point(26, 146)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.Size = New System.Drawing.Size(1355, 791)
+        Me.DataGridView1.TabIndex = 1
+        '
+        'btnAddNewBorrower
+        '
+        Me.btnAddNewBorrower.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNewBorrower.Location = New System.Drawing.Point(1123, 86)
+        Me.btnAddNewBorrower.Name = "btnAddNewBorrower"
+        Me.btnAddNewBorrower.Size = New System.Drawing.Size(258, 46)
+        Me.btnAddNewBorrower.TabIndex = 2
+        Me.btnAddNewBorrower.Text = "Add New Borrower"
+        Me.btnAddNewBorrower.UseVisualStyleBackColor = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(26, 94)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(741, 38)
+        Me.TextBox1.TabIndex = 3
+        '
+        'colPicture
+        '
+        Me.colPicture.HeaderText = "Picture"
+        Me.colPicture.MinimumWidth = 50
+        Me.colPicture.Name = "colPicture"
+        '
+        'colID
+        '
+        Me.colID.HeaderText = "ID"
+        Me.colID.MinimumWidth = 20
+        Me.colID.Name = "colID"
+        '
+        'colName
+        '
+        Me.colName.HeaderText = "Name"
+        Me.colName.MinimumWidth = 200
+        Me.colName.Name = "colName"
+        '
+        'colEmail
+        '
+        Me.colEmail.HeaderText = "Email"
+        Me.colEmail.MinimumWidth = 300
+        Me.colEmail.Name = "colEmail"
+        '
+        'colBalance
+        '
+        Me.colBalance.HeaderText = "Balance"
+        Me.colBalance.MinimumWidth = 200
+        Me.colBalance.Name = "colBalance"
+        '
+        'colStatus
+        '
+        Me.colStatus.HeaderText = "Status"
+        Me.colStatus.MinimumWidth = 80
+        Me.colStatus.Name = "colStatus"
+        '
+        'colAction
+        '
+        Me.colAction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
+        Me.colAction.HeaderText = "Action"
+        Me.colAction.MinimumWidth = 100
+        Me.colAction.Name = "colAction"
+        Me.colAction.Width = 115
+        '
         'Borrowers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -172,9 +278,12 @@ Partial Class Borrowers
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Borrowers"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.ResumeLayout(False)
+        Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -187,4 +296,15 @@ Partial Class Borrowers
     Friend WithEvents btnSideNavBorrowers As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnSideNavDashboard As Button
+    Friend WithEvents Label1 As Label
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnAddNewBorrower As Button
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents colPicture As DataGridViewTextBoxColumn
+    Friend WithEvents colID As DataGridViewTextBoxColumn
+    Friend WithEvents colName As DataGridViewTextBoxColumn
+    Friend WithEvents colEmail As DataGridViewTextBoxColumn
+    Friend WithEvents colBalance As DataGridViewTextBoxColumn
+    Friend WithEvents colStatus As DataGridViewTextBoxColumn
+    Friend WithEvents colAction As DataGridViewButtonColumn
 End Class
