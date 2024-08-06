@@ -116,13 +116,13 @@ Partial Class Loans
         '
         'btnSideNavLoans
         '
-        Me.btnSideNavLoans.BackColor = System.Drawing.SystemColors.GrayText
+        Me.btnSideNavLoans.BackColor = System.Drawing.Color.White
         Me.btnSideNavLoans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnSideNavLoans.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnSideNavLoans.FlatAppearance.BorderSize = 0
         Me.btnSideNavLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSideNavLoans.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavLoans.ForeColor = System.Drawing.Color.White
+        Me.btnSideNavLoans.ForeColor = System.Drawing.SystemColors.GrayText
         Me.btnSideNavLoans.Location = New System.Drawing.Point(12, 333)
         Me.btnSideNavLoans.Name = "btnSideNavLoans"
         Me.btnSideNavLoans.Size = New System.Drawing.Size(226, 52)
@@ -169,6 +169,7 @@ Partial Class Loans
         Me.ClientSize = New System.Drawing.Size(1664, 961)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Loans"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Loans"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.Panel1.ResumeLayout(False)

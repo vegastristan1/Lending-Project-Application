@@ -74,13 +74,13 @@ Partial Class Accounts
         '
         'btnSideNavAccounts
         '
-        Me.btnSideNavAccounts.BackColor = System.Drawing.SystemColors.GrayText
+        Me.btnSideNavAccounts.BackColor = System.Drawing.Color.White
         Me.btnSideNavAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnSideNavAccounts.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnSideNavAccounts.FlatAppearance.BorderSize = 0
         Me.btnSideNavAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSideNavAccounts.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavAccounts.ForeColor = System.Drawing.Color.White
+        Me.btnSideNavAccounts.ForeColor = System.Drawing.SystemColors.GrayText
         Me.btnSideNavAccounts.Location = New System.Drawing.Point(12, 449)
         Me.btnSideNavAccounts.Name = "btnSideNavAccounts"
         Me.btnSideNavAccounts.Size = New System.Drawing.Size(226, 52)
@@ -169,6 +169,7 @@ Partial Class Accounts
         Me.ClientSize = New System.Drawing.Size(1664, 961)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Accounts"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Accounts"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()

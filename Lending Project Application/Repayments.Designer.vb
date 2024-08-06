@@ -90,13 +90,13 @@ Partial Class Repayments
         '
         'btnSideNavRepayments
         '
-        Me.btnSideNavRepayments.BackColor = System.Drawing.SystemColors.GrayText
+        Me.btnSideNavRepayments.BackColor = System.Drawing.Color.White
         Me.btnSideNavRepayments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnSideNavRepayments.Cursor = System.Windows.Forms.Cursors.Default
         Me.btnSideNavRepayments.FlatAppearance.BorderSize = 0
         Me.btnSideNavRepayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSideNavRepayments.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavRepayments.ForeColor = System.Drawing.Color.White
+        Me.btnSideNavRepayments.ForeColor = System.Drawing.SystemColors.GrayText
         Me.btnSideNavRepayments.Location = New System.Drawing.Point(12, 391)
         Me.btnSideNavRepayments.Name = "btnSideNavRepayments"
         Me.btnSideNavRepayments.Size = New System.Drawing.Size(226, 52)
@@ -169,6 +169,7 @@ Partial Class Repayments
         Me.ClientSize = New System.Drawing.Size(1664, 961)
         Me.Controls.Add(Me.SplitContainer1)
         Me.Name = "Repayments"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Repayments"
         Me.SplitContainer1.Panel1.ResumeLayout(False)
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
