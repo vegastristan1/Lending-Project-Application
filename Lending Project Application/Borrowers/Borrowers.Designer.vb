@@ -208,10 +208,10 @@ Partial Class Borrowers
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colPicture, Me.colID, Me.colName, Me.colEmail, Me.colBalance, Me.colStatus, Me.colAction})
-        Me.DataGridView1.Location = New System.Drawing.Point(26, 146)
+        Me.DataGridView1.Location = New System.Drawing.Point(26, 138)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.Size = New System.Drawing.Size(1355, 791)
+        Me.DataGridView1.Size = New System.Drawing.Size(1355, 799)
         Me.DataGridView1.TabIndex = 1
         '
         'colPicture
