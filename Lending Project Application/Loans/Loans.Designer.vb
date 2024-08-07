@@ -31,9 +31,6 @@ Partial Class Loans
         Me.btnSideNavLoans = New System.Windows.Forms.Button()
         Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
         Me.btnSideNavDashboard = New System.Windows.Forms.Button()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.btnAddNewBorrower = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.colSideLoansID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSideLoansLoanProduct = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -42,6 +39,9 @@ Partial Class Loans
         Me.colSideLoansAppliedAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSideLoansStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSideLoansAction = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnAddNewBorrower = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
@@ -183,35 +183,6 @@ Partial Class Loans
         Me.btnSideNavDashboard.Text = "Dashboard"
         Me.btnSideNavDashboard.UseVisualStyleBackColor = False
         '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(26, 94)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(741, 38)
-        Me.TextBox1.TabIndex = 6
-        '
-        'btnAddNewBorrower
-        '
-        Me.btnAddNewBorrower.BackColor = System.Drawing.Color.RoyalBlue
-        Me.btnAddNewBorrower.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddNewBorrower.Location = New System.Drawing.Point(1181, 86)
-        Me.btnAddNewBorrower.Name = "btnAddNewBorrower"
-        Me.btnAddNewBorrower.Size = New System.Drawing.Size(200, 46)
-        Me.btnAddNewBorrower.TabIndex = 5
-        Me.btnAddNewBorrower.Text = "Add Loan"
-        Me.btnAddNewBorrower.UseVisualStyleBackColor = False
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(15, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(241, 61)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Loan List"
-        '
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -265,6 +236,35 @@ Partial Class Loans
         '
         Me.colSideLoansAction.HeaderText = "Action"
         Me.colSideLoansAction.Name = "colSideLoansAction"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(26, 94)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(741, 38)
+        Me.TextBox1.TabIndex = 6
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(241, 61)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Loan List"
+        '
+        'btnAddNewBorrower
+        '
+        Me.btnAddNewBorrower.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnAddNewBorrower.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNewBorrower.Location = New System.Drawing.Point(1181, 86)
+        Me.btnAddNewBorrower.Name = "btnAddNewBorrower"
+        Me.btnAddNewBorrower.Size = New System.Drawing.Size(200, 46)
+        Me.btnAddNewBorrower.TabIndex = 5
+        Me.btnAddNewBorrower.Text = "Add Loan"
+        Me.btnAddNewBorrower.UseVisualStyleBackColor = False
         '
         'Loans
         '
