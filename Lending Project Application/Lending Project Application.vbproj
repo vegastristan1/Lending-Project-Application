@@ -103,6 +103,12 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Loans\Add New Loan.Designer.vb">
+      <DependentUpon>Add New Loan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loans\Add New Loan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Loans\Loans.Designer.vb">
       <DependentUpon>Loans.vb</DependentUpon>
     </Compile>
@@ -155,6 +161,9 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Loans\Add New Loan.resx">
+      <DependentUpon>Add New Loan.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Loans\Loans.resx">
       <DependentUpon>Loans.vb</DependentUpon>
     </EmbeddedResource>
@@ -163,9 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Repayments.resx">
       <DependentUpon>Repayments.vb</DependentUpon>
@@ -188,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\free-user-icon-3296-thumb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrows-rotate-solid.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
