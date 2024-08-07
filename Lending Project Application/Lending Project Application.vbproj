@@ -103,10 +103,10 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loans.Designer.vb">
+    <Compile Include="Loans\Loans.Designer.vb">
       <DependentUpon>Loans.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loans.vb">
+    <Compile Include="Loans\Loans.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -155,7 +155,7 @@
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loans.resx">
+    <EmbeddedResource Include="Loans\Loans.resx">
       <DependentUpon>Loans.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
