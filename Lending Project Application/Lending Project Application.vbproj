@@ -91,6 +91,12 @@
     <Compile Include="Borrowers\Borrowers.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Borrowers\View Borrower.Designer.vb">
+      <DependentUpon>View Borrower.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Borrowers\View Borrower.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Dashboard.Designer.vb">
       <DependentUpon>Dashboard.vb</DependentUpon>
     </Compile>
@@ -142,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Borrowers\Borrowers.resx">
       <DependentUpon>Borrowers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Borrowers\View Borrower.resx">
+      <DependentUpon>View Borrower.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.vb</DependentUpon>
