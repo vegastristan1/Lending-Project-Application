@@ -22,7 +22,7 @@ Partial Class View_Borrower
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -122,6 +122,7 @@ Partial Class View_Borrower
         Me.colLoansDueAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colLoansReleaseDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colLoansStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -613,14 +614,14 @@ Partial Class View_Borrower
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colDocumentName, Me.colDocumentType, Me.colDocumentAction})
         Me.DataGridView1.Location = New System.Drawing.Point(6, 96)
         Me.DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle10
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(1342, 293)
         Me.DataGridView1.TabIndex = 39
@@ -663,13 +664,14 @@ Partial Class View_Borrower
         '
         'btnAddNewBorrowerDocumentAttach
         '
+        Me.btnAddNewBorrowerDocumentAttach.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnAddNewBorrowerDocumentAttach.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddNewBorrowerDocumentAttach.Location = New System.Drawing.Point(1209, 47)
         Me.btnAddNewBorrowerDocumentAttach.Name = "btnAddNewBorrowerDocumentAttach"
         Me.btnAddNewBorrowerDocumentAttach.Size = New System.Drawing.Size(139, 43)
         Me.btnAddNewBorrowerDocumentAttach.TabIndex = 31
         Me.btnAddNewBorrowerDocumentAttach.Text = "Attach"
-        Me.btnAddNewBorrowerDocumentAttach.UseVisualStyleBackColor = True
+        Me.btnAddNewBorrowerDocumentAttach.UseVisualStyleBackColor = False
         '
         'Label21
         '
@@ -716,6 +718,7 @@ Partial Class View_Borrower
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.Button3)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.btnAddNewBorrowerSave)
         Me.Panel1.Controls.Add(Me.TabControl2)
@@ -1106,6 +1109,17 @@ Partial Class View_Borrower
         Me.colLoansStatus.Name = "colLoansStatus"
         Me.colLoansStatus.Width = 117
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.DarkOrange
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(1227, 10)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(151, 46)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Edit"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'View_Borrower
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1248,4 +1262,5 @@ Partial Class View_Borrower
     Friend WithEvents colLoansDueAmount As DataGridViewTextBoxColumn
     Friend WithEvents colLoansReleaseDate As DataGridViewTextBoxColumn
     Friend WithEvents colLoansStatus As DataGridViewTextBoxColumn
+    Friend WithEvents Button3 As Button
 End Class
