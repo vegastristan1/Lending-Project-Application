@@ -159,10 +159,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Repayments.Designer.vb">
+    <Compile Include="Repayments\Repayments.Designer.vb">
       <DependentUpon>Repayments.vb</DependentUpon>
     </Compile>
-    <Compile Include="Repayments.vb">
+    <Compile Include="Repayments\Repayments.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -200,7 +200,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Repayments.resx">
+    <EmbeddedResource Include="Repayments\Repayments.resx">
       <DependentUpon>Repayments.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
