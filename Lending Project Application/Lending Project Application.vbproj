@@ -206,6 +206,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Repayments\Add Repayment.resx">
+      <DependentUpon>Add Repayment.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Repayments\Repayments.resx">
       <DependentUpon>Repayments.vb</DependentUpon>
     </EmbeddedResource>

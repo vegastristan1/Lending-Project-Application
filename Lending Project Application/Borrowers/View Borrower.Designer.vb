@@ -22,7 +22,6 @@ Partial Class View_Borrower
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -81,7 +80,38 @@ Partial Class View_Borrower
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.btnAddNewBorrowerSave = New System.Windows.Forms.Button()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
+        Me.colAccountOverviewNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colAccountOverviewType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colAccountOverviewInterest = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colAccountOverviewPrinsipal = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colAccountOverviewTotalBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabPage6 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.TextBox20 = New System.Windows.Forms.TextBox()
+        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
+        Me.colTransactionsDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colTransactionsAccountNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colTransactionsAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colTransactionsDebitCredit = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colTransactionsType = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colTransactionsStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colTransactionsAction = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
+        Me.colLoansLoanID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansLoanProduct = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansApplliedAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansTotalPayable = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansAmountPaid = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansDueAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansReleaseDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.TextBox21 = New System.Windows.Forms.TextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.btnSideNavLogout = New System.Windows.Forms.Button()
@@ -92,37 +122,6 @@ Partial Class View_Borrower
         Me.btnSideNavDashboard = New System.Windows.Forms.Button()
         Me.btnBackToBorrowersList = New System.Windows.Forms.Button()
         Me.lblTitleAddNewBorrower = New System.Windows.Forms.Label()
-        Me.TabPage5 = New System.Windows.Forms.TabPage()
-        Me.TabPage6 = New System.Windows.Forms.TabPage()
-        Me.TabPage7 = New System.Windows.Forms.TabPage()
-        Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.colAccountOverviewNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAccountOverviewType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAccountOverviewInterest = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAccountOverviewPrinsipal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colAccountOverviewTotalBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridView3 = New System.Windows.Forms.DataGridView()
-        Me.TextBox20 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.colTransactionsDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTransactionsAccountNumber = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTransactionsAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTransactionsDebitCredit = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTransactionsType = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTransactionsStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colTransactionsAction = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.TextBox21 = New System.Windows.Forms.TextBox()
-        Me.DataGridView4 = New System.Windows.Forms.DataGridView()
-        Me.colLoansLoanID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansLoanProduct = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansApplliedAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansTotalPayable = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansAmountPaid = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansDueAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansReleaseDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage1.SuspendLayout()
@@ -132,18 +131,18 @@ Partial Class View_Borrower
         Me.TabPage3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabControl2.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage6.SuspendLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TabPage7.SuspendLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        Me.TabPage5.SuspendLayout()
-        Me.TabPage6.SuspendLayout()
-        Me.TabPage7.SuspendLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox14
@@ -614,14 +613,6 @@ Partial Class View_Borrower
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colDocumentName, Me.colDocumentType, Me.colDocumentAction})
         Me.DataGridView1.Location = New System.Drawing.Point(6, 96)
         Me.DataGridView1.Name = "DataGridView1"
-        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle12.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.RowHeadersDefaultCellStyle = DataGridViewCellStyle12
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(1342, 293)
         Me.DataGridView1.TabIndex = 39
@@ -695,6 +686,7 @@ Partial Class View_Borrower
         '
         Me.btnAddNewBorrowerSave.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnAddNewBorrowerSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNewBorrowerSave.ForeColor = System.Drawing.Color.White
         Me.btnAddNewBorrowerSave.Location = New System.Drawing.Point(1227, 818)
         Me.btnAddNewBorrowerSave.Name = "btnAddNewBorrowerSave"
         Me.btnAddNewBorrowerSave.Size = New System.Drawing.Size(151, 46)
@@ -714,6 +706,215 @@ Partial Class View_Borrower
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.Size = New System.Drawing.Size(1363, 439)
         Me.TabControl2.TabIndex = 29
+        '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.DataGridView2)
+        Me.TabPage5.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Size = New System.Drawing.Size(1355, 395)
+        Me.TabPage5.TabIndex = 1
+        Me.TabPage5.Text = "Account Overview"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        '
+        'DataGridView2
+        '
+        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colAccountOverviewNumber, Me.colAccountOverviewType, Me.colAccountOverviewInterest, Me.colAccountOverviewPrinsipal, Me.colAccountOverviewTotalBalance})
+        Me.DataGridView2.Location = New System.Drawing.Point(3, 3)
+        Me.DataGridView2.Name = "DataGridView2"
+        Me.DataGridView2.RowHeadersVisible = False
+        Me.DataGridView2.Size = New System.Drawing.Size(1349, 389)
+        Me.DataGridView2.TabIndex = 0
+        '
+        'colAccountOverviewNumber
+        '
+        Me.colAccountOverviewNumber.HeaderText = "Number"
+        Me.colAccountOverviewNumber.Name = "colAccountOverviewNumber"
+        '
+        'colAccountOverviewType
+        '
+        Me.colAccountOverviewType.HeaderText = "Type"
+        Me.colAccountOverviewType.Name = "colAccountOverviewType"
+        '
+        'colAccountOverviewInterest
+        '
+        Me.colAccountOverviewInterest.HeaderText = "Interest"
+        Me.colAccountOverviewInterest.Name = "colAccountOverviewInterest"
+        '
+        'colAccountOverviewPrinsipal
+        '
+        Me.colAccountOverviewPrinsipal.HeaderText = "Prinsipal"
+        Me.colAccountOverviewPrinsipal.Name = "colAccountOverviewPrinsipal"
+        '
+        'colAccountOverviewTotalBalance
+        '
+        Me.colAccountOverviewTotalBalance.HeaderText = "Total Balance"
+        Me.colAccountOverviewTotalBalance.Name = "colAccountOverviewTotalBalance"
+        '
+        'TabPage6
+        '
+        Me.TabPage6.Controls.Add(Me.Button1)
+        Me.TabPage6.Controls.Add(Me.TextBox20)
+        Me.TabPage6.Controls.Add(Me.DataGridView3)
+        Me.TabPage6.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage6.Name = "TabPage6"
+        Me.TabPage6.Size = New System.Drawing.Size(1355, 395)
+        Me.TabPage6.TabIndex = 2
+        Me.TabPage6.Text = "Transactions"
+        Me.TabPage6.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(1197, 18)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(151, 46)
+        Me.Button1.TabIndex = 4
+        Me.Button1.Text = "Search"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'TextBox20
+        '
+        Me.TextBox20.Location = New System.Drawing.Point(3, 23)
+        Me.TextBox20.Name = "TextBox20"
+        Me.TextBox20.Size = New System.Drawing.Size(1188, 38)
+        Me.TextBox20.TabIndex = 1
+        '
+        'DataGridView3
+        '
+        Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colTransactionsDate, Me.colTransactionsAccountNumber, Me.colTransactionsAmount, Me.colTransactionsDebitCredit, Me.colTransactionsType, Me.colTransactionsStatus, Me.colTransactionsAction})
+        Me.DataGridView3.Location = New System.Drawing.Point(3, 67)
+        Me.DataGridView3.Name = "DataGridView3"
+        Me.DataGridView3.RowHeadersVisible = False
+        Me.DataGridView3.Size = New System.Drawing.Size(1345, 325)
+        Me.DataGridView3.TabIndex = 0
+        '
+        'colTransactionsDate
+        '
+        Me.colTransactionsDate.HeaderText = "Date"
+        Me.colTransactionsDate.Name = "colTransactionsDate"
+        '
+        'colTransactionsAccountNumber
+        '
+        Me.colTransactionsAccountNumber.HeaderText = "Account Number"
+        Me.colTransactionsAccountNumber.Name = "colTransactionsAccountNumber"
+        '
+        'colTransactionsAmount
+        '
+        Me.colTransactionsAmount.HeaderText = "Amount"
+        Me.colTransactionsAmount.Name = "colTransactionsAmount"
+        '
+        'colTransactionsDebitCredit
+        '
+        Me.colTransactionsDebitCredit.HeaderText = "Debit / Credit"
+        Me.colTransactionsDebitCredit.Name = "colTransactionsDebitCredit"
+        '
+        'colTransactionsType
+        '
+        Me.colTransactionsType.HeaderText = "Type"
+        Me.colTransactionsType.Name = "colTransactionsType"
+        '
+        'colTransactionsStatus
+        '
+        Me.colTransactionsStatus.HeaderText = "Status"
+        Me.colTransactionsStatus.Name = "colTransactionsStatus"
+        '
+        'colTransactionsAction
+        '
+        Me.colTransactionsAction.HeaderText = "Action"
+        Me.colTransactionsAction.Name = "colTransactionsAction"
+        '
+        'TabPage7
+        '
+        Me.TabPage7.Controls.Add(Me.DataGridView4)
+        Me.TabPage7.Controls.Add(Me.Button2)
+        Me.TabPage7.Controls.Add(Me.TextBox21)
+        Me.TabPage7.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage7.Name = "TabPage7"
+        Me.TabPage7.Size = New System.Drawing.Size(1355, 395)
+        Me.TabPage7.TabIndex = 3
+        Me.TabPage7.Text = "Loans"
+        Me.TabPage7.UseVisualStyleBackColor = True
+        '
+        'DataGridView4
+        '
+        Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
+        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colLoansLoanID, Me.colLoansLoanProduct, Me.colLoansApplliedAmount, Me.colLoansTotalPayable, Me.colLoansAmountPaid, Me.colLoansDueAmount, Me.colLoansReleaseDate, Me.colLoansStatus})
+        Me.DataGridView4.Location = New System.Drawing.Point(3, 67)
+        Me.DataGridView4.Name = "DataGridView4"
+        Me.DataGridView4.RowHeadersVisible = False
+        Me.DataGridView4.Size = New System.Drawing.Size(1345, 325)
+        Me.DataGridView4.TabIndex = 7
+        '
+        'colLoansLoanID
+        '
+        Me.colLoansLoanID.HeaderText = "Loan ID"
+        Me.colLoansLoanID.Name = "colLoansLoanID"
+        Me.colLoansLoanID.Width = 123
+        '
+        'colLoansLoanProduct
+        '
+        Me.colLoansLoanProduct.HeaderText = "Loan Product"
+        Me.colLoansLoanProduct.Name = "colLoansLoanProduct"
+        Me.colLoansLoanProduct.Width = 182
+        '
+        'colLoansApplliedAmount
+        '
+        Me.colLoansApplliedAmount.HeaderText = "Appllied Amount"
+        Me.colLoansApplliedAmount.Name = "colLoansApplliedAmount"
+        Me.colLoansApplliedAmount.Width = 214
+        '
+        'colLoansTotalPayable
+        '
+        Me.colLoansTotalPayable.HeaderText = "Total Payable"
+        Me.colLoansTotalPayable.Name = "colLoansTotalPayable"
+        Me.colLoansTotalPayable.Width = 187
+        '
+        'colLoansAmountPaid
+        '
+        Me.colLoansAmountPaid.HeaderText = "Amount Paid"
+        Me.colLoansAmountPaid.Name = "colLoansAmountPaid"
+        Me.colLoansAmountPaid.Width = 176
+        '
+        'colLoansDueAmount
+        '
+        Me.colLoansDueAmount.HeaderText = "Due Amount"
+        Me.colLoansDueAmount.Name = "colLoansDueAmount"
+        Me.colLoansDueAmount.Width = 172
+        '
+        'colLoansReleaseDate
+        '
+        Me.colLoansReleaseDate.HeaderText = "Release Date"
+        Me.colLoansReleaseDate.Name = "colLoansReleaseDate"
+        Me.colLoansReleaseDate.Width = 186
+        '
+        'colLoansStatus
+        '
+        Me.colLoansStatus.HeaderText = "Status"
+        Me.colLoansStatus.Name = "colLoansStatus"
+        Me.colLoansStatus.Width = 117
+        '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(1197, 18)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(151, 46)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Search"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'TextBox21
+        '
+        Me.TextBox21.Location = New System.Drawing.Point(3, 23)
+        Me.TextBox21.Name = "TextBox21"
+        Me.TextBox21.Size = New System.Drawing.Size(1188, 38)
+        Me.TextBox21.TabIndex = 5
         '
         'Panel1
         '
@@ -747,6 +948,17 @@ Partial Class View_Borrower
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1386, 873)
         Me.Panel1.TabIndex = 3
+        '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.DarkOrange
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(1227, 10)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(151, 46)
+        Me.Button3.TabIndex = 4
+        Me.Button3.Text = "Edit"
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'PictureBox1
         '
@@ -900,226 +1112,6 @@ Partial Class View_Borrower
         Me.lblTitleAddNewBorrower.TabIndex = 0
         Me.lblTitleAddNewBorrower.Text = "Borrower Details"
         '
-        'TabPage5
-        '
-        Me.TabPage5.Controls.Add(Me.DataGridView2)
-        Me.TabPage5.Location = New System.Drawing.Point(4, 40)
-        Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(1355, 395)
-        Me.TabPage5.TabIndex = 1
-        Me.TabPage5.Text = "Account Overview"
-        Me.TabPage5.UseVisualStyleBackColor = True
-        '
-        'TabPage6
-        '
-        Me.TabPage6.Controls.Add(Me.Button1)
-        Me.TabPage6.Controls.Add(Me.TextBox20)
-        Me.TabPage6.Controls.Add(Me.DataGridView3)
-        Me.TabPage6.Location = New System.Drawing.Point(4, 40)
-        Me.TabPage6.Name = "TabPage6"
-        Me.TabPage6.Size = New System.Drawing.Size(1355, 395)
-        Me.TabPage6.TabIndex = 2
-        Me.TabPage6.Text = "Transactions"
-        Me.TabPage6.UseVisualStyleBackColor = True
-        '
-        'TabPage7
-        '
-        Me.TabPage7.Controls.Add(Me.DataGridView4)
-        Me.TabPage7.Controls.Add(Me.Button2)
-        Me.TabPage7.Controls.Add(Me.TextBox21)
-        Me.TabPage7.Location = New System.Drawing.Point(4, 40)
-        Me.TabPage7.Name = "TabPage7"
-        Me.TabPage7.Size = New System.Drawing.Size(1355, 395)
-        Me.TabPage7.TabIndex = 3
-        Me.TabPage7.Text = "Loans"
-        Me.TabPage7.UseVisualStyleBackColor = True
-        '
-        'DataGridView2
-        '
-        Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colAccountOverviewNumber, Me.colAccountOverviewType, Me.colAccountOverviewInterest, Me.colAccountOverviewPrinsipal, Me.colAccountOverviewTotalBalance})
-        Me.DataGridView2.Location = New System.Drawing.Point(3, 3)
-        Me.DataGridView2.Name = "DataGridView2"
-        Me.DataGridView2.RowHeadersVisible = False
-        Me.DataGridView2.Size = New System.Drawing.Size(1349, 389)
-        Me.DataGridView2.TabIndex = 0
-        '
-        'colAccountOverviewNumber
-        '
-        Me.colAccountOverviewNumber.HeaderText = "Number"
-        Me.colAccountOverviewNumber.Name = "colAccountOverviewNumber"
-        '
-        'colAccountOverviewType
-        '
-        Me.colAccountOverviewType.HeaderText = "Type"
-        Me.colAccountOverviewType.Name = "colAccountOverviewType"
-        '
-        'colAccountOverviewInterest
-        '
-        Me.colAccountOverviewInterest.HeaderText = "Interest"
-        Me.colAccountOverviewInterest.Name = "colAccountOverviewInterest"
-        '
-        'colAccountOverviewPrinsipal
-        '
-        Me.colAccountOverviewPrinsipal.HeaderText = "Prinsipal"
-        Me.colAccountOverviewPrinsipal.Name = "colAccountOverviewPrinsipal"
-        '
-        'colAccountOverviewTotalBalance
-        '
-        Me.colAccountOverviewTotalBalance.HeaderText = "Total Balance"
-        Me.colAccountOverviewTotalBalance.Name = "colAccountOverviewTotalBalance"
-        '
-        'DataGridView3
-        '
-        Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colTransactionsDate, Me.colTransactionsAccountNumber, Me.colTransactionsAmount, Me.colTransactionsDebitCredit, Me.colTransactionsType, Me.colTransactionsStatus, Me.colTransactionsAction})
-        Me.DataGridView3.Location = New System.Drawing.Point(3, 67)
-        Me.DataGridView3.Name = "DataGridView3"
-        Me.DataGridView3.RowHeadersVisible = False
-        Me.DataGridView3.Size = New System.Drawing.Size(1345, 325)
-        Me.DataGridView3.TabIndex = 0
-        '
-        'TextBox20
-        '
-        Me.TextBox20.Location = New System.Drawing.Point(3, 23)
-        Me.TextBox20.Name = "TextBox20"
-        Me.TextBox20.Size = New System.Drawing.Size(1188, 38)
-        Me.TextBox20.TabIndex = 1
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(1197, 18)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(151, 46)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Search"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'colTransactionsDate
-        '
-        Me.colTransactionsDate.HeaderText = "Date"
-        Me.colTransactionsDate.Name = "colTransactionsDate"
-        '
-        'colTransactionsAccountNumber
-        '
-        Me.colTransactionsAccountNumber.HeaderText = "Account Number"
-        Me.colTransactionsAccountNumber.Name = "colTransactionsAccountNumber"
-        '
-        'colTransactionsAmount
-        '
-        Me.colTransactionsAmount.HeaderText = "Amount"
-        Me.colTransactionsAmount.Name = "colTransactionsAmount"
-        '
-        'colTransactionsDebitCredit
-        '
-        Me.colTransactionsDebitCredit.HeaderText = "Debit / Credit"
-        Me.colTransactionsDebitCredit.Name = "colTransactionsDebitCredit"
-        '
-        'colTransactionsType
-        '
-        Me.colTransactionsType.HeaderText = "Type"
-        Me.colTransactionsType.Name = "colTransactionsType"
-        '
-        'colTransactionsStatus
-        '
-        Me.colTransactionsStatus.HeaderText = "Status"
-        Me.colTransactionsStatus.Name = "colTransactionsStatus"
-        '
-        'colTransactionsAction
-        '
-        Me.colTransactionsAction.HeaderText = "Action"
-        Me.colTransactionsAction.Name = "colTransactionsAction"
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1197, 18)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(151, 46)
-        Me.Button2.TabIndex = 6
-        Me.Button2.Text = "Search"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'TextBox21
-        '
-        Me.TextBox21.Location = New System.Drawing.Point(3, 23)
-        Me.TextBox21.Name = "TextBox21"
-        Me.TextBox21.Size = New System.Drawing.Size(1188, 38)
-        Me.TextBox21.TabIndex = 5
-        '
-        'DataGridView4
-        '
-        Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader
-        Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colLoansLoanID, Me.colLoansLoanProduct, Me.colLoansApplliedAmount, Me.colLoansTotalPayable, Me.colLoansAmountPaid, Me.colLoansDueAmount, Me.colLoansReleaseDate, Me.colLoansStatus})
-        Me.DataGridView4.Location = New System.Drawing.Point(3, 67)
-        Me.DataGridView4.Name = "DataGridView4"
-        Me.DataGridView4.RowHeadersVisible = False
-        Me.DataGridView4.Size = New System.Drawing.Size(1345, 325)
-        Me.DataGridView4.TabIndex = 7
-        '
-        'colLoansLoanID
-        '
-        Me.colLoansLoanID.HeaderText = "Loan ID"
-        Me.colLoansLoanID.Name = "colLoansLoanID"
-        Me.colLoansLoanID.Width = 123
-        '
-        'colLoansLoanProduct
-        '
-        Me.colLoansLoanProduct.HeaderText = "Loan Product"
-        Me.colLoansLoanProduct.Name = "colLoansLoanProduct"
-        Me.colLoansLoanProduct.Width = 182
-        '
-        'colLoansApplliedAmount
-        '
-        Me.colLoansApplliedAmount.HeaderText = "Appllied Amount"
-        Me.colLoansApplliedAmount.Name = "colLoansApplliedAmount"
-        Me.colLoansApplliedAmount.Width = 214
-        '
-        'colLoansTotalPayable
-        '
-        Me.colLoansTotalPayable.HeaderText = "Total Payable"
-        Me.colLoansTotalPayable.Name = "colLoansTotalPayable"
-        Me.colLoansTotalPayable.Width = 187
-        '
-        'colLoansAmountPaid
-        '
-        Me.colLoansAmountPaid.HeaderText = "Amount Paid"
-        Me.colLoansAmountPaid.Name = "colLoansAmountPaid"
-        Me.colLoansAmountPaid.Width = 176
-        '
-        'colLoansDueAmount
-        '
-        Me.colLoansDueAmount.HeaderText = "Due Amount"
-        Me.colLoansDueAmount.Name = "colLoansDueAmount"
-        Me.colLoansDueAmount.Width = 172
-        '
-        'colLoansReleaseDate
-        '
-        Me.colLoansReleaseDate.HeaderText = "Release Date"
-        Me.colLoansReleaseDate.Name = "colLoansReleaseDate"
-        Me.colLoansReleaseDate.Width = 186
-        '
-        'colLoansStatus
-        '
-        Me.colLoansStatus.HeaderText = "Status"
-        Me.colLoansStatus.Name = "colLoansStatus"
-        Me.colLoansStatus.Width = 117
-        '
-        'Button3
-        '
-        Me.Button3.BackColor = System.Drawing.Color.DarkOrange
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(1227, 10)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(151, 46)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Edit"
-        Me.Button3.UseVisualStyleBackColor = False
-        '
         'View_Borrower
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1143,6 +1135,14 @@ Partial Class View_Borrower
         Me.TabPage3.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabControl2.ResumeLayout(False)
+        Me.TabPage5.ResumeLayout(False)
+        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage6.ResumeLayout(False)
+        Me.TabPage6.PerformLayout()
+        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TabPage7.ResumeLayout(False)
+        Me.TabPage7.PerformLayout()
+        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -1151,14 +1151,6 @@ Partial Class View_Borrower
         Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        Me.TabPage5.ResumeLayout(False)
-        Me.TabPage6.ResumeLayout(False)
-        Me.TabPage6.PerformLayout()
-        Me.TabPage7.ResumeLayout(False)
-        Me.TabPage7.PerformLayout()
-        CType(Me.DataGridView2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.DataGridView4, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

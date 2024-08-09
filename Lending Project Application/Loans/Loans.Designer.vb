@@ -259,6 +259,7 @@ Partial Class Loans
         '
         Me.btnAddNewBorrower.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnAddNewBorrower.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNewBorrower.ForeColor = System.Drawing.Color.White
         Me.btnAddNewBorrower.Location = New System.Drawing.Point(1181, 86)
         Me.btnAddNewBorrower.Name = "btnAddNewBorrower"
         Me.btnAddNewBorrower.Size = New System.Drawing.Size(200, 46)
