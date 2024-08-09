@@ -23,6 +23,7 @@ Partial Class View_Loan_Detials
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(View_Loan_Detials))
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.colLoansRepaymentsBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
@@ -59,9 +60,14 @@ Partial Class View_Loan_Detials
         Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
         Me.btnSideNavDashboard = New System.Windows.Forms.Button()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -75,21 +81,16 @@ Partial Class View_Loan_Detials
         Me.Label11 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.colLoansRepaymentsScheduleDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label16 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'colLoansRepaymentsBalance
@@ -100,10 +101,10 @@ Partial Class View_Loan_Detials
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(307, 298)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(309, 305)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(179, 31)
+        Me.Label9.Size = New System.Drawing.Size(122, 24)
         Me.Label9.TabIndex = 40
         Me.Label9.Text = "Release Date"
         '
@@ -137,7 +138,7 @@ Partial Class View_Loan_Detials
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(24, 215)
+        Me.Label7.Location = New System.Drawing.Point(20, 215)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(275, 39)
         Me.Label7.TabIndex = 36
@@ -146,10 +147,10 @@ Partial Class View_Loan_Detials
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(307, 139)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(309, 146)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(225, 31)
+        Me.Label5.Size = New System.Drawing.Size(157, 24)
         Me.Label5.TabIndex = 35
         Me.Label5.Text = "Mode of Payment"
         '
@@ -179,10 +180,10 @@ Partial Class View_Loan_Detials
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(21, 139)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(23, 146)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(175, 31)
+        Me.Label3.Size = New System.Drawing.Size(122, 24)
         Me.Label3.TabIndex = 33
         Me.Label3.Text = "Loan Product"
         '
@@ -216,6 +217,7 @@ Partial Class View_Loan_Detials
         '
         Me.btnAddNewBorrowerSave.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnAddNewBorrowerSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNewBorrowerSave.ForeColor = System.Drawing.Color.White
         Me.btnAddNewBorrowerSave.Location = New System.Drawing.Point(1213, 818)
         Me.btnAddNewBorrowerSave.Name = "btnAddNewBorrowerSave"
         Me.btnAddNewBorrowerSave.Size = New System.Drawing.Size(151, 46)
@@ -226,10 +228,10 @@ Partial Class View_Loan_Detials
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(307, 373)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(309, 380)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(92, 31)
+        Me.Label10.Size = New System.Drawing.Size(60, 24)
         Me.Label10.TabIndex = 26
         Me.Label10.Text = "Status"
         '
@@ -255,10 +257,10 @@ Partial Class View_Loan_Detials
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(307, 63)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(309, 70)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(124, 31)
+        Me.Label4.Size = New System.Drawing.Size(87, 24)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Borrower"
         '
@@ -282,20 +284,20 @@ Partial Class View_Loan_Detials
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(20, 298)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(23, 305)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(247, 31)
+        Me.Label2.Size = New System.Drawing.Size(166, 24)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "First Payment Date"
         '
         'Label23
         '
         Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(21, 63)
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(23, 70)
         Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(109, 31)
+        Me.Label23.Size = New System.Drawing.Size(74, 24)
         Me.Label23.TabIndex = 2
         Me.Label23.Text = "Loan ID"
         '
@@ -469,6 +471,27 @@ Partial Class View_Loan_Detials
         Me.SplitContainer1.SplitterDistance = 250
         Me.SplitContainer1.TabIndex = 4
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox1.Image = Global.Lending_Project_Application.My.Resources.Resources.logo_placeholder_image
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(226, 199)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(318, 32)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(264, 37)
+        Me.Label16.TabIndex = 46
+        Me.Label16.Text = "(Borrower Name)"
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.White
@@ -505,6 +528,33 @@ Partial Class View_Loan_Detials
         Me.Panel1.Size = New System.Drawing.Size(1386, 873)
         Me.Panel1.TabIndex = 7
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.DarkOrange
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(1214, 12)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(151, 46)
+        Me.Button2.TabIndex = 8
+        Me.Button2.Text = "Edit"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkOrange
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(990, 488)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button1.Size = New System.Drawing.Size(374, 46)
+        Me.Button1.TabIndex = 45
+        Me.Button1.Text = "Edit Repayment Schedule"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -535,6 +585,15 @@ Partial Class View_Loan_Detials
         Me.TabPage1.Text = "Collateral Information"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
+        'PictureBox2
+        '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.PictureBox2.Location = New System.Drawing.Point(409, 6)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(329, 323)
+        Me.PictureBox2.TabIndex = 53
+        Me.PictureBox2.TabStop = False
+        '
         'TextBox8
         '
         Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -546,10 +605,10 @@ Partial Class View_Loan_Detials
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(6, 260)
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(8, 262)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(236, 31)
+        Me.Label15.Size = New System.Drawing.Size(162, 24)
         Me.Label15.TabIndex = 51
         Me.Label15.Text = "Collateral Address"
         '
@@ -564,10 +623,10 @@ Partial Class View_Loan_Detials
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(6, 110)
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(8, 117)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(83, 31)
+        Me.Label14.Size = New System.Drawing.Size(59, 24)
         Me.Label14.TabIndex = 49
         Me.Label14.Text = "Value"
         '
@@ -582,10 +641,10 @@ Partial Class View_Loan_Detials
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(6, 185)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(8, 192)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(151, 31)
+        Me.Label13.Size = New System.Drawing.Size(104, 24)
         Me.Label13.TabIndex = 47
         Me.Label13.Text = "Description"
         '
@@ -600,10 +659,10 @@ Partial Class View_Loan_Detials
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(6, 35)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(8, 42)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(197, 31)
+        Me.Label12.Size = New System.Drawing.Size(135, 24)
         Me.Label12.TabIndex = 45
         Me.Label12.Text = "Collateral Type"
         '
@@ -628,16 +687,24 @@ Partial Class View_Loan_Detials
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(21, 373)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(23, 381)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(271, 31)
+        Me.Label11.Size = New System.Drawing.Size(182, 24)
         Me.Label11.TabIndex = 42
         Me.Label11.Text = "Payable for (Prin/Int.)"
         '
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colLoansRepaymentsScheduleDate, Me.colLoansRepaymentsAmountToPay, Me.colLoansRepaymentsPrincipalAmount, Me.colLoansRepaymentsInterest, Me.colLoansRepaymentsBalance, Me.colLoansRepaymentsStatus})
         Me.DataGridView1.Location = New System.Drawing.Point(27, 540)
@@ -652,63 +719,6 @@ Partial Class View_Loan_Detials
         Me.colLoansRepaymentsScheduleDate.HeaderText = "Date"
         Me.colLoansRepaymentsScheduleDate.Name = "colLoansRepaymentsScheduleDate"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox1.Image = Global.Lending_Project_Application.My.Resources.Resources.logo_placeholder_image
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(226, 199)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.PictureBox2.Location = New System.Drawing.Point(409, 6)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(329, 323)
-        Me.PictureBox2.TabIndex = 53
-        Me.PictureBox2.TabStop = False
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.DarkOrange
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(1214, 12)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(151, 46)
-        Me.Button2.TabIndex = 8
-        Me.Button2.Text = "Edit"
-        Me.Button2.UseVisualStyleBackColor = False
-        '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.DarkOrange
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(990, 488)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(374, 46)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "Edit Repayment Schedule"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = False
-        '
-        'Label16
-        '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(318, 32)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(264, 37)
-        Me.Label16.TabIndex = 46
-        Me.Label16.Text = "(Borrower Name)"
-        '
         'View_Loan_Detials
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -722,14 +732,14 @@ Partial Class View_Loan_Detials
         Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub

@@ -22,6 +22,7 @@ Partial Class Add_New_Borrower
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnBackToBorrowersList = New System.Windows.Forms.Button()
         Me.lblTitleAddNewBorrower = New System.Windows.Forms.Label()
         Me.btnSideNavLogout = New System.Windows.Forms.Button()
@@ -344,6 +345,14 @@ Partial Class Add_New_Borrower
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colDocumentName, Me.colDocumentType, Me.colDocumentAction})
         Me.DataGridView1.Location = New System.Drawing.Point(6, 92)
@@ -373,10 +382,10 @@ Partial Class Add_New_Borrower
         'Label22
         '
         Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(364, 15)
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(366, 21)
         Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(75, 31)
+        Me.Label22.Size = New System.Drawing.Size(53, 24)
         Me.Label22.TabIndex = 38
         Me.Label22.Text = "Type"
         '
@@ -401,10 +410,10 @@ Partial Class Add_New_Borrower
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(0, 14)
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(6, 21)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(217, 31)
+        Me.Label21.Size = New System.Drawing.Size(153, 24)
         Me.Label21.TabIndex = 36
         Me.Label21.Text = "Document Name"
         '
@@ -445,20 +454,20 @@ Partial Class Add_New_Borrower
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label13.Location = New System.Drawing.Point(404, 22)
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label13.Location = New System.Drawing.Point(406, 29)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(145, 31)
+        Me.Label13.Size = New System.Drawing.Size(123, 24)
         Me.Label13.TabIndex = 34
-        Me.Label13.Text = "Last Name"
+        Me.Label13.Text = "Middle Name"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label14.Location = New System.Drawing.Point(6, 97)
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label14.Location = New System.Drawing.Point(8, 104)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(114, 31)
+        Me.Label14.Size = New System.Drawing.Size(80, 24)
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "Address"
         '
@@ -481,12 +490,12 @@ Partial Class Add_New_Borrower
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(205, 22)
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(207, 29)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(145, 31)
+        Me.Label12.Size = New System.Drawing.Size(101, 24)
         Me.Label12.TabIndex = 31
-        Me.Label12.Text = "Last Name"
+        Me.Label12.Text = "First Name"
         '
         'TextBox8
         '
@@ -499,10 +508,10 @@ Partial Class Add_New_Borrower
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(6, 22)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.Location = New System.Drawing.Point(8, 29)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(145, 31)
+        Me.Label11.Size = New System.Drawing.Size(99, 24)
         Me.Label11.TabIndex = 29
         Me.Label11.Text = "Last Name"
         '
@@ -544,10 +553,10 @@ Partial Class Add_New_Borrower
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label18.Location = New System.Drawing.Point(365, 4)
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(367, 11)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(92, 31)
+        Me.Label18.Size = New System.Drawing.Size(60, 24)
         Me.Label18.TabIndex = 43
         Me.Label18.Text = "Status"
         '
@@ -570,20 +579,20 @@ Partial Class Add_New_Borrower
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label19.Location = New System.Drawing.Point(3, 4)
+        Me.Label19.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label19.Location = New System.Drawing.Point(3, 11)
         Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(226, 31)
+        Me.Label19.Size = New System.Drawing.Size(160, 24)
         Me.Label19.TabIndex = 39
         Me.Label19.Text = "Employer's Name"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(3, 79)
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(4, 86)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(114, 31)
+        Me.Label20.Size = New System.Drawing.Size(80, 24)
         Me.Label20.TabIndex = 40
         Me.Label20.Text = "Address"
         '
@@ -614,10 +623,10 @@ Partial Class Add_New_Borrower
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label17.Location = New System.Drawing.Point(365, 3)
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label17.Location = New System.Drawing.Point(367, 10)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(166, 31)
+        Me.Label17.Size = New System.Drawing.Size(117, 24)
         Me.Label17.TabIndex = 37
         Me.Label17.Text = "Environment"
         '
@@ -640,30 +649,30 @@ Partial Class Add_New_Borrower
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label16.Location = New System.Drawing.Point(6, 3)
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label16.Location = New System.Drawing.Point(4, 10)
         Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(204, 31)
+        Me.Label16.Size = New System.Drawing.Size(142, 24)
         Me.Label16.TabIndex = 35
         Me.Label16.Text = "Business Name"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label15.Location = New System.Drawing.Point(3, 78)
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label15.Location = New System.Drawing.Point(3, 85)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(114, 31)
+        Me.Label15.Size = New System.Drawing.Size(80, 24)
         Me.Label15.TabIndex = 35
         Me.Label15.Text = "Address"
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(474, 287)
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Location = New System.Drawing.Point(476, 294)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(151, 31)
+        Me.Label10.Size = New System.Drawing.Size(99, 24)
         Me.Label10.TabIndex = 26
         Me.Label10.Text = "Civil Status"
         '
@@ -687,10 +696,10 @@ Partial Class Add_New_Borrower
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(474, 213)
+        Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(476, 220)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(175, 31)
+        Me.Label9.Size = New System.Drawing.Size(119, 24)
         Me.Label9.TabIndex = 23
         Me.Label9.Text = "Place of Birth"
         '
@@ -705,10 +714,10 @@ Partial Class Add_New_Borrower
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(8, 288)
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(10, 295)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(112, 31)
+        Me.Label8.Size = New System.Drawing.Size(79, 24)
         Me.Label8.TabIndex = 21
         Me.Label8.Text = "Religion"
         '
@@ -723,10 +732,10 @@ Partial Class Add_New_Borrower
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(8, 138)
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(11, 145)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(114, 31)
+        Me.Label7.Size = New System.Drawing.Size(80, 24)
         Me.Label7.TabIndex = 19
         Me.Label7.Text = "Address"
         '
@@ -759,20 +768,20 @@ Partial Class Add_New_Borrower
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(623, 63)
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(629, 70)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(172, 31)
+        Me.Label5.Size = New System.Drawing.Size(123, 24)
         Me.Label5.TabIndex = 12
         Me.Label5.Text = "Middle Name"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(316, 63)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(318, 70)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(147, 31)
+        Me.Label4.Size = New System.Drawing.Size(101, 24)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "First Name"
         '
@@ -787,10 +796,10 @@ Partial Class Add_New_Borrower
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(520, 138)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(516, 145)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(168, 31)
+        Me.Label3.Size = New System.Drawing.Size(116, 24)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Tell / CP No."
         '
@@ -833,20 +842,20 @@ Partial Class Add_New_Borrower
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(8, 213)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(11, 220)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(123, 31)
+        Me.Label2.Size = New System.Drawing.Size(83, 24)
         Me.Label2.TabIndex = 4
         Me.Label2.Text = "Birthdate"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(8, 63)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(11, 70)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(145, 31)
+        Me.Label1.Size = New System.Drawing.Size(99, 24)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Last Name"
         '

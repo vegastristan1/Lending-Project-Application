@@ -132,17 +132,11 @@
   <metadata name="colLoansRepaymentsAmountToPay.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="colLoansRepaymentsScheduleDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="colLoansRepaymentsScheduleDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAAsVJREFUSEvd1knITWEYwPFrlilkKLEwxMZCsaCQHYpCFCU72ZBky9ZQViylsKFk
+        vgAADr4B6kKxwAAAAsVJREFUSEvd1knITWEYwPFrlilkKLEwxMZCsaCQHYpCFCU72ZBky9ZQViylsKFk
         Yy42rFCGDClJUoaEZM78/+u+t+ec897rXNl8nvrVd+937vu84/OeRk+IvhiJ6ViIFViG+ZiKYeiFfxrj
         sRfX8Aof8anpA17gEjZgIMphh+zwTPT2i07RBzOwE0/xs4YfuIfNGAPDmdoOO2mHtza/y4a9Wo3H+I5c
         Er9v978vuABHOBo3kf53GYNRCZOuhVMaG0vuYwc2YQsO4jXKzzl6O+4+uNv8Ti7XEBTC6V2DctJncI0X
@@ -157,4 +151,7 @@
         Gr8AvDs8PPVZXwkAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="colLoansRepaymentsScheduleDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
