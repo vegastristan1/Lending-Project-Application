@@ -54,7 +54,6 @@ Partial Class View_Loan_Detials
         Me.colLoansRepaymentsAmountToPay = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSideNavLogout = New System.Windows.Forms.Button()
-        Me.btnSideNavAccounts = New System.Windows.Forms.Button()
         Me.btnSideNavRepayments = New System.Windows.Forms.Button()
         Me.btnSideNavLoans = New System.Windows.Forms.Button()
         Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
@@ -364,22 +363,6 @@ Partial Class View_Loan_Detials
         Me.btnSideNavLogout.Text = "Logout"
         Me.btnSideNavLogout.UseVisualStyleBackColor = False
         '
-        'btnSideNavAccounts
-        '
-        Me.btnSideNavAccounts.BackColor = System.Drawing.SystemColors.GrayText
-        Me.btnSideNavAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSideNavAccounts.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSideNavAccounts.FlatAppearance.BorderSize = 0
-        Me.btnSideNavAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSideNavAccounts.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavAccounts.ForeColor = System.Drawing.Color.White
-        Me.btnSideNavAccounts.Location = New System.Drawing.Point(12, 449)
-        Me.btnSideNavAccounts.Name = "btnSideNavAccounts"
-        Me.btnSideNavAccounts.Size = New System.Drawing.Size(226, 52)
-        Me.btnSideNavAccounts.TabIndex = 5
-        Me.btnSideNavAccounts.Text = "Accounts"
-        Me.btnSideNavAccounts.UseVisualStyleBackColor = False
-        '
         'btnSideNavRepayments
         '
         Me.btnSideNavRepayments.BackColor = System.Drawing.SystemColors.GrayText
@@ -454,7 +437,6 @@ Partial Class View_Loan_Detials
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.GrayText
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLogout)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavAccounts)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavRepayments)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLoans)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavBorrowers)
@@ -774,7 +756,6 @@ Partial Class View_Loan_Detials
     Friend WithEvents colLoansRepaymentsAmountToPay As DataGridViewTextBoxColumn
     Friend WithEvents Label1 As Label
     Friend WithEvents btnSideNavLogout As Button
-    Friend WithEvents btnSideNavAccounts As Button
     Friend WithEvents btnSideNavRepayments As Button
     Friend WithEvents btnSideNavLoans As Button
     Friend WithEvents btnSideNavBorrowers As Button

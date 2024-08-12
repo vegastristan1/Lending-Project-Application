@@ -22,10 +22,6 @@ Partial Class View_Borrower
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.TextBox14 = New System.Windows.Forms.TextBox()
         Me.TextBox17 = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -119,7 +115,6 @@ Partial Class View_Borrower
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.btnSideNavLogout = New System.Windows.Forms.Button()
-        Me.btnSideNavAccounts = New System.Windows.Forms.Button()
         Me.btnSideNavRepayments = New System.Windows.Forms.Button()
         Me.btnSideNavLoans = New System.Windows.Forms.Button()
         Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
@@ -613,14 +608,6 @@ Partial Class View_Borrower
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colDocumentName, Me.colDocumentType, Me.colDocumentAction})
         Me.DataGridView1.Location = New System.Drawing.Point(6, 96)
@@ -733,14 +720,6 @@ Partial Class View_Borrower
         'DataGridView2
         '
         Me.DataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView2.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colAccountOverviewNumber, Me.colAccountOverviewType, Me.colAccountOverviewInterest, Me.colAccountOverviewPrinsipal, Me.colAccountOverviewTotalBalance})
         Me.DataGridView2.Location = New System.Drawing.Point(3, 3)
@@ -806,14 +785,6 @@ Partial Class View_Borrower
         'DataGridView3
         '
         Me.DataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView3.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
         Me.DataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView3.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colTransactionsDate, Me.colTransactionsAccountNumber, Me.colTransactionsAmount, Me.colTransactionsDebitCredit, Me.colTransactionsType, Me.colTransactionsStatus, Me.colTransactionsAction})
         Me.DataGridView3.Location = New System.Drawing.Point(3, 67)
@@ -872,14 +843,6 @@ Partial Class View_Borrower
         'DataGridView4
         '
         Me.DataGridView4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView4.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView4.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colLoansLoanID, Me.colLoansLoanProduct, Me.colLoansApplliedAmount, Me.colLoansTotalPayable, Me.colLoansAmountPaid, Me.colLoansDueAmount, Me.colLoansReleaseDate, Me.colLoansStatus})
         Me.DataGridView4.Location = New System.Drawing.Point(3, 67)
@@ -1009,7 +972,6 @@ Partial Class View_Borrower
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.GrayText
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLogout)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavAccounts)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavRepayments)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLoans)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavBorrowers)
@@ -1040,22 +1002,6 @@ Partial Class View_Borrower
         Me.btnSideNavLogout.TabIndex = 6
         Me.btnSideNavLogout.Text = "Logout"
         Me.btnSideNavLogout.UseVisualStyleBackColor = False
-        '
-        'btnSideNavAccounts
-        '
-        Me.btnSideNavAccounts.BackColor = System.Drawing.SystemColors.GrayText
-        Me.btnSideNavAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSideNavAccounts.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSideNavAccounts.FlatAppearance.BorderSize = 0
-        Me.btnSideNavAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSideNavAccounts.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavAccounts.ForeColor = System.Drawing.Color.White
-        Me.btnSideNavAccounts.Location = New System.Drawing.Point(12, 449)
-        Me.btnSideNavAccounts.Name = "btnSideNavAccounts"
-        Me.btnSideNavAccounts.Size = New System.Drawing.Size(226, 52)
-        Me.btnSideNavAccounts.TabIndex = 5
-        Me.btnSideNavAccounts.Text = "Accounts"
-        Me.btnSideNavAccounts.UseVisualStyleBackColor = False
         '
         'btnSideNavRepayments
         '
@@ -1245,7 +1191,6 @@ Partial Class View_Borrower
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents SplitContainer1 As SplitContainer
     Friend WithEvents btnSideNavLogout As Button
-    Friend WithEvents btnSideNavAccounts As Button
     Friend WithEvents btnSideNavRepayments As Button
     Friend WithEvents btnSideNavLoans As Button
     Friend WithEvents btnSideNavBorrowers As Button

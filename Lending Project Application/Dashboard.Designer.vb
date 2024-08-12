@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Dashboard
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,11 +20,10 @@ Partial Class Dashboard
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.btnSideNavLogout = New System.Windows.Forms.Button()
-        Me.btnSideNavAccounts = New System.Windows.Forms.Button()
         Me.btnSideNavRepayments = New System.Windows.Forms.Button()
         Me.btnSideNavLoans = New System.Windows.Forms.Button()
         Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
@@ -46,7 +45,6 @@ Partial Class Dashboard
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.GrayText
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLogout)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavAccounts)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavRepayments)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLoans)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavBorrowers)
@@ -71,22 +69,6 @@ Partial Class Dashboard
         Me.btnSideNavLogout.TabIndex = 6
         Me.btnSideNavLogout.Text = "Logout"
         Me.btnSideNavLogout.UseVisualStyleBackColor = False
-        '
-        'btnSideNavAccounts
-        '
-        Me.btnSideNavAccounts.BackColor = System.Drawing.SystemColors.GrayText
-        Me.btnSideNavAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSideNavAccounts.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSideNavAccounts.FlatAppearance.BorderSize = 0
-        Me.btnSideNavAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSideNavAccounts.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavAccounts.ForeColor = System.Drawing.Color.White
-        Me.btnSideNavAccounts.Location = New System.Drawing.Point(12, 449)
-        Me.btnSideNavAccounts.Name = "btnSideNavAccounts"
-        Me.btnSideNavAccounts.Size = New System.Drawing.Size(226, 52)
-        Me.btnSideNavAccounts.TabIndex = 5
-        Me.btnSideNavAccounts.Text = "Accounts"
-        Me.btnSideNavAccounts.UseVisualStyleBackColor = False
         '
         'btnSideNavRepayments
         '
@@ -184,7 +166,6 @@ Partial Class Dashboard
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnSideNavDashboard As Button
     Friend WithEvents btnSideNavLogout As Button
-    Friend WithEvents btnSideNavAccounts As Button
     Friend WithEvents btnSideNavRepayments As Button
     Friend WithEvents btnSideNavLoans As Button
     Friend WithEvents btnSideNavBorrowers As Button

@@ -14,11 +14,6 @@
         Me.Hide()
     End Sub
 
-    Private Sub btnSideNavAccounts_Click(sender As Object, e As EventArgs) Handles btnSideNavAccounts.Click
-        Accounts.Show()
-        Me.Hide()
-    End Sub
-
     Private Sub btnSideNavLogout_Click(sender As Object, e As EventArgs) Handles btnSideNavLogout.Click
         Login.Show()
         Me.Hide()
@@ -28,4 +23,5 @@
         Add_New_Borrower.Show()
         Me.Hide()
     End Sub
+
 End Class

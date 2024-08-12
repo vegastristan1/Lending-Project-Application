@@ -22,11 +22,9 @@ Partial Class Add_New_Borrower
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.btnBackToBorrowersList = New System.Windows.Forms.Button()
         Me.lblTitleAddNewBorrower = New System.Windows.Forms.Label()
         Me.btnSideNavLogout = New System.Windows.Forms.Button()
-        Me.btnSideNavAccounts = New System.Windows.Forms.Button()
         Me.btnSideNavRepayments = New System.Windows.Forms.Button()
         Me.btnSideNavLoans = New System.Windows.Forms.Button()
         Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
@@ -146,22 +144,6 @@ Partial Class Add_New_Borrower
         Me.btnSideNavLogout.Text = "Logout"
         Me.btnSideNavLogout.UseVisualStyleBackColor = False
         '
-        'btnSideNavAccounts
-        '
-        Me.btnSideNavAccounts.BackColor = System.Drawing.SystemColors.GrayText
-        Me.btnSideNavAccounts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSideNavAccounts.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSideNavAccounts.FlatAppearance.BorderSize = 0
-        Me.btnSideNavAccounts.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSideNavAccounts.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavAccounts.ForeColor = System.Drawing.Color.White
-        Me.btnSideNavAccounts.Location = New System.Drawing.Point(12, 449)
-        Me.btnSideNavAccounts.Name = "btnSideNavAccounts"
-        Me.btnSideNavAccounts.Size = New System.Drawing.Size(226, 52)
-        Me.btnSideNavAccounts.TabIndex = 5
-        Me.btnSideNavAccounts.Text = "Accounts"
-        Me.btnSideNavAccounts.UseVisualStyleBackColor = False
-        '
         'btnSideNavRepayments
         '
         Me.btnSideNavRepayments.BackColor = System.Drawing.SystemColors.GrayText
@@ -236,7 +218,6 @@ Partial Class Add_New_Borrower
         '
         Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.GrayText
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLogout)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavAccounts)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavRepayments)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLoans)
         Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavBorrowers)
@@ -345,14 +326,6 @@ Partial Class Add_New_Borrower
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colDocumentName, Me.colDocumentType, Me.colDocumentAction})
         Me.DataGridView1.Location = New System.Drawing.Point(6, 92)
@@ -907,7 +880,6 @@ Partial Class Add_New_Borrower
     Friend WithEvents btnBackToBorrowersList As Button
     Friend WithEvents lblTitleAddNewBorrower As Label
     Friend WithEvents btnSideNavLogout As Button
-    Friend WithEvents btnSideNavAccounts As Button
     Friend WithEvents btnSideNavRepayments As Button
     Friend WithEvents btnSideNavLoans As Button
     Friend WithEvents btnSideNavBorrowers As Button
