@@ -114,6 +114,7 @@ Partial Class View_Borrower
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblPersonalInformation = New System.Windows.Forms.Label()
         Me.lblTitleAddNewBorrower = New System.Windows.Forms.Label()
+        Me.btnBackToBorrowersList = New System.Windows.Forms.Button()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.TabControl2.SuspendLayout()
@@ -135,6 +136,7 @@ Partial Class View_Borrower
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.btnBackToBorrowersList)
         Me.Panel3.Controls.Add(Me.Panel1)
         Me.Panel3.Controls.Add(Me.lblTitleAddNewBorrower)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
@@ -961,16 +963,30 @@ Partial Class View_Borrower
         Me.lblTitleAddNewBorrower.TabIndex = 4
         Me.lblTitleAddNewBorrower.Text = "Borrower Details"
         '
+        'btnBackToBorrowersList
+        '
+        Me.btnBackToBorrowersList.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBackToBorrowersList.Location = New System.Drawing.Point(1245, 9)
+        Me.btnBackToBorrowersList.Name = "btnBackToBorrowersList"
+        Me.btnBackToBorrowersList.Size = New System.Drawing.Size(151, 46)
+        Me.btnBackToBorrowersList.TabIndex = 30
+        Me.btnBackToBorrowersList.Text = "Back"
+        Me.btnBackToBorrowersList.UseVisualStyleBackColor = True
+        '
         'View_Borrower
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1405, 926)
+        Me.ControlBox = False
         Me.Controls.Add(Me.Panel3)
         Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "View_Borrower"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "View_Borrower"
+        Me.TopMost = True
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
         Me.Panel1.ResumeLayout(False)
@@ -1092,4 +1108,5 @@ Partial Class View_Borrower
     Friend WithEvents Label2 As Label
     Friend WithEvents lblPersonalInformation As Label
     Friend WithEvents lblTitleAddNewBorrower As Label
+    Friend WithEvents btnBackToBorrowersList As Button
 End Class

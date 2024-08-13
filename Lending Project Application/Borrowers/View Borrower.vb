@@ -1,5 +1,5 @@
 ﻿Public Class View_Borrower
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-
+    Private Sub btnBackToBorrowersList_Click(sender As Object, e As EventArgs) Handles btnBackToBorrowersList.Click
+        Me.Close()
     End Sub
 End Class
