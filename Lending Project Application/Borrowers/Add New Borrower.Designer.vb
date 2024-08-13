@@ -22,17 +22,11 @@ Partial Class Add_New_Borrower
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.btnBackToBorrowersList = New System.Windows.Forms.Button()
         Me.lblTitleAddNewBorrower = New System.Windows.Forms.Label()
-        Me.btnSideNavLogout = New System.Windows.Forms.Button()
-        Me.btnSideNavRepayments = New System.Windows.Forms.Button()
-        Me.btnSideNavLoans = New System.Windows.Forms.Button()
-        Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
-        Me.btnSideNavDashboard = New System.Windows.Forms.Button()
-        Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnAddNewBorrowerSave = New System.Windows.Forms.Button()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
         Me.TabPage3 = New System.Windows.Forms.TabPage()
@@ -91,12 +85,8 @@ Partial Class Add_New_Borrower
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblPersonalInformation = New System.Windows.Forms.Label()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.SplitContainer1.Panel1.SuspendLayout()
-        Me.SplitContainer1.Panel2.SuspendLayout()
-        Me.SplitContainer1.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.TabControl2.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -108,189 +98,85 @@ Partial Class Add_New_Borrower
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.btnBackToBorrowersList)
+        Me.Panel1.Controls.Add(Me.lblTitleAddNewBorrower)
+        Me.Panel1.Controls.Add(Me.Panel3)
+        Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(1405, 926)
+        Me.Panel1.TabIndex = 0
+        '
         'btnBackToBorrowersList
         '
         Me.btnBackToBorrowersList.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBackToBorrowersList.Location = New System.Drawing.Point(1247, 12)
+        Me.btnBackToBorrowersList.Location = New System.Drawing.Point(1244, 9)
         Me.btnBackToBorrowersList.Name = "btnBackToBorrowersList"
         Me.btnBackToBorrowersList.Size = New System.Drawing.Size(151, 46)
-        Me.btnBackToBorrowersList.TabIndex = 2
+        Me.btnBackToBorrowersList.TabIndex = 5
         Me.btnBackToBorrowersList.Text = "Back"
         Me.btnBackToBorrowersList.UseVisualStyleBackColor = True
         '
         'lblTitleAddNewBorrower
         '
         Me.lblTitleAddNewBorrower.AutoSize = True
-        Me.lblTitleAddNewBorrower.Font = New System.Drawing.Font("Microsoft Sans Serif", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTitleAddNewBorrower.Location = New System.Drawing.Point(15, 12)
+        Me.lblTitleAddNewBorrower.Font = New System.Drawing.Font("Microsoft Sans Serif", 35.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitleAddNewBorrower.Location = New System.Drawing.Point(12, 9)
         Me.lblTitleAddNewBorrower.Name = "lblTitleAddNewBorrower"
-        Me.lblTitleAddNewBorrower.Size = New System.Drawing.Size(467, 61)
-        Me.lblTitleAddNewBorrower.TabIndex = 0
+        Me.lblTitleAddNewBorrower.Size = New System.Drawing.Size(415, 54)
+        Me.lblTitleAddNewBorrower.TabIndex = 4
         Me.lblTitleAddNewBorrower.Text = "Add New Borrower"
-        '
-        'btnSideNavLogout
-        '
-        Me.btnSideNavLogout.BackColor = System.Drawing.SystemColors.GrayText
-        Me.btnSideNavLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSideNavLogout.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSideNavLogout.FlatAppearance.BorderSize = 0
-        Me.btnSideNavLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSideNavLogout.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavLogout.ForeColor = System.Drawing.Color.White
-        Me.btnSideNavLogout.Location = New System.Drawing.Point(12, 897)
-        Me.btnSideNavLogout.Name = "btnSideNavLogout"
-        Me.btnSideNavLogout.Size = New System.Drawing.Size(226, 52)
-        Me.btnSideNavLogout.TabIndex = 6
-        Me.btnSideNavLogout.Text = "Logout"
-        Me.btnSideNavLogout.UseVisualStyleBackColor = False
-        '
-        'btnSideNavRepayments
-        '
-        Me.btnSideNavRepayments.BackColor = System.Drawing.SystemColors.GrayText
-        Me.btnSideNavRepayments.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSideNavRepayments.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSideNavRepayments.FlatAppearance.BorderSize = 0
-        Me.btnSideNavRepayments.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSideNavRepayments.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavRepayments.ForeColor = System.Drawing.Color.White
-        Me.btnSideNavRepayments.Location = New System.Drawing.Point(12, 391)
-        Me.btnSideNavRepayments.Name = "btnSideNavRepayments"
-        Me.btnSideNavRepayments.Size = New System.Drawing.Size(226, 52)
-        Me.btnSideNavRepayments.TabIndex = 4
-        Me.btnSideNavRepayments.Text = "Repayments"
-        Me.btnSideNavRepayments.UseVisualStyleBackColor = False
-        '
-        'btnSideNavLoans
-        '
-        Me.btnSideNavLoans.BackColor = System.Drawing.SystemColors.GrayText
-        Me.btnSideNavLoans.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSideNavLoans.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSideNavLoans.FlatAppearance.BorderSize = 0
-        Me.btnSideNavLoans.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSideNavLoans.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavLoans.ForeColor = System.Drawing.Color.White
-        Me.btnSideNavLoans.Location = New System.Drawing.Point(12, 333)
-        Me.btnSideNavLoans.Name = "btnSideNavLoans"
-        Me.btnSideNavLoans.Size = New System.Drawing.Size(226, 52)
-        Me.btnSideNavLoans.TabIndex = 3
-        Me.btnSideNavLoans.Text = "Loans"
-        Me.btnSideNavLoans.UseVisualStyleBackColor = False
-        '
-        'btnSideNavBorrowers
-        '
-        Me.btnSideNavBorrowers.BackColor = System.Drawing.Color.White
-        Me.btnSideNavBorrowers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSideNavBorrowers.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSideNavBorrowers.FlatAppearance.BorderSize = 0
-        Me.btnSideNavBorrowers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSideNavBorrowers.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavBorrowers.ForeColor = System.Drawing.SystemColors.GrayText
-        Me.btnSideNavBorrowers.Location = New System.Drawing.Point(12, 275)
-        Me.btnSideNavBorrowers.Name = "btnSideNavBorrowers"
-        Me.btnSideNavBorrowers.Size = New System.Drawing.Size(226, 52)
-        Me.btnSideNavBorrowers.TabIndex = 2
-        Me.btnSideNavBorrowers.Text = "Borrowers"
-        Me.btnSideNavBorrowers.UseVisualStyleBackColor = False
-        '
-        'btnSideNavDashboard
-        '
-        Me.btnSideNavDashboard.BackColor = System.Drawing.SystemColors.GrayText
-        Me.btnSideNavDashboard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
-        Me.btnSideNavDashboard.Cursor = System.Windows.Forms.Cursors.Default
-        Me.btnSideNavDashboard.FlatAppearance.BorderSize = 0
-        Me.btnSideNavDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnSideNavDashboard.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSideNavDashboard.ForeColor = System.Drawing.Color.White
-        Me.btnSideNavDashboard.Location = New System.Drawing.Point(12, 217)
-        Me.btnSideNavDashboard.Name = "btnSideNavDashboard"
-        Me.btnSideNavDashboard.Size = New System.Drawing.Size(226, 52)
-        Me.btnSideNavDashboard.TabIndex = 0
-        Me.btnSideNavDashboard.Text = "Dashboard"
-        Me.btnSideNavDashboard.UseVisualStyleBackColor = False
-        '
-        'SplitContainer1
-        '
-        Me.SplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.SplitContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.SplitContainer1.Name = "SplitContainer1"
-        '
-        'SplitContainer1.Panel1
-        '
-        Me.SplitContainer1.Panel1.BackColor = System.Drawing.SystemColors.GrayText
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLogout)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavRepayments)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavLoans)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavBorrowers)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.PictureBox1)
-        Me.SplitContainer1.Panel1.Controls.Add(Me.btnSideNavDashboard)
-        '
-        'SplitContainer1.Panel2
-        '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.Panel1)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.btnBackToBorrowersList)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.lblTitleAddNewBorrower)
-        Me.SplitContainer1.Size = New System.Drawing.Size(1664, 961)
-        Me.SplitContainer1.SplitterDistance = 250
-        Me.SplitContainer1.TabIndex = 2
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.Lending_Project_Application.My.Resources.Resources.logo_placeholder_image
-        Me.PictureBox1.Location = New System.Drawing.Point(12, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(226, 199)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
-        'Panel1
-        '
-        Me.Panel1.BackColor = System.Drawing.Color.White
-        Me.Panel1.Controls.Add(Me.Panel3)
-        Me.Panel1.Controls.Add(Me.btnAddNewBorrowerSave)
-        Me.Panel1.Controls.Add(Me.TabControl2)
-        Me.Panel1.Controls.Add(Me.GroupBox1)
-        Me.Panel1.Controls.Add(Me.TabControl1)
-        Me.Panel1.Controls.Add(Me.Label10)
-        Me.Panel1.Controls.Add(Me.ComboBox1)
-        Me.Panel1.Controls.Add(Me.TextBox7)
-        Me.Panel1.Controls.Add(Me.Label9)
-        Me.Panel1.Controls.Add(Me.TextBox6)
-        Me.Panel1.Controls.Add(Me.Label8)
-        Me.Panel1.Controls.Add(Me.TextBox5)
-        Me.Panel1.Controls.Add(Me.Label7)
-        Me.Panel1.Controls.Add(Me.TextBox4)
-        Me.Panel1.Controls.Add(Me.TextBox3)
-        Me.Panel1.Controls.Add(Me.Label6)
-        Me.Panel1.Controls.Add(Me.Label5)
-        Me.Panel1.Controls.Add(Me.Label4)
-        Me.Panel1.Controls.Add(Me.TextBox1)
-        Me.Panel1.Controls.Add(Me.Label3)
-        Me.Panel1.Controls.Add(Me.Panel2)
-        Me.Panel1.Controls.Add(Me.DateTimePicker1)
-        Me.Panel1.Controls.Add(Me.TextBox2)
-        Me.Panel1.Controls.Add(Me.Label2)
-        Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Controls.Add(Me.lblPersonalInformation)
-        Me.Panel1.Location = New System.Drawing.Point(12, 76)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1386, 873)
-        Me.Panel1.TabIndex = 3
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.Black
-        Me.Panel3.Location = New System.Drawing.Point(15, 372)
+        Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.Panel4)
+        Me.Panel3.Controls.Add(Me.btnAddNewBorrowerSave)
+        Me.Panel3.Controls.Add(Me.TabControl2)
+        Me.Panel3.Controls.Add(Me.GroupBox1)
+        Me.Panel3.Controls.Add(Me.TabControl1)
+        Me.Panel3.Controls.Add(Me.Label10)
+        Me.Panel3.Controls.Add(Me.ComboBox1)
+        Me.Panel3.Controls.Add(Me.TextBox7)
+        Me.Panel3.Controls.Add(Me.Label9)
+        Me.Panel3.Controls.Add(Me.TextBox6)
+        Me.Panel3.Controls.Add(Me.Label8)
+        Me.Panel3.Controls.Add(Me.TextBox5)
+        Me.Panel3.Controls.Add(Me.Label7)
+        Me.Panel3.Controls.Add(Me.TextBox4)
+        Me.Panel3.Controls.Add(Me.TextBox3)
+        Me.Panel3.Controls.Add(Me.Label6)
+        Me.Panel3.Controls.Add(Me.Label5)
+        Me.Panel3.Controls.Add(Me.Label4)
+        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.Label3)
+        Me.Panel3.Controls.Add(Me.Panel2)
+        Me.Panel3.Controls.Add(Me.DateTimePicker1)
+        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Controls.Add(Me.Label2)
+        Me.Panel3.Controls.Add(Me.Label1)
+        Me.Panel3.Controls.Add(Me.lblPersonalInformation)
+        Me.Panel3.Location = New System.Drawing.Point(10, 66)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(1359, 10)
-        Me.Panel3.TabIndex = 30
+        Me.Panel3.Size = New System.Drawing.Size(1386, 850)
+        Me.Panel3.TabIndex = 6
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.Black
+        Me.Panel4.Location = New System.Drawing.Point(15, 348)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(1359, 10)
+        Me.Panel4.TabIndex = 30
         '
         'btnAddNewBorrowerSave
         '
         Me.btnAddNewBorrowerSave.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnAddNewBorrowerSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddNewBorrowerSave.ForeColor = System.Drawing.Color.White
-        Me.btnAddNewBorrowerSave.Location = New System.Drawing.Point(1227, 818)
+        Me.btnAddNewBorrowerSave.Location = New System.Drawing.Point(1227, 796)
         Me.btnAddNewBorrowerSave.Name = "btnAddNewBorrowerSave"
         Me.btnAddNewBorrowerSave.Size = New System.Drawing.Size(151, 46)
         Me.btnAddNewBorrowerSave.TabIndex = 4
@@ -300,8 +186,8 @@ Partial Class Add_New_Borrower
         'TabControl2
         '
         Me.TabControl2.Controls.Add(Me.TabPage3)
-        Me.TabControl2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl2.Location = New System.Drawing.Point(635, 428)
+        Me.TabControl2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl2.Location = New System.Drawing.Point(635, 406)
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.Size = New System.Drawing.Size(743, 384)
@@ -315,10 +201,10 @@ Partial Class Add_New_Borrower
         Me.TabPage3.Controls.Add(Me.btnAddNewBorrowerDocumentAttach)
         Me.TabPage3.Controls.Add(Me.Label21)
         Me.TabPage3.Controls.Add(Me.TextBox18)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 29)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(735, 340)
+        Me.TabPage3.Size = New System.Drawing.Size(735, 351)
         Me.TabPage3.TabIndex = 0
         Me.TabPage3.Text = "Documents"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -408,8 +294,8 @@ Partial Class Add_New_Borrower
         Me.GroupBox1.Controls.Add(Me.Label12)
         Me.GroupBox1.Controls.Add(Me.TextBox8)
         Me.GroupBox1.Controls.Add(Me.Label11)
-        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(14, 419)
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(14, 397)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(615, 180)
         Me.GroupBox1.TabIndex = 28
@@ -492,8 +378,8 @@ Partial Class Add_New_Borrower
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TabControl1.Location = New System.Drawing.Point(14, 605)
+        Me.TabControl1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TabControl1.Location = New System.Drawing.Point(14, 583)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(615, 207)
@@ -507,10 +393,10 @@ Partial Class Add_New_Borrower
         Me.TabPage1.Controls.Add(Me.TextBox17)
         Me.TabPage1.Controls.Add(Me.Label19)
         Me.TabPage1.Controls.Add(Me.Label20)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(607, 163)
+        Me.TabPage1.Size = New System.Drawing.Size(607, 174)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Work Information"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -643,7 +529,7 @@ Partial Class Add_New_Borrower
         '
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label10.Location = New System.Drawing.Point(476, 294)
+        Me.Label10.Location = New System.Drawing.Point(476, 273)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(99, 24)
         Me.Label10.TabIndex = 26
@@ -653,7 +539,7 @@ Partial Class Add_New_Borrower
         '
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(480, 321)
+        Me.ComboBox1.Location = New System.Drawing.Point(480, 300)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(454, 39)
         Me.ComboBox1.TabIndex = 25
@@ -661,7 +547,7 @@ Partial Class Add_New_Borrower
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(480, 247)
+        Me.TextBox7.Location = New System.Drawing.Point(480, 226)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(454, 38)
         Me.TextBox7.TabIndex = 24
@@ -670,7 +556,7 @@ Partial Class Add_New_Borrower
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(476, 220)
+        Me.Label9.Location = New System.Drawing.Point(476, 199)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(119, 24)
         Me.Label9.TabIndex = 23
@@ -679,7 +565,7 @@ Partial Class Add_New_Borrower
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(14, 322)
+        Me.TextBox6.Location = New System.Drawing.Point(14, 301)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(454, 38)
         Me.TextBox6.TabIndex = 22
@@ -688,7 +574,7 @@ Partial Class Add_New_Borrower
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(10, 295)
+        Me.Label8.Location = New System.Drawing.Point(10, 274)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(79, 24)
         Me.Label8.TabIndex = 21
@@ -697,7 +583,7 @@ Partial Class Add_New_Borrower
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(14, 172)
+        Me.TextBox5.Location = New System.Drawing.Point(14, 151)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(500, 38)
         Me.TextBox5.TabIndex = 20
@@ -706,7 +592,7 @@ Partial Class Add_New_Borrower
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(11, 145)
+        Me.Label7.Location = New System.Drawing.Point(11, 124)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(80, 24)
         Me.Label7.TabIndex = 19
@@ -715,7 +601,7 @@ Partial Class Add_New_Borrower
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(633, 97)
+        Me.TextBox4.Location = New System.Drawing.Point(633, 76)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(301, 38)
         Me.TextBox4.TabIndex = 18
@@ -723,7 +609,7 @@ Partial Class Add_New_Borrower
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(322, 97)
+        Me.TextBox3.Location = New System.Drawing.Point(322, 76)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(302, 38)
         Me.TextBox3.TabIndex = 17
@@ -731,10 +617,10 @@ Partial Class Add_New_Borrower
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(8, 385)
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(8, 363)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(225, 31)
+        Me.Label6.Size = New System.Drawing.Size(198, 29)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Other Information"
         '
@@ -742,7 +628,7 @@ Partial Class Add_New_Borrower
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(629, 70)
+        Me.Label5.Location = New System.Drawing.Point(629, 49)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(123, 24)
         Me.Label5.TabIndex = 12
@@ -752,7 +638,7 @@ Partial Class Add_New_Borrower
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(318, 70)
+        Me.Label4.Location = New System.Drawing.Point(318, 49)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(101, 24)
         Me.Label4.TabIndex = 10
@@ -761,7 +647,7 @@ Partial Class Add_New_Borrower
         'TextBox1
         '
         Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(520, 172)
+        Me.TextBox1.Location = New System.Drawing.Point(520, 151)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(414, 38)
         Me.TextBox1.TabIndex = 9
@@ -770,7 +656,7 @@ Partial Class Add_New_Borrower
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(516, 145)
+        Me.Label3.Location = New System.Drawing.Point(516, 124)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(116, 24)
         Me.Label3.TabIndex = 8
@@ -779,7 +665,7 @@ Partial Class Add_New_Borrower
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.PictureBox2)
-        Me.Panel2.Location = New System.Drawing.Point(1025, 80)
+        Me.Panel2.Location = New System.Drawing.Point(1025, 59)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(280, 280)
         Me.Panel2.TabIndex = 7
@@ -799,7 +685,7 @@ Partial Class Add_New_Borrower
         '
         Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(14, 247)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(14, 226)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(454, 38)
         Me.DateTimePicker1.TabIndex = 6
@@ -807,7 +693,7 @@ Partial Class Add_New_Borrower
         'TextBox2
         '
         Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(14, 97)
+        Me.TextBox2.Location = New System.Drawing.Point(14, 76)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(302, 38)
         Me.TextBox2.TabIndex = 5
@@ -816,7 +702,7 @@ Partial Class Add_New_Borrower
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(11, 220)
+        Me.Label2.Location = New System.Drawing.Point(11, 199)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(83, 24)
         Me.Label2.TabIndex = 4
@@ -826,7 +712,7 @@ Partial Class Add_New_Borrower
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(11, 70)
+        Me.Label1.Location = New System.Drawing.Point(11, 49)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(99, 24)
         Me.Label1.TabIndex = 2
@@ -835,10 +721,10 @@ Partial Class Add_New_Borrower
         'lblPersonalInformation
         '
         Me.lblPersonalInformation.AutoSize = True
-        Me.lblPersonalInformation.Font = New System.Drawing.Font("Microsoft Sans Serif", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPersonalInformation.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPersonalInformation.Location = New System.Drawing.Point(7, 10)
         Me.lblPersonalInformation.Name = "lblPersonalInformation"
-        Me.lblPersonalInformation.Size = New System.Drawing.Size(313, 37)
+        Me.lblPersonalInformation.Size = New System.Drawing.Size(234, 29)
         Me.lblPersonalInformation.TabIndex = 1
         Me.lblPersonalInformation.Text = "Personal Information"
         '
@@ -846,20 +732,17 @@ Partial Class Add_New_Borrower
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1664, 961)
-        Me.Controls.Add(Me.SplitContainer1)
+        Me.ClientSize = New System.Drawing.Size(1405, 926)
+        Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.Name = "Add_New_Borrower"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Add_New_Borrower"
-        Me.SplitContainer1.Panel1.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.ResumeLayout(False)
-        Me.SplitContainer1.Panel2.PerformLayout()
-        CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.SplitContainer1.ResumeLayout(False)
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Add New Borrower"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.TabControl2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
@@ -877,41 +760,23 @@ Partial Class Add_New_Borrower
 
     End Sub
 
+    Friend WithEvents Panel1 As Panel
     Friend WithEvents btnBackToBorrowersList As Button
     Friend WithEvents lblTitleAddNewBorrower As Label
-    Friend WithEvents btnSideNavLogout As Button
-    Friend WithEvents btnSideNavRepayments As Button
-    Friend WithEvents btnSideNavLoans As Button
-    Friend WithEvents btnSideNavBorrowers As Button
-    Friend WithEvents btnSideNavDashboard As Button
-    Friend WithEvents SplitContainer1 As SplitContainer
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents lblPersonalInformation As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Panel1 As Panel
-    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel4 As Panel
     Friend WithEvents btnAddNewBorrowerSave As Button
     Friend WithEvents TabControl2 As TabControl
     Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents colDocumentName As DataGridViewTextBoxColumn
+    Friend WithEvents colDocumentType As DataGridViewTextBoxColumn
+    Friend WithEvents colDocumentAction As DataGridViewButtonColumn
+    Friend WithEvents Label22 As Label
+    Friend WithEvents TextBox19 As TextBox
+    Friend WithEvents btnAddNewBorrowerDocumentAttach As Button
+    Friend WithEvents Label21 As Label
+    Friend WithEvents TextBox18 As TextBox
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents TextBox11 As TextBox
     Friend WithEvents Label13 As Label
@@ -923,27 +788,39 @@ Partial Class Add_New_Borrower
     Friend WithEvents Label11 As Label
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents TextBox14 As TextBox
-    Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label15 As Label
     Friend WithEvents TextBox15 As TextBox
     Friend WithEvents Label18 As Label
     Friend WithEvents TextBox16 As TextBox
     Friend WithEvents TextBox17 As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents btnAddNewBorrowerDocumentAttach As Button
-    Friend WithEvents Label21 As Label
-    Friend WithEvents TextBox18 As TextBox
-    Friend WithEvents Label22 As Label
-    Friend WithEvents TextBox19 As TextBox
-    Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents colDocumentName As DataGridViewTextBoxColumn
-    Friend WithEvents colDocumentType As DataGridViewTextBoxColumn
-    Friend WithEvents colDocumentAction As DataGridViewButtonColumn
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents Label17 As Label
+    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents Label16 As Label
+    Friend WithEvents Label15 As Label
+    Friend WithEvents Label10 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents Label9 As Label
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents lblPersonalInformation As Label
 End Class
