@@ -176,7 +176,7 @@ Partial Class Add_New_Borrower
         Me.btnAddNewBorrowerSave.BackColor = System.Drawing.Color.RoyalBlue
         Me.btnAddNewBorrowerSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddNewBorrowerSave.ForeColor = System.Drawing.Color.White
-        Me.btnAddNewBorrowerSave.Location = New System.Drawing.Point(1227, 796)
+        Me.btnAddNewBorrowerSave.Location = New System.Drawing.Point(1223, 796)
         Me.btnAddNewBorrowerSave.Name = "btnAddNewBorrowerSave"
         Me.btnAddNewBorrowerSave.Size = New System.Drawing.Size(151, 46)
         Me.btnAddNewBorrowerSave.TabIndex = 4
@@ -463,10 +463,10 @@ Partial Class Add_New_Borrower
         Me.TabPage2.Controls.Add(Me.TextBox12)
         Me.TabPage2.Controls.Add(Me.Label16)
         Me.TabPage2.Controls.Add(Me.Label15)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 40)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(607, 163)
+        Me.TabPage2.Size = New System.Drawing.Size(607, 174)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Business Information"
         Me.TabPage2.UseVisualStyleBackColor = True
