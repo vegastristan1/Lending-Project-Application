@@ -21,6 +21,5 @@
 
     Private Sub btnAddNewBorrower_Click(sender As Object, e As EventArgs) Handles btnAddNewBorrower.Click
         Add_Repayment.Show()
-        Me.Hide()
     End Sub
 End Class
