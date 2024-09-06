@@ -1,5 +1,5 @@
 ﻿Public Class Login
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles login_btn_login.Click
         Me.Hide()
         Dashboard.Show()
     End Sub
