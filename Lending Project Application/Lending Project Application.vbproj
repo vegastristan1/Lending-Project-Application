@@ -112,6 +112,11 @@
     <Compile Include="Dashboard.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dbLendingDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbLendingDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Loans\Add New Loan.Designer.vb">
       <DependentUpon>Add New Loan.vb</DependentUpon>
     </Compile>
@@ -205,6 +210,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="dbLendingDataSet.xsc">
+      <DependentUpon>dbLendingDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbLendingDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbLendingDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbLendingDataSet.xss">
+      <DependentUpon>dbLendingDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
