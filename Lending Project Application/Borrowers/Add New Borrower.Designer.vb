@@ -26,6 +26,7 @@ Partial Class Add_New_Borrower
         Me.btnBackToBorrowersList = New System.Windows.Forms.Button()
         Me.lblTitleAddNewBorrower = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.cboAddNewBorrowerReligion = New System.Windows.Forms.ComboBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnAddNewBorrowerSave = New System.Windows.Forms.Button()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
@@ -40,48 +41,47 @@ Partial Class Add_New_Borrower
         Me.Label21 = New System.Windows.Forms.Label()
         Me.TextBox18 = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerSpouseAddress = New System.Windows.Forms.TextBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerSpouseMiddleName = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerSpouseFirstName = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerSpouseLastName = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.cboAddNewBorrowerWorkStatus = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox16 = New System.Windows.Forms.TextBox()
-        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerWorkEmployerName = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerWorkAddress = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.TextBox14 = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerBusinessEnvironment = New System.Windows.Forms.TextBox()
         Me.Label17 = New System.Windows.Forms.Label()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerBusinessName = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerBusinessAddress = New System.Windows.Forms.TextBox()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.cboAddNewBorrowerCivilStatus = New System.Windows.Forms.ComboBox()
+        Me.txtAddNewBorrowerPlaceOfBirth = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerAddress = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerMiddleName = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerFirstName = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtAddNewBorrowerContactNo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.dtpBirthdateAddNewBorrowerBirthday = New System.Windows.Forms.DateTimePicker()
+        Me.txtAddNewBorrowerLastName = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblPersonalInformation = New System.Windows.Forms.Label()
@@ -115,7 +115,7 @@ Partial Class Add_New_Borrower
         Me.btnBackToBorrowersList.Location = New System.Drawing.Point(1244, 9)
         Me.btnBackToBorrowersList.Name = "btnBackToBorrowersList"
         Me.btnBackToBorrowersList.Size = New System.Drawing.Size(151, 46)
-        Me.btnBackToBorrowersList.TabIndex = 5
+        Me.btnBackToBorrowersList.TabIndex = 24
         Me.btnBackToBorrowersList.Text = "Back"
         Me.btnBackToBorrowersList.UseVisualStyleBackColor = True
         '
@@ -132,36 +132,48 @@ Partial Class Add_New_Borrower
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
+        Me.Panel3.Controls.Add(Me.cboAddNewBorrowerReligion)
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.btnAddNewBorrowerSave)
         Me.Panel3.Controls.Add(Me.TabControl2)
         Me.Panel3.Controls.Add(Me.GroupBox1)
         Me.Panel3.Controls.Add(Me.TabControl1)
         Me.Panel3.Controls.Add(Me.Label10)
-        Me.Panel3.Controls.Add(Me.ComboBox1)
-        Me.Panel3.Controls.Add(Me.TextBox7)
+        Me.Panel3.Controls.Add(Me.cboAddNewBorrowerCivilStatus)
+        Me.Panel3.Controls.Add(Me.txtAddNewBorrowerPlaceOfBirth)
         Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.TextBox6)
         Me.Panel3.Controls.Add(Me.Label8)
-        Me.Panel3.Controls.Add(Me.TextBox5)
+        Me.Panel3.Controls.Add(Me.txtAddNewBorrowerAddress)
         Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Controls.Add(Me.TextBox4)
-        Me.Panel3.Controls.Add(Me.TextBox3)
+        Me.Panel3.Controls.Add(Me.txtAddNewBorrowerMiddleName)
+        Me.Panel3.Controls.Add(Me.txtAddNewBorrowerFirstName)
         Me.Panel3.Controls.Add(Me.Label6)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label4)
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.txtAddNewBorrowerContactNo)
         Me.Panel3.Controls.Add(Me.Label3)
         Me.Panel3.Controls.Add(Me.Panel2)
-        Me.Panel3.Controls.Add(Me.DateTimePicker1)
-        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Controls.Add(Me.dtpBirthdateAddNewBorrowerBirthday)
+        Me.Panel3.Controls.Add(Me.txtAddNewBorrowerLastName)
         Me.Panel3.Controls.Add(Me.Label2)
         Me.Panel3.Controls.Add(Me.Label1)
         Me.Panel3.Controls.Add(Me.lblPersonalInformation)
         Me.Panel3.Location = New System.Drawing.Point(10, 66)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1386, 850)
-        Me.Panel3.TabIndex = 6
+        Me.Panel3.TabIndex = 1
+        '
+        'cboAddNewBorrowerReligion
+        '
+        Me.cboAddNewBorrowerReligion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cboAddNewBorrowerReligion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboAddNewBorrowerReligion.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboAddNewBorrowerReligion.FormattingEnabled = True
+        Me.cboAddNewBorrowerReligion.Items.AddRange(New Object() {"N/A", "Aglipay", "Bible Baptist Church", "Church of Christ", "Iglesia FIlipina Independiente", "Iglesia ni Cristo", "Islam", "Jehovah's Witness", "Other religious affiliations", "Roman Catholic", "Seventh Day Adventist", "United Church of Christ in the Philippines", "None"})
+        Me.cboAddNewBorrowerReligion.Location = New System.Drawing.Point(14, 300)
+        Me.cboAddNewBorrowerReligion.Name = "cboAddNewBorrowerReligion"
+        Me.cboAddNewBorrowerReligion.Size = New System.Drawing.Size(454, 39)
+        Me.cboAddNewBorrowerReligion.TabIndex = 8
         '
         'Panel4
         '
@@ -179,7 +191,7 @@ Partial Class Add_New_Borrower
         Me.btnAddNewBorrowerSave.Location = New System.Drawing.Point(1223, 796)
         Me.btnAddNewBorrowerSave.Name = "btnAddNewBorrowerSave"
         Me.btnAddNewBorrowerSave.Size = New System.Drawing.Size(151, 46)
-        Me.btnAddNewBorrowerSave.TabIndex = 4
+        Me.btnAddNewBorrowerSave.TabIndex = 23
         Me.btnAddNewBorrowerSave.Text = "Save"
         Me.btnAddNewBorrowerSave.UseVisualStyleBackColor = False
         '
@@ -191,7 +203,8 @@ Partial Class Add_New_Borrower
         Me.TabControl2.Name = "TabControl2"
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.Size = New System.Drawing.Size(743, 384)
-        Me.TabControl2.TabIndex = 29
+        Me.TabControl2.TabIndex = 99
+        Me.TabControl2.TabStop = False
         '
         'TabPage3
         '
@@ -218,7 +231,8 @@ Partial Class Add_New_Borrower
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(721, 242)
-        Me.DataGridView1.TabIndex = 39
+        Me.DataGridView1.TabIndex = 99
+        Me.DataGridView1.TabStop = False
         '
         'colDocumentName
         '
@@ -254,7 +268,7 @@ Partial Class Add_New_Borrower
         Me.TextBox19.Location = New System.Drawing.Point(370, 49)
         Me.TextBox19.Name = "TextBox19"
         Me.TextBox19.Size = New System.Drawing.Size(212, 38)
-        Me.TextBox19.TabIndex = 37
+        Me.TextBox19.TabIndex = 21
         '
         'btnAddNewBorrowerDocumentAttach
         '
@@ -262,7 +276,7 @@ Partial Class Add_New_Borrower
         Me.btnAddNewBorrowerDocumentAttach.Location = New System.Drawing.Point(588, 47)
         Me.btnAddNewBorrowerDocumentAttach.Name = "btnAddNewBorrowerDocumentAttach"
         Me.btnAddNewBorrowerDocumentAttach.Size = New System.Drawing.Size(139, 43)
-        Me.btnAddNewBorrowerDocumentAttach.TabIndex = 31
+        Me.btnAddNewBorrowerDocumentAttach.TabIndex = 21
         Me.btnAddNewBorrowerDocumentAttach.Text = "Attach"
         Me.btnAddNewBorrowerDocumentAttach.UseVisualStyleBackColor = True
         '
@@ -282,33 +296,33 @@ Partial Class Add_New_Borrower
         Me.TextBox18.Location = New System.Drawing.Point(6, 48)
         Me.TextBox18.Name = "TextBox18"
         Me.TextBox18.Size = New System.Drawing.Size(347, 38)
-        Me.TextBox18.TabIndex = 35
+        Me.TextBox18.TabIndex = 20
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox11)
+        Me.GroupBox1.Controls.Add(Me.txtAddNewBorrowerSpouseAddress)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label14)
-        Me.GroupBox1.Controls.Add(Me.TextBox10)
-        Me.GroupBox1.Controls.Add(Me.TextBox9)
+        Me.GroupBox1.Controls.Add(Me.txtAddNewBorrowerSpouseMiddleName)
+        Me.GroupBox1.Controls.Add(Me.txtAddNewBorrowerSpouseFirstName)
         Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
+        Me.GroupBox1.Controls.Add(Me.txtAddNewBorrowerSpouseLastName)
         Me.GroupBox1.Controls.Add(Me.Label11)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(14, 397)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(615, 180)
-        Me.GroupBox1.TabIndex = 28
+        Me.GroupBox1.TabIndex = 99
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Spouse"
         '
-        'TextBox11
+        'txtAddNewBorrowerSpouseAddress
         '
-        Me.TextBox11.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox11.Location = New System.Drawing.Point(12, 131)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(591, 38)
-        Me.TextBox11.TabIndex = 30
+        Me.txtAddNewBorrowerSpouseAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerSpouseAddress.Location = New System.Drawing.Point(12, 131)
+        Me.txtAddNewBorrowerSpouseAddress.Name = "txtAddNewBorrowerSpouseAddress"
+        Me.txtAddNewBorrowerSpouseAddress.Size = New System.Drawing.Size(591, 38)
+        Me.txtAddNewBorrowerSpouseAddress.TabIndex = 13
         '
         'Label13
         '
@@ -330,21 +344,21 @@ Partial Class Add_New_Borrower
         Me.Label14.TabIndex = 29
         Me.Label14.Text = "Address"
         '
-        'TextBox10
+        'txtAddNewBorrowerSpouseMiddleName
         '
-        Me.TextBox10.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox10.Location = New System.Drawing.Point(410, 56)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(193, 38)
-        Me.TextBox10.TabIndex = 33
+        Me.txtAddNewBorrowerSpouseMiddleName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerSpouseMiddleName.Location = New System.Drawing.Point(410, 56)
+        Me.txtAddNewBorrowerSpouseMiddleName.Name = "txtAddNewBorrowerSpouseMiddleName"
+        Me.txtAddNewBorrowerSpouseMiddleName.Size = New System.Drawing.Size(193, 38)
+        Me.txtAddNewBorrowerSpouseMiddleName.TabIndex = 12
         '
-        'TextBox9
+        'txtAddNewBorrowerSpouseFirstName
         '
-        Me.TextBox9.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox9.Location = New System.Drawing.Point(211, 56)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(193, 38)
-        Me.TextBox9.TabIndex = 32
+        Me.txtAddNewBorrowerSpouseFirstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerSpouseFirstName.Location = New System.Drawing.Point(211, 56)
+        Me.txtAddNewBorrowerSpouseFirstName.Name = "txtAddNewBorrowerSpouseFirstName"
+        Me.txtAddNewBorrowerSpouseFirstName.Size = New System.Drawing.Size(193, 38)
+        Me.txtAddNewBorrowerSpouseFirstName.TabIndex = 11
         '
         'Label12
         '
@@ -356,13 +370,13 @@ Partial Class Add_New_Borrower
         Me.Label12.TabIndex = 31
         Me.Label12.Text = "First Name"
         '
-        'TextBox8
+        'txtAddNewBorrowerSpouseLastName
         '
-        Me.TextBox8.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(12, 56)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(193, 38)
-        Me.TextBox8.TabIndex = 30
+        Me.txtAddNewBorrowerSpouseLastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerSpouseLastName.Location = New System.Drawing.Point(12, 56)
+        Me.txtAddNewBorrowerSpouseLastName.Name = "txtAddNewBorrowerSpouseLastName"
+        Me.txtAddNewBorrowerSpouseLastName.Size = New System.Drawing.Size(193, 38)
+        Me.txtAddNewBorrowerSpouseLastName.TabIndex = 10
         '
         'Label11
         '
@@ -383,14 +397,15 @@ Partial Class Add_New_Borrower
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
         Me.TabControl1.Size = New System.Drawing.Size(615, 207)
-        Me.TabControl1.TabIndex = 27
+        Me.TabControl1.TabIndex = 99
+        Me.TabControl1.TabStop = False
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.TextBox15)
+        Me.TabPage1.Controls.Add(Me.cboAddNewBorrowerWorkStatus)
         Me.TabPage1.Controls.Add(Me.Label18)
-        Me.TabPage1.Controls.Add(Me.TextBox16)
-        Me.TabPage1.Controls.Add(Me.TextBox17)
+        Me.TabPage1.Controls.Add(Me.txtAddNewBorrowerWorkEmployerName)
+        Me.TabPage1.Controls.Add(Me.txtAddNewBorrowerWorkAddress)
         Me.TabPage1.Controls.Add(Me.Label19)
         Me.TabPage1.Controls.Add(Me.Label20)
         Me.TabPage1.Location = New System.Drawing.Point(4, 29)
@@ -401,13 +416,16 @@ Partial Class Add_New_Borrower
         Me.TabPage1.Text = "Work Information"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TextBox15
+        'cboAddNewBorrowerWorkStatus
         '
-        Me.TextBox15.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox15.Location = New System.Drawing.Point(371, 38)
-        Me.TextBox15.Name = "TextBox15"
-        Me.TextBox15.Size = New System.Drawing.Size(228, 38)
-        Me.TextBox15.TabIndex = 44
+        Me.cboAddNewBorrowerWorkStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboAddNewBorrowerWorkStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboAddNewBorrowerWorkStatus.FormattingEnabled = True
+        Me.cboAddNewBorrowerWorkStatus.Items.AddRange(New Object() {"Self-employed", "General Contractor", "Full-time", "Apprentice", "Seasonal employment", "Employee", "Casual", "Unemployment", "Contract", "Temporary", "Permanent employee", "Daily hire and weekly hire", "Agency workers", "Project employment"})
+        Me.cboAddNewBorrowerWorkStatus.Location = New System.Drawing.Point(372, 37)
+        Me.cboAddNewBorrowerWorkStatus.Name = "cboAddNewBorrowerWorkStatus"
+        Me.cboAddNewBorrowerWorkStatus.Size = New System.Drawing.Size(228, 39)
+        Me.cboAddNewBorrowerWorkStatus.TabIndex = 15
         '
         'Label18
         '
@@ -419,21 +437,21 @@ Partial Class Add_New_Borrower
         Me.Label18.TabIndex = 43
         Me.Label18.Text = "Status"
         '
-        'TextBox16
+        'txtAddNewBorrowerWorkEmployerName
         '
-        Me.TextBox16.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox16.Location = New System.Drawing.Point(8, 38)
-        Me.TextBox16.Name = "TextBox16"
-        Me.TextBox16.Size = New System.Drawing.Size(357, 38)
-        Me.TextBox16.TabIndex = 41
+        Me.txtAddNewBorrowerWorkEmployerName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerWorkEmployerName.Location = New System.Drawing.Point(8, 38)
+        Me.txtAddNewBorrowerWorkEmployerName.Name = "txtAddNewBorrowerWorkEmployerName"
+        Me.txtAddNewBorrowerWorkEmployerName.Size = New System.Drawing.Size(357, 38)
+        Me.txtAddNewBorrowerWorkEmployerName.TabIndex = 14
         '
-        'TextBox17
+        'txtAddNewBorrowerWorkAddress
         '
-        Me.TextBox17.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox17.Location = New System.Drawing.Point(8, 113)
-        Me.TextBox17.Name = "TextBox17"
-        Me.TextBox17.Size = New System.Drawing.Size(591, 38)
-        Me.TextBox17.TabIndex = 42
+        Me.txtAddNewBorrowerWorkAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerWorkAddress.Location = New System.Drawing.Point(8, 113)
+        Me.txtAddNewBorrowerWorkAddress.Name = "txtAddNewBorrowerWorkAddress"
+        Me.txtAddNewBorrowerWorkAddress.Size = New System.Drawing.Size(591, 38)
+        Me.txtAddNewBorrowerWorkAddress.TabIndex = 16
         '
         'Label19
         '
@@ -457,10 +475,10 @@ Partial Class Add_New_Borrower
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.TextBox14)
+        Me.TabPage2.Controls.Add(Me.txtAddNewBorrowerBusinessEnvironment)
         Me.TabPage2.Controls.Add(Me.Label17)
-        Me.TabPage2.Controls.Add(Me.TextBox13)
-        Me.TabPage2.Controls.Add(Me.TextBox12)
+        Me.TabPage2.Controls.Add(Me.txtAddNewBorrowerBusinessName)
+        Me.TabPage2.Controls.Add(Me.txtAddNewBorrowerBusinessAddress)
         Me.TabPage2.Controls.Add(Me.Label16)
         Me.TabPage2.Controls.Add(Me.Label15)
         Me.TabPage2.Location = New System.Drawing.Point(4, 29)
@@ -471,13 +489,13 @@ Partial Class Add_New_Borrower
         Me.TabPage2.Text = "Business Information"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'TextBox14
+        'txtAddNewBorrowerBusinessEnvironment
         '
-        Me.TextBox14.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox14.Location = New System.Drawing.Point(371, 37)
-        Me.TextBox14.Name = "TextBox14"
-        Me.TextBox14.Size = New System.Drawing.Size(228, 38)
-        Me.TextBox14.TabIndex = 38
+        Me.txtAddNewBorrowerBusinessEnvironment.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerBusinessEnvironment.Location = New System.Drawing.Point(371, 37)
+        Me.txtAddNewBorrowerBusinessEnvironment.Name = "txtAddNewBorrowerBusinessEnvironment"
+        Me.txtAddNewBorrowerBusinessEnvironment.Size = New System.Drawing.Size(228, 38)
+        Me.txtAddNewBorrowerBusinessEnvironment.TabIndex = 18
         '
         'Label17
         '
@@ -489,21 +507,21 @@ Partial Class Add_New_Borrower
         Me.Label17.TabIndex = 37
         Me.Label17.Text = "Environment"
         '
-        'TextBox13
+        'txtAddNewBorrowerBusinessName
         '
-        Me.TextBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox13.Location = New System.Drawing.Point(8, 37)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(357, 38)
-        Me.TextBox13.TabIndex = 36
+        Me.txtAddNewBorrowerBusinessName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerBusinessName.Location = New System.Drawing.Point(8, 37)
+        Me.txtAddNewBorrowerBusinessName.Name = "txtAddNewBorrowerBusinessName"
+        Me.txtAddNewBorrowerBusinessName.Size = New System.Drawing.Size(357, 38)
+        Me.txtAddNewBorrowerBusinessName.TabIndex = 17
         '
-        'TextBox12
+        'txtAddNewBorrowerBusinessAddress
         '
-        Me.TextBox12.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox12.Location = New System.Drawing.Point(8, 112)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(591, 38)
-        Me.TextBox12.TabIndex = 36
+        Me.txtAddNewBorrowerBusinessAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerBusinessAddress.Location = New System.Drawing.Point(8, 112)
+        Me.txtAddNewBorrowerBusinessAddress.Name = "txtAddNewBorrowerBusinessAddress"
+        Me.txtAddNewBorrowerBusinessAddress.Size = New System.Drawing.Size(591, 38)
+        Me.txtAddNewBorrowerBusinessAddress.TabIndex = 19
         '
         'Label16
         '
@@ -535,22 +553,25 @@ Partial Class Add_New_Borrower
         Me.Label10.TabIndex = 26
         Me.Label10.Text = "Civil Status"
         '
-        'ComboBox1
+        'cboAddNewBorrowerCivilStatus
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(480, 300)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(454, 39)
-        Me.ComboBox1.TabIndex = 25
+        Me.cboAddNewBorrowerCivilStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cboAddNewBorrowerCivilStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cboAddNewBorrowerCivilStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboAddNewBorrowerCivilStatus.FormattingEnabled = True
+        Me.cboAddNewBorrowerCivilStatus.Items.AddRange(New Object() {"Married", "Widowed", "Separated", "Divorced", "Single"})
+        Me.cboAddNewBorrowerCivilStatus.Location = New System.Drawing.Point(480, 300)
+        Me.cboAddNewBorrowerCivilStatus.Name = "cboAddNewBorrowerCivilStatus"
+        Me.cboAddNewBorrowerCivilStatus.Size = New System.Drawing.Size(454, 39)
+        Me.cboAddNewBorrowerCivilStatus.TabIndex = 9
         '
-        'TextBox7
+        'txtAddNewBorrowerPlaceOfBirth
         '
-        Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(480, 226)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(454, 38)
-        Me.TextBox7.TabIndex = 24
+        Me.txtAddNewBorrowerPlaceOfBirth.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerPlaceOfBirth.Location = New System.Drawing.Point(480, 226)
+        Me.txtAddNewBorrowerPlaceOfBirth.Name = "txtAddNewBorrowerPlaceOfBirth"
+        Me.txtAddNewBorrowerPlaceOfBirth.Size = New System.Drawing.Size(454, 38)
+        Me.txtAddNewBorrowerPlaceOfBirth.TabIndex = 7
         '
         'Label9
         '
@@ -562,14 +583,6 @@ Partial Class Add_New_Borrower
         Me.Label9.TabIndex = 23
         Me.Label9.Text = "Place of Birth"
         '
-        'TextBox6
-        '
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(14, 301)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(454, 38)
-        Me.TextBox6.TabIndex = 22
-        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -580,13 +593,13 @@ Partial Class Add_New_Borrower
         Me.Label8.TabIndex = 21
         Me.Label8.Text = "Religion"
         '
-        'TextBox5
+        'txtAddNewBorrowerAddress
         '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(14, 151)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(500, 38)
-        Me.TextBox5.TabIndex = 20
+        Me.txtAddNewBorrowerAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerAddress.Location = New System.Drawing.Point(14, 151)
+        Me.txtAddNewBorrowerAddress.Name = "txtAddNewBorrowerAddress"
+        Me.txtAddNewBorrowerAddress.Size = New System.Drawing.Size(500, 38)
+        Me.txtAddNewBorrowerAddress.TabIndex = 4
         '
         'Label7
         '
@@ -598,21 +611,21 @@ Partial Class Add_New_Borrower
         Me.Label7.TabIndex = 19
         Me.Label7.Text = "Address"
         '
-        'TextBox4
+        'txtAddNewBorrowerMiddleName
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(633, 76)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(301, 38)
-        Me.TextBox4.TabIndex = 18
+        Me.txtAddNewBorrowerMiddleName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerMiddleName.Location = New System.Drawing.Point(633, 76)
+        Me.txtAddNewBorrowerMiddleName.Name = "txtAddNewBorrowerMiddleName"
+        Me.txtAddNewBorrowerMiddleName.Size = New System.Drawing.Size(301, 38)
+        Me.txtAddNewBorrowerMiddleName.TabIndex = 3
         '
-        'TextBox3
+        'txtAddNewBorrowerFirstName
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(322, 76)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(302, 38)
-        Me.TextBox3.TabIndex = 17
+        Me.txtAddNewBorrowerFirstName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerFirstName.Location = New System.Drawing.Point(322, 76)
+        Me.txtAddNewBorrowerFirstName.Name = "txtAddNewBorrowerFirstName"
+        Me.txtAddNewBorrowerFirstName.Size = New System.Drawing.Size(302, 38)
+        Me.txtAddNewBorrowerFirstName.TabIndex = 2
         '
         'Label6
         '
@@ -644,13 +657,13 @@ Partial Class Add_New_Borrower
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "First Name"
         '
-        'TextBox1
+        'txtAddNewBorrowerContactNo
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(520, 151)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(414, 38)
-        Me.TextBox1.TabIndex = 9
+        Me.txtAddNewBorrowerContactNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerContactNo.Location = New System.Drawing.Point(520, 151)
+        Me.txtAddNewBorrowerContactNo.Name = "txtAddNewBorrowerContactNo"
+        Me.txtAddNewBorrowerContactNo.Size = New System.Drawing.Size(414, 38)
+        Me.txtAddNewBorrowerContactNo.TabIndex = 5
         '
         'Label3
         '
@@ -681,22 +694,22 @@ Partial Class Add_New_Borrower
         Me.PictureBox2.TabIndex = 3
         Me.PictureBox2.TabStop = False
         '
-        'DateTimePicker1
+        'dtpBirthdateAddNewBorrowerBirthday
         '
-        Me.DateTimePicker1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DateTimePicker1.Location = New System.Drawing.Point(14, 226)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(454, 38)
-        Me.DateTimePicker1.TabIndex = 6
+        Me.dtpBirthdateAddNewBorrowerBirthday.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpBirthdateAddNewBorrowerBirthday.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpBirthdateAddNewBorrowerBirthday.Location = New System.Drawing.Point(14, 226)
+        Me.dtpBirthdateAddNewBorrowerBirthday.Name = "dtpBirthdateAddNewBorrowerBirthday"
+        Me.dtpBirthdateAddNewBorrowerBirthday.Size = New System.Drawing.Size(454, 38)
+        Me.dtpBirthdateAddNewBorrowerBirthday.TabIndex = 6
         '
-        'TextBox2
+        'txtAddNewBorrowerLastName
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(14, 76)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(302, 38)
-        Me.TextBox2.TabIndex = 5
+        Me.txtAddNewBorrowerLastName.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerLastName.Location = New System.Drawing.Point(14, 76)
+        Me.txtAddNewBorrowerLastName.Name = "txtAddNewBorrowerLastName"
+        Me.txtAddNewBorrowerLastName.Size = New System.Drawing.Size(302, 38)
+        Me.txtAddNewBorrowerLastName.TabIndex = 1
         '
         'Label2
         '
@@ -782,49 +795,49 @@ Partial Class Add_New_Borrower
     Friend WithEvents Label21 As Label
     Friend WithEvents TextBox18 As TextBox
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox11 As TextBox
+    Friend WithEvents txtAddNewBorrowerSpouseAddress As TextBox
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents txtAddNewBorrowerSpouseMiddleName As TextBox
+    Friend WithEvents txtAddNewBorrowerSpouseFirstName As TextBox
     Friend WithEvents Label12 As Label
-    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents txtAddNewBorrowerSpouseLastName As TextBox
     Friend WithEvents Label11 As Label
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TextBox15 As TextBox
     Friend WithEvents Label18 As Label
-    Friend WithEvents TextBox16 As TextBox
-    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents txtAddNewBorrowerWorkEmployerName As TextBox
+    Friend WithEvents txtAddNewBorrowerWorkAddress As TextBox
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
     Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents TextBox14 As TextBox
+    Friend WithEvents txtAddNewBorrowerBusinessEnvironment As TextBox
     Friend WithEvents Label17 As Label
-    Friend WithEvents TextBox13 As TextBox
-    Friend WithEvents TextBox12 As TextBox
+    Friend WithEvents txtAddNewBorrowerBusinessName As TextBox
+    Friend WithEvents txtAddNewBorrowerBusinessAddress As TextBox
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents cboAddNewBorrowerCivilStatus As ComboBox
+    Friend WithEvents txtAddNewBorrowerPlaceOfBirth As TextBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox6 As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtAddNewBorrowerAddress As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtAddNewBorrowerMiddleName As TextBox
+    Friend WithEvents txtAddNewBorrowerFirstName As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtAddNewBorrowerContactNo As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents dtpBirthdateAddNewBorrowerBirthday As DateTimePicker
+    Friend WithEvents txtAddNewBorrowerLastName As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblPersonalInformation As Label
+    Friend WithEvents cboAddNewBorrowerReligion As ComboBox
+    Friend WithEvents cboAddNewBorrowerWorkStatus As ComboBox
 End Class
