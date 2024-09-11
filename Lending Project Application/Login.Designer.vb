@@ -118,6 +118,7 @@ Partial Class Login
         Me.login_txt_password.Location = New System.Drawing.Point(141, 66)
         Me.login_txt_password.Margin = New System.Windows.Forms.Padding(2)
         Me.login_txt_password.Name = "login_txt_password"
+        Me.login_txt_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.login_txt_password.Size = New System.Drawing.Size(204, 35)
         Me.login_txt_password.TabIndex = 4
         '

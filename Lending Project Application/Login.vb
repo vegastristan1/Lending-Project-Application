@@ -24,7 +24,7 @@ Public Class Login
 
     End Sub
 
-    Private Sub btnCloseLogin_Click(sender As Object, e As EventArgs) Handles btnCloseLogin.Click
+    Private Sub BtnCloseLogin_Click(sender As Object, e As EventArgs) Handles btnCloseLogin.Click
         Me.Close()
     End Sub
 End Class
