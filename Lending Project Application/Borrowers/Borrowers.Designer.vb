@@ -23,6 +23,9 @@ Partial Class Borrowers
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.btnSideNavLogout = New System.Windows.Forms.Button()
         Me.btnSideNavRepayments = New System.Windows.Forms.Button()
@@ -33,6 +36,7 @@ Partial Class Borrowers
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnAddNewBorrower = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.colPicture = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -40,7 +44,7 @@ Partial Class Borrowers
         Me.colBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colAction = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.colDelete = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -187,69 +191,30 @@ Partial Class Borrowers
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colPicture, Me.colID, Me.colName, Me.colEmail, Me.colBalance, Me.colStatus, Me.colAction})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colPicture, Me.colID, Me.colName, Me.colEmail, Me.colBalance, Me.colStatus, Me.colAction, Me.colDelete})
         Me.DataGridView1.Location = New System.Drawing.Point(26, 138)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowHeadersVisible = False
         Me.DataGridView1.Size = New System.Drawing.Size(1355, 799)
         Me.DataGridView1.TabIndex = 1
-        '
-        'colPicture
-        '
-        Me.colPicture.HeaderText = "Picture"
-        Me.colPicture.MinimumWidth = 50
-        Me.colPicture.Name = "colPicture"
-        '
-        'colID
-        '
-        Me.colID.HeaderText = "ID"
-        Me.colID.MinimumWidth = 20
-        Me.colID.Name = "colID"
-        '
-        'colName
-        '
-        Me.colName.HeaderText = "Name"
-        Me.colName.MinimumWidth = 200
-        Me.colName.Name = "colName"
-        '
-        'colEmail
-        '
-        Me.colEmail.HeaderText = "Email"
-        Me.colEmail.MinimumWidth = 300
-        Me.colEmail.Name = "colEmail"
-        '
-        'colBalance
-        '
-        Me.colBalance.HeaderText = "Balance"
-        Me.colBalance.MinimumWidth = 200
-        Me.colBalance.Name = "colBalance"
-        '
-        'colStatus
-        '
-        Me.colStatus.HeaderText = "Status"
-        Me.colStatus.MinimumWidth = 80
-        Me.colStatus.Name = "colStatus"
-        '
-        'colAction
-        '
-        Me.colAction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None
-        Me.colAction.HeaderText = "Action"
-        Me.colAction.MinimumWidth = 100
-        Me.colAction.Name = "colAction"
-        Me.colAction.Width = 115
         '
         'Label1
         '
@@ -260,6 +225,88 @@ Partial Class Borrowers
         Me.Label1.Size = New System.Drawing.Size(393, 61)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Borrowers Lists"
+        '
+        'colPicture
+        '
+        Me.colPicture.HeaderText = "Picture"
+        Me.colPicture.MinimumWidth = 50
+        Me.colPicture.Name = "colPicture"
+        Me.colPicture.ReadOnly = True
+        '
+        'colID
+        '
+        Me.colID.HeaderText = "ID"
+        Me.colID.MinimumWidth = 20
+        Me.colID.Name = "colID"
+        Me.colID.ReadOnly = True
+        '
+        'colName
+        '
+        Me.colName.HeaderText = "Name"
+        Me.colName.MinimumWidth = 200
+        Me.colName.Name = "colName"
+        Me.colName.ReadOnly = True
+        '
+        'colEmail
+        '
+        Me.colEmail.HeaderText = "Email"
+        Me.colEmail.MinimumWidth = 300
+        Me.colEmail.Name = "colEmail"
+        Me.colEmail.ReadOnly = True
+        '
+        'colBalance
+        '
+        Me.colBalance.HeaderText = "Balance"
+        Me.colBalance.MinimumWidth = 200
+        Me.colBalance.Name = "colBalance"
+        Me.colBalance.ReadOnly = True
+        '
+        'colStatus
+        '
+        Me.colStatus.HeaderText = "Status"
+        Me.colStatus.MinimumWidth = 80
+        Me.colStatus.Name = "colStatus"
+        Me.colStatus.ReadOnly = True
+        '
+        'colAction
+        '
+        Me.colAction.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer), CType(CType(0, Byte), Integer))
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White
+        Me.colAction.DefaultCellStyle = DataGridViewCellStyle3
+        Me.colAction.FillWeight = 50.0!
+        Me.colAction.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.colAction.HeaderText = ""
+        Me.colAction.MinimumWidth = 50
+        Me.colAction.Name = "colAction"
+        Me.colAction.ReadOnly = True
+        Me.colAction.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.colAction.Text = "View"
+        Me.colAction.UseColumnTextForButtonValue = True
+        '
+        'colDelete
+        '
+        Me.colDelete.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle4.BackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Red
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White
+        Me.colDelete.DefaultCellStyle = DataGridViewCellStyle4
+        Me.colDelete.FillWeight = 50.0!
+        Me.colDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.colDelete.HeaderText = ""
+        Me.colDelete.MinimumWidth = 50
+        Me.colDelete.Name = "colDelete"
+        Me.colDelete.ReadOnly = True
+        Me.colDelete.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.colDelete.Text = "Delete"
+        Me.colDelete.UseColumnTextForButtonValue = True
         '
         'Borrowers
         '
@@ -299,4 +346,5 @@ Partial Class Borrowers
     Friend WithEvents colBalance As DataGridViewTextBoxColumn
     Friend WithEvents colStatus As DataGridViewTextBoxColumn
     Friend WithEvents colAction As DataGridViewButtonColumn
+    Friend WithEvents colDelete As DataGridViewButtonColumn
 End Class
