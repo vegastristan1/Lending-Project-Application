@@ -30,7 +30,7 @@ Public Class Borrowers
         LoadBorrowersData()
     End Sub
 
-    Private Sub LoadBorrowersData()
+    Sub LoadBorrowersData()
         Dim connectionString As String = "Data Source=LENOVO-GEN7\SQLEXPRESS;Initial Catalog=dbLending;Integrated Security=True;TrustServerCertificate=True"
 
         Dim query As String = "
@@ -106,5 +106,9 @@ Public Class Borrowers
                 MessageBox.Show("Row deleted!")
             End If
         End If
+    End Sub
+
+    Private Sub btnSideNavBorrowers_Click(sender As Object, e As EventArgs) Handles btnSideNavBorrowers.Click
+        LoadBorrowersData()
     End Sub
 End Class

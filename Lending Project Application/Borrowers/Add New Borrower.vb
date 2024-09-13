@@ -45,9 +45,9 @@ Public Class Add_New_Borrower
         spouseemployeraddress)
 
         ' Optionally, display a confirmation message or clear the form fields after saving
-        MessageBox.Show("Borrower information added successfully!")
+        'MessageBox.Show("Borrower information added successfully!")
         Clearformfields() ' Assuming you have a method to clear the form after saving
-
+        Borrowers.LoadBorrowersData()
     End Sub
 
     Public Sub InsertBorrowerAndName(ByVal lastName As String, ByVal firstName As String, ByVal middleName As String, ByVal suffixname As String,
@@ -115,7 +115,7 @@ Public Class Add_New_Borrower
                 ' If everything is successful, commit the transaction
                 transaction.Commit()
 
-                MessageBox.Show("Borrower and Name added successfully!")
+                'MessageBox.Show("Borrower and Name added successfully!")
 
             Catch ex As Exception
                 ' If any error occurs, roll back the transaction

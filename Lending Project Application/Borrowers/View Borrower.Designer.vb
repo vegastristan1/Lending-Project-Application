@@ -112,7 +112,6 @@ Partial Class View_Borrower
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblPersonalInformation = New System.Windows.Forms.Label()
         Me.lblTitleAddNewBorrower = New System.Windows.Forms.Label()
-        Me.txtBorrowerDetailsID = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.txtViewBorrowerEmailAddress = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
@@ -141,7 +140,6 @@ Partial Class View_Borrower
         '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.txtBorrowerDetailsID)
         Me.Panel3.Controls.Add(Me.btnBackToBorrowersList)
         Me.Panel3.Controls.Add(Me.Panel1)
         Me.Panel3.Controls.Add(Me.lblTitleAddNewBorrower)
@@ -958,13 +956,6 @@ Partial Class View_Borrower
         Me.lblTitleAddNewBorrower.TabIndex = 4
         Me.lblTitleAddNewBorrower.Text = "Borrower Details"
         '
-        'txtBorrowerDetailsID
-        '
-        Me.txtBorrowerDetailsID.Location = New System.Drawing.Point(1139, 12)
-        Me.txtBorrowerDetailsID.Name = "txtBorrowerDetailsID"
-        Me.txtBorrowerDetailsID.Size = New System.Drawing.Size(100, 20)
-        Me.txtBorrowerDetailsID.TabIndex = 31
-        '
         'Label12
         '
         Me.Label12.AutoSize = True
@@ -1171,7 +1162,6 @@ Partial Class View_Borrower
     Friend WithEvents lblPersonalInformation As Label
     Friend WithEvents lblTitleAddNewBorrower As Label
     Friend WithEvents btnBackToBorrowersList As Button
-    Friend WithEvents txtBorrowerDetailsID As TextBox
     Friend WithEvents Label23 As Label
     Friend WithEvents txtViewBorrowerEmailAddress As TextBox
     Friend WithEvents Label12 As Label

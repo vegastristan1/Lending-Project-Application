@@ -9,7 +9,7 @@ Public Class View_Borrower
         'MessageBox.Show("Borrower ID: " & HoldBorrowerID.ToString())
 
         ' Assign Borrower ID to the TextBox
-        txtBorrowerDetailsID.Text = HoldBorrowerID.ToString()
+        'txtBorrowerDetailsID.Text = HoldBorrowerID.ToString()
 
         ' Fetch and display borrower details from the database based on the BorrowerID
         LoadBorrowerDetails(HoldBorrowerID)
