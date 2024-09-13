@@ -83,10 +83,19 @@ Public Class Borrowers
         ' Ensure the click is on a button column
         If e.ColumnIndex = DataGridView1.Columns("colAction").Index AndAlso e.RowIndex >= 0 Then
             ' Handle "View" button click
-            'MessageBox.Show("View button clicked for row " & e.RowIndex.ToString())
-            View_Borrower.Show()
 
-            ' You can add your "View" logic here
+            ' Get the BorrowerID from the selected row
+            Dim selectedBorrowerID As Integer = CInt(DataGridView1.Rows(e.RowIndex).Cells("colID").Value)
+
+            ' Create an instance of the View_Borrower form
+            Dim viewBorrowerForm As New View_Borrower()
+
+            ' Pass the BorrowerID to the View_Borrower form (create a property in View_Borrower to receive it)
+            viewBorrowerForm.HoldBorrowerID = selectedBorrowerID
+
+            ' Show the View_Borrower form
+            viewBorrowerForm.Show()
+
         ElseIf e.ColumnIndex = DataGridView1.Columns("colDelete").Index AndAlso e.RowIndex >= 0 Then
             ' Handle "Delete" button click
             Dim confirm As DialogResult = MessageBox.Show("Are you sure you want to delete this row?", "Confirm Delete", MessageBoxButtons.YesNo)
