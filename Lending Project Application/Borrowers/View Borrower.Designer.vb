@@ -23,6 +23,7 @@ Partial Class View_Borrower
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnBackToBorrowersList = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -114,7 +115,7 @@ Partial Class View_Borrower
         Me.Label2 = New System.Windows.Forms.Label()
         Me.lblPersonalInformation = New System.Windows.Forms.Label()
         Me.lblTitleAddNewBorrower = New System.Windows.Forms.Label()
-        Me.btnBackToBorrowersList = New System.Windows.Forms.Button()
+        Me.txtBorrowerDetailsID = New System.Windows.Forms.TextBox()
         Me.Panel3.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.TabControl2.SuspendLayout()
@@ -136,6 +137,7 @@ Partial Class View_Borrower
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.txtBorrowerDetailsID)
         Me.Panel3.Controls.Add(Me.btnBackToBorrowersList)
         Me.Panel3.Controls.Add(Me.Panel1)
         Me.Panel3.Controls.Add(Me.lblTitleAddNewBorrower)
@@ -144,6 +146,16 @@ Partial Class View_Borrower
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1405, 926)
         Me.Panel3.TabIndex = 4
+        '
+        'btnBackToBorrowersList
+        '
+        Me.btnBackToBorrowersList.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBackToBorrowersList.Location = New System.Drawing.Point(1245, 9)
+        Me.btnBackToBorrowersList.Name = "btnBackToBorrowersList"
+        Me.btnBackToBorrowersList.Size = New System.Drawing.Size(151, 46)
+        Me.btnBackToBorrowersList.TabIndex = 30
+        Me.btnBackToBorrowersList.Text = "Back"
+        Me.btnBackToBorrowersList.UseVisualStyleBackColor = True
         '
         'Panel1
         '
@@ -963,15 +975,12 @@ Partial Class View_Borrower
         Me.lblTitleAddNewBorrower.TabIndex = 4
         Me.lblTitleAddNewBorrower.Text = "Borrower Details"
         '
-        'btnBackToBorrowersList
+        'txtBorrowerDetailsID
         '
-        Me.btnBackToBorrowersList.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBackToBorrowersList.Location = New System.Drawing.Point(1245, 9)
-        Me.btnBackToBorrowersList.Name = "btnBackToBorrowersList"
-        Me.btnBackToBorrowersList.Size = New System.Drawing.Size(151, 46)
-        Me.btnBackToBorrowersList.TabIndex = 30
-        Me.btnBackToBorrowersList.Text = "Back"
-        Me.btnBackToBorrowersList.UseVisualStyleBackColor = True
+        Me.txtBorrowerDetailsID.Location = New System.Drawing.Point(1139, 12)
+        Me.txtBorrowerDetailsID.Name = "txtBorrowerDetailsID"
+        Me.txtBorrowerDetailsID.Size = New System.Drawing.Size(100, 20)
+        Me.txtBorrowerDetailsID.TabIndex = 31
         '
         'View_Borrower
         '
@@ -1109,4 +1118,5 @@ Partial Class View_Borrower
     Friend WithEvents lblPersonalInformation As Label
     Friend WithEvents lblTitleAddNewBorrower As Label
     Friend WithEvents btnBackToBorrowersList As Button
+    Friend WithEvents txtBorrowerDetailsID As TextBox
 End Class
