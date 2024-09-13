@@ -26,7 +26,13 @@ Partial Class Add_New_Borrower
         Me.btnBackToBorrowersList = New System.Windows.Forms.Button()
         Me.lblTitleAddNewBorrower = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.cboAddNewBorrowerReligion = New System.Windows.Forms.ComboBox()
+        Me.txtAddNewBorrowerCitizenship = New System.Windows.Forms.TextBox()
+        Me.cmbBirthdateAddNewBorrowerSuffix = New System.Windows.Forms.ComboBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.txtAddNewBorrowerEmailAddress = New System.Windows.Forms.TextBox()
+        Me.cmbAddNewBorrowerReligion = New System.Windows.Forms.ComboBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.btnAddNewBorrowerSave = New System.Windows.Forms.Button()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
@@ -49,7 +55,7 @@ Partial Class Add_New_Borrower
         Me.Label11 = New System.Windows.Forms.Label()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.cboAddNewBorrowerWorkStatus = New System.Windows.Forms.ComboBox()
+        Me.cmbAddNewBorrowerWorkStatus = New System.Windows.Forms.ComboBox()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.txtAddNewBorrowerWorkEmployerName = New System.Windows.Forms.TextBox()
         Me.txtAddNewBorrowerWorkAddress = New System.Windows.Forms.TextBox()
@@ -63,7 +69,7 @@ Partial Class Add_New_Borrower
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.cboAddNewBorrowerCivilStatus = New System.Windows.Forms.ComboBox()
+        Me.cmbAddNewBorrowerCivilStatus = New System.Windows.Forms.ComboBox()
         Me.txtAddNewBorrowerPlaceOfBirth = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -83,12 +89,6 @@ Partial Class Add_New_Borrower
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblPersonalInformation = New System.Windows.Forms.Label()
-        Me.txtAddNewBorrowerEmailAddress = New System.Windows.Forms.TextBox()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.dtpBirthdateAddNewBorrowerSuffix = New System.Windows.Forms.ComboBox()
-        Me.txtAddNewBorrowerCitizenship = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.TabControl2.SuspendLayout()
@@ -137,19 +137,19 @@ Partial Class Add_New_Borrower
         '
         Me.Panel3.BackColor = System.Drawing.Color.White
         Me.Panel3.Controls.Add(Me.txtAddNewBorrowerCitizenship)
-        Me.Panel3.Controls.Add(Me.dtpBirthdateAddNewBorrowerSuffix)
+        Me.Panel3.Controls.Add(Me.cmbBirthdateAddNewBorrowerSuffix)
         Me.Panel3.Controls.Add(Me.Label25)
         Me.Panel3.Controls.Add(Me.Label24)
         Me.Panel3.Controls.Add(Me.Label23)
         Me.Panel3.Controls.Add(Me.txtAddNewBorrowerEmailAddress)
-        Me.Panel3.Controls.Add(Me.cboAddNewBorrowerReligion)
+        Me.Panel3.Controls.Add(Me.cmbAddNewBorrowerReligion)
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.btnAddNewBorrowerSave)
         Me.Panel3.Controls.Add(Me.TabControl2)
         Me.Panel3.Controls.Add(Me.GroupBox1)
         Me.Panel3.Controls.Add(Me.TabControl1)
         Me.Panel3.Controls.Add(Me.Label10)
-        Me.Panel3.Controls.Add(Me.cboAddNewBorrowerCivilStatus)
+        Me.Panel3.Controls.Add(Me.cmbAddNewBorrowerCivilStatus)
         Me.Panel3.Controls.Add(Me.txtAddNewBorrowerPlaceOfBirth)
         Me.Panel3.Controls.Add(Me.Label9)
         Me.Panel3.Controls.Add(Me.Label8)
@@ -173,17 +173,75 @@ Partial Class Add_New_Borrower
         Me.Panel3.Size = New System.Drawing.Size(1386, 850)
         Me.Panel3.TabIndex = 1
         '
-        'cboAddNewBorrowerReligion
+        'txtAddNewBorrowerCitizenship
         '
-        Me.cboAddNewBorrowerReligion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cboAddNewBorrowerReligion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cboAddNewBorrowerReligion.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboAddNewBorrowerReligion.FormattingEnabled = True
-        Me.cboAddNewBorrowerReligion.Items.AddRange(New Object() {"N/A", "Aglipay", "Bible Baptist Church", "Church of Christ", "Iglesia FIlipina Independiente", "Iglesia ni Cristo", "Islam", "Jehovah's Witness", "Other religious affiliations", "Roman Catholic", "Seventh Day Adventist", "United Church of Christ in the Philippines", "None"})
-        Me.cboAddNewBorrowerReligion.Location = New System.Drawing.Point(672, 297)
-        Me.cboAddNewBorrowerReligion.Name = "cboAddNewBorrowerReligion"
-        Me.cboAddNewBorrowerReligion.Size = New System.Drawing.Size(415, 39)
-        Me.cboAddNewBorrowerReligion.TabIndex = 8
+        Me.txtAddNewBorrowerCitizenship.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerCitizenship.Location = New System.Drawing.Point(338, 298)
+        Me.txtAddNewBorrowerCitizenship.Name = "txtAddNewBorrowerCitizenship"
+        Me.txtAddNewBorrowerCitizenship.Size = New System.Drawing.Size(328, 38)
+        Me.txtAddNewBorrowerCitizenship.TabIndex = 107
+        '
+        'cmbBirthdateAddNewBorrowerSuffix
+        '
+        Me.cmbBirthdateAddNewBorrowerSuffix.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbBirthdateAddNewBorrowerSuffix.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbBirthdateAddNewBorrowerSuffix.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbBirthdateAddNewBorrowerSuffix.FormattingEnabled = True
+        Me.cmbBirthdateAddNewBorrowerSuffix.Items.AddRange(New Object() {"N/A", "Sr.", "Jr.", "I", "II", "IV", "V", "VI", "VII", "VIII", "IX", "X", "PhD", "MD", "DDS", "Esq.", "CPA", "JD", "RN"})
+        Me.cmbBirthdateAddNewBorrowerSuffix.Location = New System.Drawing.Point(940, 76)
+        Me.cmbBirthdateAddNewBorrowerSuffix.Name = "cmbBirthdateAddNewBorrowerSuffix"
+        Me.cmbBirthdateAddNewBorrowerSuffix.Size = New System.Drawing.Size(147, 39)
+        Me.cmbBirthdateAddNewBorrowerSuffix.TabIndex = 106
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(936, 49)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(55, 24)
+        Me.Label25.TabIndex = 105
+        Me.Label25.Text = "Suffix"
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(334, 270)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(101, 24)
+        Me.Label24.TabIndex = 103
+        Me.Label24.Text = "Citizenship"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(754, 124)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(132, 24)
+        Me.Label23.TabIndex = 101
+        Me.Label23.Text = "Email Address"
+        '
+        'txtAddNewBorrowerEmailAddress
+        '
+        Me.txtAddNewBorrowerEmailAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewBorrowerEmailAddress.Location = New System.Drawing.Point(758, 151)
+        Me.txtAddNewBorrowerEmailAddress.Name = "txtAddNewBorrowerEmailAddress"
+        Me.txtAddNewBorrowerEmailAddress.Size = New System.Drawing.Size(329, 38)
+        Me.txtAddNewBorrowerEmailAddress.TabIndex = 100
+        '
+        'cmbAddNewBorrowerReligion
+        '
+        Me.cmbAddNewBorrowerReligion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbAddNewBorrowerReligion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbAddNewBorrowerReligion.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbAddNewBorrowerReligion.FormattingEnabled = True
+        Me.cmbAddNewBorrowerReligion.Items.AddRange(New Object() {"N/A", "Aglipay", "Bible Baptist Church", "Church of Christ", "Iglesia FIlipina Independiente", "Iglesia ni Cristo", "Islam", "Jehovah's Witness", "Other religious affiliations", "Roman Catholic", "Seventh Day Adventist", "United Church of Christ in the Philippines", "None"})
+        Me.cmbAddNewBorrowerReligion.Location = New System.Drawing.Point(672, 297)
+        Me.cmbAddNewBorrowerReligion.Name = "cmbAddNewBorrowerReligion"
+        Me.cmbAddNewBorrowerReligion.Size = New System.Drawing.Size(415, 39)
+        Me.cmbAddNewBorrowerReligion.TabIndex = 8
         '
         'Panel4
         '
@@ -392,7 +450,7 @@ Partial Class Add_New_Borrower
         '
         'TabPage1
         '
-        Me.TabPage1.Controls.Add(Me.cboAddNewBorrowerWorkStatus)
+        Me.TabPage1.Controls.Add(Me.cmbAddNewBorrowerWorkStatus)
         Me.TabPage1.Controls.Add(Me.Label18)
         Me.TabPage1.Controls.Add(Me.txtAddNewBorrowerWorkEmployerName)
         Me.TabPage1.Controls.Add(Me.txtAddNewBorrowerWorkAddress)
@@ -406,16 +464,16 @@ Partial Class Add_New_Borrower
         Me.TabPage1.Text = "Work Information"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'cboAddNewBorrowerWorkStatus
+        'cmbAddNewBorrowerWorkStatus
         '
-        Me.cboAddNewBorrowerWorkStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboAddNewBorrowerWorkStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboAddNewBorrowerWorkStatus.FormattingEnabled = True
-        Me.cboAddNewBorrowerWorkStatus.Items.AddRange(New Object() {"Self-employed", "General Contractor", "Full-time", "Apprentice", "Seasonal employment", "Employee", "Casual", "Unemployment", "Contract", "Temporary", "Permanent employee", "Daily hire and weekly hire", "Agency workers", "Project employment"})
-        Me.cboAddNewBorrowerWorkStatus.Location = New System.Drawing.Point(372, 37)
-        Me.cboAddNewBorrowerWorkStatus.Name = "cboAddNewBorrowerWorkStatus"
-        Me.cboAddNewBorrowerWorkStatus.Size = New System.Drawing.Size(228, 39)
-        Me.cboAddNewBorrowerWorkStatus.TabIndex = 15
+        Me.cmbAddNewBorrowerWorkStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbAddNewBorrowerWorkStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbAddNewBorrowerWorkStatus.FormattingEnabled = True
+        Me.cmbAddNewBorrowerWorkStatus.Items.AddRange(New Object() {"Self-employed", "General Contractor", "Full-time", "Apprentice", "Seasonal employment", "Employee", "Casual", "Unemployment", "Contract", "Temporary", "Permanent employee", "Daily hire and weekly hire", "Agency workers", "Project employment"})
+        Me.cmbAddNewBorrowerWorkStatus.Location = New System.Drawing.Point(372, 37)
+        Me.cmbAddNewBorrowerWorkStatus.Name = "cmbAddNewBorrowerWorkStatus"
+        Me.cmbAddNewBorrowerWorkStatus.Size = New System.Drawing.Size(228, 39)
+        Me.cmbAddNewBorrowerWorkStatus.TabIndex = 15
         '
         'Label18
         '
@@ -543,17 +601,17 @@ Partial Class Add_New_Borrower
         Me.Label10.TabIndex = 26
         Me.Label10.Text = "Civil Status"
         '
-        'cboAddNewBorrowerCivilStatus
+        'cmbAddNewBorrowerCivilStatus
         '
-        Me.cboAddNewBorrowerCivilStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.cboAddNewBorrowerCivilStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.cboAddNewBorrowerCivilStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.cboAddNewBorrowerCivilStatus.FormattingEnabled = True
-        Me.cboAddNewBorrowerCivilStatus.Items.AddRange(New Object() {"Married", "Widowed", "Separated", "Divorced", "Single"})
-        Me.cboAddNewBorrowerCivilStatus.Location = New System.Drawing.Point(15, 297)
-        Me.cboAddNewBorrowerCivilStatus.Name = "cboAddNewBorrowerCivilStatus"
-        Me.cboAddNewBorrowerCivilStatus.Size = New System.Drawing.Size(317, 39)
-        Me.cboAddNewBorrowerCivilStatus.TabIndex = 9
+        Me.cmbAddNewBorrowerCivilStatus.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
+        Me.cmbAddNewBorrowerCivilStatus.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.cmbAddNewBorrowerCivilStatus.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbAddNewBorrowerCivilStatus.FormattingEnabled = True
+        Me.cmbAddNewBorrowerCivilStatus.Items.AddRange(New Object() {"Married", "Widowed", "Separated", "Divorced", "Single"})
+        Me.cmbAddNewBorrowerCivilStatus.Location = New System.Drawing.Point(15, 297)
+        Me.cmbAddNewBorrowerCivilStatus.Name = "cmbAddNewBorrowerCivilStatus"
+        Me.cmbAddNewBorrowerCivilStatus.Size = New System.Drawing.Size(317, 39)
+        Me.cmbAddNewBorrowerCivilStatus.TabIndex = 9
         '
         'txtAddNewBorrowerPlaceOfBirth
         '
@@ -731,64 +789,6 @@ Partial Class Add_New_Borrower
         Me.lblPersonalInformation.TabIndex = 1
         Me.lblPersonalInformation.Text = "Personal Information"
         '
-        'txtAddNewBorrowerEmailAddress
-        '
-        Me.txtAddNewBorrowerEmailAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddNewBorrowerEmailAddress.Location = New System.Drawing.Point(758, 151)
-        Me.txtAddNewBorrowerEmailAddress.Name = "txtAddNewBorrowerEmailAddress"
-        Me.txtAddNewBorrowerEmailAddress.Size = New System.Drawing.Size(329, 38)
-        Me.txtAddNewBorrowerEmailAddress.TabIndex = 100
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label23.Location = New System.Drawing.Point(754, 124)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(132, 24)
-        Me.Label23.TabIndex = 101
-        Me.Label23.Text = "Email Address"
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(334, 270)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(101, 24)
-        Me.Label24.TabIndex = 103
-        Me.Label24.Text = "Citizenship"
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(936, 49)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(55, 24)
-        Me.Label25.TabIndex = 105
-        Me.Label25.Text = "Suffix"
-        '
-        'dtpBirthdateAddNewBorrowerSuffix
-        '
-        Me.dtpBirthdateAddNewBorrowerSuffix.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
-        Me.dtpBirthdateAddNewBorrowerSuffix.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
-        Me.dtpBirthdateAddNewBorrowerSuffix.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpBirthdateAddNewBorrowerSuffix.FormattingEnabled = True
-        Me.dtpBirthdateAddNewBorrowerSuffix.Items.AddRange(New Object() {"N/A", "Sr.", "Jr.", "I", "II", "IV", "V", "VI", "VII", "VIII", "IX", "X", "PhD", "MD", "DDS", "Esq.", "CPA", "JD", "RN"})
-        Me.dtpBirthdateAddNewBorrowerSuffix.Location = New System.Drawing.Point(940, 76)
-        Me.dtpBirthdateAddNewBorrowerSuffix.Name = "dtpBirthdateAddNewBorrowerSuffix"
-        Me.dtpBirthdateAddNewBorrowerSuffix.Size = New System.Drawing.Size(147, 39)
-        Me.dtpBirthdateAddNewBorrowerSuffix.TabIndex = 106
-        '
-        'txtAddNewBorrowerCitizenship
-        '
-        Me.txtAddNewBorrowerCitizenship.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddNewBorrowerCitizenship.Location = New System.Drawing.Point(338, 298)
-        Me.txtAddNewBorrowerCitizenship.Name = "txtAddNewBorrowerCitizenship"
-        Me.txtAddNewBorrowerCitizenship.Size = New System.Drawing.Size(328, 38)
-        Me.txtAddNewBorrowerCitizenship.TabIndex = 107
-        '
         'Add_New_Borrower
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -864,7 +864,7 @@ Partial Class Add_New_Borrower
     Friend WithEvents Label16 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label10 As Label
-    Friend WithEvents cboAddNewBorrowerCivilStatus As ComboBox
+    Friend WithEvents cmbAddNewBorrowerCivilStatus As ComboBox
     Friend WithEvents txtAddNewBorrowerPlaceOfBirth As TextBox
     Friend WithEvents Label9 As Label
     Friend WithEvents Label8 As Label
@@ -884,12 +884,12 @@ Partial Class Add_New_Borrower
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents lblPersonalInformation As Label
-    Friend WithEvents cboAddNewBorrowerReligion As ComboBox
-    Friend WithEvents cboAddNewBorrowerWorkStatus As ComboBox
+    Friend WithEvents cmbAddNewBorrowerReligion As ComboBox
+    Friend WithEvents cmbAddNewBorrowerWorkStatus As ComboBox
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents txtAddNewBorrowerEmailAddress As TextBox
     Friend WithEvents Label25 As Label
-    Friend WithEvents dtpBirthdateAddNewBorrowerSuffix As ComboBox
+    Friend WithEvents cmbBirthdateAddNewBorrowerSuffix As ComboBox
     Friend WithEvents txtAddNewBorrowerCitizenship As TextBox
 End Class

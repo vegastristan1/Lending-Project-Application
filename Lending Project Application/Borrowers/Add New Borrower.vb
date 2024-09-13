@@ -10,7 +10,7 @@ Public Class Add_New_Borrower
         Dim lastname As String = txtAddNewBorrowerLastName.Text
         Dim firstname As String = txtAddNewBorrowerFirstName.Text
         Dim middlename As String = txtAddNewBorrowerMiddleName.Text
-        Dim suffixname As String = If(dtpBirthdateAddNewBorrowerSuffix.SelectedItem IsNot Nothing, dtpBirthdateAddNewBorrowerSuffix.SelectedItem.ToString(), "")
+        Dim suffixname As String = If(cmbBirthdateAddNewBorrowerSuffix.SelectedItem IsNot Nothing, cmbBirthdateAddNewBorrowerSuffix.SelectedItem.ToString(), "")
         Dim homeaddress As String = txtAddNewBorrowerAddress.Text
         Dim telno As String = txtAddNewBorrowerContactNo.Text
         Dim emailaddress As String = txtAddNewBorrowerEmailAddress.Text
@@ -18,17 +18,17 @@ Public Class Add_New_Borrower
         Dim placeofbirth As String = txtAddNewBorrowerPlaceOfBirth.Text
 
         ' Check if civilStatus ComboBox has a selected item, otherwise default to an empty string
-        Dim civilStatus As String = If(cboAddNewBorrowerCivilStatus.SelectedItem IsNot Nothing, cboAddNewBorrowerCivilStatus.SelectedItem.ToString(), "")
+        Dim civilStatus As String = If(cmbAddNewBorrowerCivilStatus.SelectedItem IsNot Nothing, cmbAddNewBorrowerCivilStatus.SelectedItem.ToString(), "")
 
         Dim citizenship As String = txtAddNewBorrowerCitizenship.Text
 
         ' Check if religion ComboBox has a selected item, otherwise default to an empty string
-        Dim religion As String = If(cboAddNewBorrowerReligion.SelectedItem IsNot Nothing, cboAddNewBorrowerReligion.SelectedItem.ToString(), "")
+        Dim religion As String = If(cmbAddNewBorrowerReligion.SelectedItem IsNot Nothing, cmbAddNewBorrowerReligion.SelectedItem.ToString(), "")
 
         Dim employername As String = txtAddNewBorrowerWorkEmployerName.Text
 
         ' Check if employmentStatus ComboBox has a selected item, otherwise default to an empty string
-        Dim employmentStatus As String = If(cboAddNewBorrowerWorkStatus.SelectedItem IsNot Nothing, cboAddNewBorrowerWorkStatus.SelectedItem.ToString(), "")
+        Dim employmentStatus As String = If(cmbAddNewBorrowerWorkStatus.SelectedItem IsNot Nothing, cmbAddNewBorrowerWorkStatus.SelectedItem.ToString(), "")
 
         Dim employeraddress As String = txtAddNewBorrowerWorkAddress.Text
         Dim businessname As String = txtAddNewBorrowerBusinessName.Text
@@ -130,17 +130,17 @@ Public Class Add_New_Borrower
         txtAddNewBorrowerLastName.Clear()
         txtAddNewBorrowerFirstName.Clear()
         txtAddNewBorrowerMiddleName.Clear()
-        dtpBirthdateAddNewBorrowerSuffix.SelectedIndex = -1
+        cmbBirthdateAddNewBorrowerSuffix.SelectedIndex = -1
         txtAddNewBorrowerAddress.Clear()
         txtAddNewBorrowerContactNo.Clear()
         txtAddNewBorrowerEmailAddress.Clear()
         dtpBirthdateAddNewBorrowerBirthday.Value = DateTime.Now ' reset to today's date
         txtAddNewBorrowerPlaceOfBirth.Clear()
-        cboAddNewBorrowerCivilStatus.SelectedIndex = -1 ' reset combobox
+        cmbAddNewBorrowerCivilStatus.SelectedIndex = -1 ' reset combobox
         txtAddNewBorrowerCitizenship.Clear()
-        cboAddNewBorrowerReligion.SelectedIndex = -1
+        cmbAddNewBorrowerReligion.SelectedIndex = -1
         txtAddNewBorrowerWorkEmployerName.Clear()
-        cboAddNewBorrowerWorkStatus.SelectedIndex = -1
+        cmbAddNewBorrowerWorkStatus.SelectedIndex = -1
         txtAddNewBorrowerWorkAddress.Clear()
         txtAddNewBorrowerBusinessName.Clear()
         txtAddNewBorrowerBusinessEnvironment.Clear()
