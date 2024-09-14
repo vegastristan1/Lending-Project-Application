@@ -4,6 +4,12 @@ Public Class View_Borrower
 
     Public Property HoldBorrowerID As Integer
 
+    ' Replace with your actual connection string
+    'Dim connectionString As String = "Data Source=LENOVO-GEN7\SQLEXPRESS;Initial Catalog=dbLending;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
+    ' Replace with your actual connection string
+    Dim connectionString As String = "Data Source=LENOVO-GEN7\SQLEXPRESS;Initial Catalog=dbLending;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
+
+
     Private Sub View_Borrower_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' Use the BorrowerID to load data for the selected borrower
         'MessageBox.Show("Borrower ID: " & HoldBorrowerID.ToString())
@@ -16,8 +22,6 @@ Public Class View_Borrower
     End Sub
 
     Private Sub LoadBorrowerDetails(borrowerID As Integer)
-        ' Replace with your actual connection string
-        Dim connectionString As String = "Data Source=LENOVO-GEN7\SQLEXPRESS;Initial Catalog=dbLending;Integrated Security=True;Encrypt=True;TrustServerCertificate=True"
 
         ' SQL Query to fetch borrower details
         ' SQL Query to fetch borrower and name details using INNER JOIN
@@ -101,6 +105,64 @@ Public Class View_Borrower
     End Sub
 
     Private Sub btnViewBorrowerSave_Click(sender As Object, e As EventArgs) Handles btnViewBorrowerSave.Click
-        btnViewBorrowerEdit.Visible = True
+        'btnViewBorrowerEdit.Visible = True
+
+
+        ' SQL Query to update borrower and name details
+        Dim query As String = "
+        UPDATE Borrowers 
+        SET Birthdate = @Birthdate, TelNo = @TelNo, EmailAddress = @EmailAddress, PlaceOfBirth = @PlaceOfBirth, 
+            CivilStatus = @CivilStatus, Citizenship = @Citizenship, Religion = @Religion, HomeAddress = @HomeAddress, 
+            SpouseName = @SpouseName, SpouseEmployerName = @SpouseEmployerName, SpouseEmployerAddress = @SpouseEmployerAddress, 
+            EmployerName = @EmployerName, EmploymentStatus = @EmploymentStatus, EmployerAddress = @EmployerAddress, 
+            BusinessName = @BusinessName, BusinessNature = @BusinessNature, BusinessAddress = @BusinessAddress
+        WHERE BorrowerID = @BorrowerID;
+
+        UPDATE Names 
+        SET LastName = @LastName, FirstName = @FirstName, MiddleName = @MiddleName, SuffixName = @SuffixName
+        WHERE NameID = @BorrowerID;"
+
+        Using connection As New SqlConnection(connectionString)
+            Using command As New SqlCommand(query, connection)
+                ' Set the parameters for Borrowers table
+                command.Parameters.AddWithValue("@BorrowerID", HoldBorrowerID)
+                command.Parameters.AddWithValue("@Birthdate", dtpViewBorrowerBirthdate.Value)
+                command.Parameters.AddWithValue("@TelNo", txtViewBorrowerContactNo.Text)
+                command.Parameters.AddWithValue("@EmailAddress", txtViewBorrowerEmailAddress.Text)
+                command.Parameters.AddWithValue("@PlaceOfBirth", txtViewBorrowerPlaceOfBirth.Text)
+                command.Parameters.AddWithValue("@CivilStatus", cmbViewBorrowerCivilStatus.SelectedItem.ToString())
+                command.Parameters.AddWithValue("@Citizenship", txtViewBorrowerCitizenship.Text)
+                command.Parameters.AddWithValue("@Religion", cmbViewBorrowerReligion.SelectedItem.ToString())
+                command.Parameters.AddWithValue("@HomeAddress", txtViewBorrowerAddress.Text)
+                command.Parameters.AddWithValue("@SpouseName", txtViewBorrowerSpouseName.Text)
+                command.Parameters.AddWithValue("@SpouseEmployerName", txtViewBorrowerSpouseEmployersName.Text)
+                command.Parameters.AddWithValue("@SpouseEmployerAddress", txtViewBorrowerSpouseWorkAddress.Text)
+                command.Parameters.AddWithValue("@EmployerName", txtViewBorrowerWorkEmployerName.Text)
+
+                ' Check if an item is selected in the ComboBox, if not, default to "Unemployment"
+                Dim employmentStatus As String = If(cmbViewBorrowerWorkStatus.SelectedItem IsNot Nothing, cmbViewBorrowerWorkStatus.SelectedItem.ToString(), "Unemployment")
+                ' Now, set the parameter with the determined value
+                command.Parameters.AddWithValue("@EmploymentStatus", employmentStatus)
+
+                command.Parameters.AddWithValue("@EmployerAddress", txtViewBorrowerWorkAddress.Text)
+                command.Parameters.AddWithValue("@BusinessName", txtViewBorrowerBusinessName.Text)
+                command.Parameters.AddWithValue("@BusinessNature", txtViewBorrowerBusinessNature.Text)
+                command.Parameters.AddWithValue("@BusinessAddress", txtViewBorrowerBusinessAddress.Text)
+
+                ' Set the parameters for Names table
+                command.Parameters.AddWithValue("@LastName", txtViewBorrowerLastName.Text)
+                command.Parameters.AddWithValue("@FirstName", txtViewBorrowerFirstName.Text)
+                command.Parameters.AddWithValue("@MiddleName", txtViewBorrowerMiddleName.Text)
+                Dim suffixName As String = If(cmbViewBorrowerSuffixName.SelectedItem IsNot Nothing, cmbViewBorrowerSuffixName.SelectedItem.ToString(), "N/A")
+                command.Parameters.AddWithValue("@SuffixName", suffixName)
+
+                connection.Open()
+                command.ExecuteNonQuery()
+            End Using
+        End Using
+
+        'MessageBox.Show("Borrower details updated successfully.")
+        Me.Close()
     End Sub
+
 End Class

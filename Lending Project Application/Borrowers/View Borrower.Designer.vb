@@ -260,7 +260,7 @@ Partial Class View_Borrower
         Me.btnViewBorrowerEdit.BackColor = System.Drawing.Color.DarkOrange
         Me.btnViewBorrowerEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnViewBorrowerEdit.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnViewBorrowerEdit.Location = New System.Drawing.Point(1070, 796)
+        Me.btnViewBorrowerEdit.Location = New System.Drawing.Point(1220, 796)
         Me.btnViewBorrowerEdit.Name = "btnViewBorrowerEdit"
         Me.btnViewBorrowerEdit.Size = New System.Drawing.Size(151, 46)
         Me.btnViewBorrowerEdit.TabIndex = 4
@@ -293,7 +293,7 @@ Partial Class View_Borrower
         Me.btnViewBorrowerSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnViewBorrowerSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnViewBorrowerSave.ForeColor = System.Drawing.Color.White
-        Me.btnViewBorrowerSave.Location = New System.Drawing.Point(1227, 796)
+        Me.btnViewBorrowerSave.Location = New System.Drawing.Point(1220, 796)
         Me.btnViewBorrowerSave.Name = "btnViewBorrowerSave"
         Me.btnViewBorrowerSave.Size = New System.Drawing.Size(151, 46)
         Me.btnViewBorrowerSave.TabIndex = 4
