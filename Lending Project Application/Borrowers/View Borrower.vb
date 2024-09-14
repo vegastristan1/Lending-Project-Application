@@ -73,4 +73,34 @@ Public Class View_Borrower
         Me.Close()
     End Sub
 
+    Private Sub btnViewBorrowerEdit_Click(sender As Object, e As EventArgs) Handles btnViewBorrowerEdit.Click
+        txtViewBorrowerLastName.Enabled = True
+        txtViewBorrowerFirstName.Enabled = True
+        txtViewBorrowerMiddleName.Enabled = True
+        cmbViewBorrowerSuffixName.Enabled = True
+        dtpViewBorrowerBirthdate.Enabled = True
+        txtViewBorrowerContactNo.Enabled = True
+        txtViewBorrowerEmailAddress.Enabled = True
+        txtViewBorrowerPlaceOfBirth.Enabled = True
+        cmbViewBorrowerCivilStatus.Enabled = True
+        txtViewBorrowerCitizenship.Enabled = True
+        cmbViewBorrowerReligion.Enabled = True
+        txtViewBorrowerAddress.Enabled = True
+        txtViewBorrowerSpouseName.Enabled = True
+        txtViewBorrowerSpouseEmployersName.Enabled = True
+        txtViewBorrowerSpouseWorkAddress.Enabled = True
+        txtViewBorrowerWorkEmployerName.Enabled = True
+        cmbViewBorrowerWorkStatus.Enabled = True
+        txtViewBorrowerWorkAddress.Enabled = True
+        txtViewBorrowerBusinessName.Enabled = True
+        txtViewBorrowerBusinessNature.Enabled = True
+        txtViewBorrowerBusinessAddress.Enabled = True
+
+        btnViewBorrowerEdit.Visible = False
+        btnViewBorrowerSave.Enabled = True
+    End Sub
+
+    Private Sub btnViewBorrowerSave_Click(sender As Object, e As EventArgs) Handles btnViewBorrowerSave.Click
+        btnViewBorrowerEdit.Visible = True
+    End Sub
 End Class
