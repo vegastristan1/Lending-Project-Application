@@ -37,7 +37,6 @@ Partial Class Borrowers
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.btnAddNewBorrower = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.colPicture = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colName = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -46,6 +45,7 @@ Partial Class Borrowers
         Me.colStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colAction = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.colDelete = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.Label1 = New System.Windows.Forms.Label()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
@@ -226,16 +226,6 @@ Partial Class Borrowers
         Me.DataGridView1.Size = New System.Drawing.Size(1355, 799)
         Me.DataGridView1.TabIndex = 1
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(15, 12)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(393, 61)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Borrowers Lists"
-        '
         'colPicture
         '
         Me.colPicture.HeaderText = "Picture"
@@ -317,6 +307,16 @@ Partial Class Borrowers
         Me.colDelete.Resizable = System.Windows.Forms.DataGridViewTriState.[False]
         Me.colDelete.Text = "Delete"
         Me.colDelete.UseColumnTextForButtonValue = True
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 39.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(15, 12)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(393, 61)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Borrowers Lists"
         '
         'Borrowers
         '
