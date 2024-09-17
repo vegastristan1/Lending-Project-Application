@@ -19,7 +19,11 @@
         Me.Hide()
     End Sub
 
-    Private Sub btnAddNewBorrower_Click(sender As Object, e As EventArgs) Handles btnAddNewBorrower.Click
+    Private Sub btnAddLoan_Click(sender As Object, e As EventArgs) Handles btnAddLoan.Click
         Add_New_Loan.Show()
+    End Sub
+
+    Private Sub Loans_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

@@ -22,7 +22,7 @@ Partial Class Loans
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.SplitContainer1 = New System.Windows.Forms.SplitContainer()
         Me.btnSideNavLogout = New System.Windows.Forms.Button()
@@ -30,7 +30,7 @@ Partial Class Loans
         Me.btnSideNavLoans = New System.Windows.Forms.Button()
         Me.btnSideNavBorrowers = New System.Windows.Forms.Button()
         Me.btnSideNavDashboard = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgvLoanList = New System.Windows.Forms.DataGridView()
         Me.colSideLoansID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSideLoansLoanProduct = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSideLoansBorrower = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,15 +38,15 @@ Partial Class Loans
         Me.colSideLoansAppliedAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSideLoansStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colSideLoansAction = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtSearchLoanList = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.btnAddNewBorrower = New System.Windows.Forms.Button()
+        Me.btnAddLoan = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SplitContainer1.Panel1.SuspendLayout()
         Me.SplitContainer1.Panel2.SuspendLayout()
         Me.SplitContainer1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvLoanList, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -77,10 +77,10 @@ Partial Class Loans
         '
         'SplitContainer1.Panel2
         '
-        Me.SplitContainer1.Panel2.Controls.Add(Me.DataGridView1)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.TextBox1)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.dgvLoanList)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.txtSearchLoanList)
         Me.SplitContainer1.Panel2.Controls.Add(Me.Label1)
-        Me.SplitContainer1.Panel2.Controls.Add(Me.btnAddNewBorrower)
+        Me.SplitContainer1.Panel2.Controls.Add(Me.btnAddLoan)
         Me.SplitContainer1.Size = New System.Drawing.Size(1664, 961)
         Me.SplitContainer1.SplitterDistance = 250
         Me.SplitContainer1.TabIndex = 2
@@ -165,24 +165,24 @@ Partial Class Loans
         Me.btnSideNavDashboard.Text = "Dashboard"
         Me.btnSideNavDashboard.UseVisualStyleBackColor = False
         '
-        'DataGridView1
+        'dgvLoanList
         '
-        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSideLoansID, Me.colSideLoansLoanProduct, Me.colSideLoansBorrower, Me.colSideLoansReleaseDate, Me.colSideLoansAppliedAmount, Me.colSideLoansStatus, Me.colSideLoansAction})
-        Me.DataGridView1.Location = New System.Drawing.Point(26, 138)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersVisible = False
-        Me.DataGridView1.Size = New System.Drawing.Size(1355, 811)
-        Me.DataGridView1.TabIndex = 7
+        Me.dgvLoanList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvLoanList.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvLoanList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvLoanList.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colSideLoansID, Me.colSideLoansLoanProduct, Me.colSideLoansBorrower, Me.colSideLoansReleaseDate, Me.colSideLoansAppliedAmount, Me.colSideLoansStatus, Me.colSideLoansAction})
+        Me.dgvLoanList.Location = New System.Drawing.Point(26, 138)
+        Me.dgvLoanList.Name = "dgvLoanList"
+        Me.dgvLoanList.RowHeadersVisible = False
+        Me.dgvLoanList.Size = New System.Drawing.Size(1355, 811)
+        Me.dgvLoanList.TabIndex = 7
         '
         'colSideLoansID
         '
@@ -219,13 +219,13 @@ Partial Class Loans
         Me.colSideLoansAction.HeaderText = "Action"
         Me.colSideLoansAction.Name = "colSideLoansAction"
         '
-        'TextBox1
+        'txtSearchLoanList
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(26, 94)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(741, 38)
-        Me.TextBox1.TabIndex = 6
+        Me.txtSearchLoanList.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtSearchLoanList.Location = New System.Drawing.Point(26, 94)
+        Me.txtSearchLoanList.Name = "txtSearchLoanList"
+        Me.txtSearchLoanList.Size = New System.Drawing.Size(741, 38)
+        Me.txtSearchLoanList.TabIndex = 6
         '
         'Label1
         '
@@ -237,17 +237,17 @@ Partial Class Loans
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Loan List"
         '
-        'btnAddNewBorrower
+        'btnAddLoan
         '
-        Me.btnAddNewBorrower.BackColor = System.Drawing.Color.RoyalBlue
-        Me.btnAddNewBorrower.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddNewBorrower.ForeColor = System.Drawing.Color.White
-        Me.btnAddNewBorrower.Location = New System.Drawing.Point(1181, 86)
-        Me.btnAddNewBorrower.Name = "btnAddNewBorrower"
-        Me.btnAddNewBorrower.Size = New System.Drawing.Size(200, 46)
-        Me.btnAddNewBorrower.TabIndex = 5
-        Me.btnAddNewBorrower.Text = "Add Loan"
-        Me.btnAddNewBorrower.UseVisualStyleBackColor = False
+        Me.btnAddLoan.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnAddLoan.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddLoan.ForeColor = System.Drawing.Color.White
+        Me.btnAddLoan.Location = New System.Drawing.Point(1181, 86)
+        Me.btnAddLoan.Name = "btnAddLoan"
+        Me.btnAddLoan.Size = New System.Drawing.Size(200, 46)
+        Me.btnAddLoan.TabIndex = 5
+        Me.btnAddLoan.Text = "Add Loan"
+        Me.btnAddLoan.UseVisualStyleBackColor = False
         '
         'Loans
         '
@@ -264,7 +264,7 @@ Partial Class Loans
         Me.SplitContainer1.Panel2.PerformLayout()
         CType(Me.SplitContainer1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.SplitContainer1.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvLoanList, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -276,10 +276,10 @@ Partial Class Loans
     Friend WithEvents btnSideNavLoans As Button
     Friend WithEvents btnSideNavBorrowers As Button
     Friend WithEvents btnSideNavDashboard As Button
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtSearchLoanList As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents btnAddNewBorrower As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents btnAddLoan As Button
+    Friend WithEvents dgvLoanList As DataGridView
     Friend WithEvents colSideLoansID As DataGridViewTextBoxColumn
     Friend WithEvents colSideLoansLoanProduct As DataGridViewTextBoxColumn
     Friend WithEvents colSideLoansBorrower As DataGridViewTextBoxColumn
