@@ -22,13 +22,11 @@ Partial Class Add_New_Loan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.TextBox7 = New System.Windows.Forms.TextBox()
@@ -71,12 +69,14 @@ Partial Class Add_New_Loan
         Me.lblPersonalInformation = New System.Windows.Forms.Label()
         Me.btnBackToLoansList = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -125,22 +125,6 @@ Partial Class Add_New_Loan
         Me.Panel2.Size = New System.Drawing.Size(1382, 847)
         Me.Panel2.TabIndex = 10
         '
-        'Button1
-        '
-        Me.Button1.BackColor = System.Drawing.Color.DarkOrange
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.Lending_Project_Application.My.Resources.Resources.arrows_rotate_solid
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(974, 466)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(399, 46)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "Generate Repayment Schedule"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = False
-        '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
@@ -170,14 +154,6 @@ Partial Class Add_New_Loan
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Collateral Information"
         Me.TabPage1.UseVisualStyleBackColor = True
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Location = New System.Drawing.Point(409, 6)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(329, 323)
-        Me.PictureBox2.TabIndex = 53
-        Me.PictureBox2.TabStop = False
         '
         'TextBox8
         '
@@ -282,14 +258,14 @@ Partial Class Add_New_Loan
         'DataGridView1
         '
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colLoansRepaymentsScheduleDate, Me.colLoansRepaymentsAmountToPay, Me.colLoansRepaymentsPrincipalAmount, Me.colLoansRepaymentsInterest, Me.colLoansRepaymentsBalance, Me.colLoansRepaymentsStatus})
         Me.DataGridView1.Location = New System.Drawing.Point(14, 518)
@@ -352,10 +328,10 @@ Partial Class Add_New_Loan
         '
         'TextBox3
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox3.Location = New System.Drawing.Point(310, 235)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(290, 38)
+        Me.TextBox3.Size = New System.Drawing.Size(290, 40)
         Me.TextBox3.TabIndex = 39
         '
         'Label8
@@ -370,10 +346,10 @@ Partial Class Add_New_Loan
         '
         'TextBox1
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox1.Location = New System.Drawing.Point(13, 235)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(291, 38)
+        Me.TextBox1.Size = New System.Drawing.Size(291, 40)
         Me.TextBox1.TabIndex = 37
         '
         'Label7
@@ -398,8 +374,11 @@ Partial Class Add_New_Loan
         '
         'ComboBox4
         '
+        Me.ComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox4.FormattingEnabled = True
+        Me.ComboBox4.Items.AddRange(New Object() {"Monthly", "Weekly", "Bi-Weekly", "Semi-Monthly", "Quarterly", "Annually", "Lump-Sum", "Daily"})
         Me.ComboBox4.Location = New System.Drawing.Point(310, 151)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(290, 33)
@@ -418,9 +397,11 @@ Partial Class Add_New_Loan
         '
         'ComboBox3
         '
+        Me.ComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Items.AddRange(New Object() {"Select One", "Student Loan", "General Loan", "Business Loan"})
+        Me.ComboBox3.Items.AddRange(New Object() {"Student Loan", "General Loan", "Business Loan"})
         Me.ComboBox3.Location = New System.Drawing.Point(14, 151)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(290, 33)
@@ -471,8 +452,11 @@ Partial Class Add_New_Loan
         '
         'ComboBox1
         '
+        Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Pending for Approval", "Approved", "Rejected", "On-going Payment", "Paid Off", "Overdue", "Defaulted", "Cancelled", "Under Review"})
         Me.ComboBox1.Location = New System.Drawing.Point(310, 385)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(290, 33)
@@ -566,6 +550,33 @@ Partial Class Add_New_Loan
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Add New Loan"
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.DarkOrange
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Image = Global.Lending_Project_Application.My.Resources.Resources.arrows_rotate_solid
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(974, 466)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Button1.Size = New System.Drawing.Size(399, 46)
+        Me.Button1.TabIndex = 45
+        Me.Button1.Text = "Generate Repayment Schedule"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.Button1.UseVisualStyleBackColor = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.PictureBox2.Image = Global.Lending_Project_Application.My.Resources.Resources.collateral_placeholder
+        Me.PictureBox2.Location = New System.Drawing.Point(409, 6)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(329, 323)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 53
+        Me.PictureBox2.TabStop = False
+        '
         'Add_New_Loan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -588,8 +599,8 @@ Partial Class Add_New_Loan
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
