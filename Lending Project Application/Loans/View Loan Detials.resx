@@ -117,25 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Button1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAAsVJREFUSEvd1knITWEYwPFrlilkKLEwxMZCsaCQHYpCFCU72ZBky9ZQViylsKFk
-        Yy42rFCGDClJUoaEZM78/+u+t+ec897rXNl8nvrVd+937vu84/OeRk+IvhiJ6ViIFViG+ZiKYeiFfxrj
-        sRfX8Aof8anpA17gEjZgIMphh+zwTPT2i07RBzOwE0/xs4YfuIfNGAPDmdoOO2mHtza/y4a9Wo3H+I5c
-        Er9v978vuABHOBo3kf53GYNRCZOuhVMaG0vuYwc2YQsO4jXKzzl6O+4+uNv8Ti7XEBTC6V2DctJncI0X
-        oB/K4bquxGm8R/ztI7wMn6+jktg1tZfpIafyBuah7bqEGIpVMFlqoyyb2I0U182kHpVujolL5fS+RUyY
-        VKbaIxN3r9M7F3WTOlrX/RCOwt/HhElhxK7tHsQHXNM605tiEcrrm1MYsYkPID7gRuomlsNjFNvIsdAM
-        Qium4SzskcfFznQT4+AU34bHJ8czbAcr1cuDPQLdJk3hsRoFi0bOcPyxZP7fMQFLYfXJWQyvxL+JyViC
-        ib8/hRiLi/Dm+NyGV99+DEA34e69Bdt+gCloxRy8Q27rR5ZBi0zdsAZYCWMb69EK3yC8K+MDSbr6PJ/H
-        UamxHWIWniC2ZSVshYmdiphQXmuHsRHr4DmtWz49lnY01v1zKFTCTiN+CN+t+qNumHQb3BupHUc+G4Uo
-        J/4a/pb1dzfchJ1G7GicXkcak9q2l0el7pen+hSeh89yja/CBgp1thlWu11wZHF6dRK+gVainNgXMzeB
-        icqNyLeJ87AuH4PP5ZbK705gErLh9LyBD5vIV1TrqT84gjpHrcyROzvZkabwiLh7v8E3jnhWvdytOhaB
-        XIIyO+4N50aqdZf7Aue16O2RC7/3zXMfnGbfIu7AK/AKzsCr1CWqlbDb8Lr06nMzec15BTqdltKecN01
-        Gr8AvDs8PPVZXwkAAAAASUVORK5CYII=
-</value>
-  </data>
   <metadata name="colLoansRepaymentsScheduleDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

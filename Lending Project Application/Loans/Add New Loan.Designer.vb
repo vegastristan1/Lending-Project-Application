@@ -22,14 +22,14 @@ Partial Class Add_New_Loan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle33 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle34 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle35 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle36 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.txtAddNewLoanTotal = New System.Windows.Forms.TextBox()
@@ -53,6 +53,33 @@ Partial Class Add_New_Loan
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.txtAddNewLoanGuarantorIDReference1 = New System.Windows.Forms.TextBox()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorOccupation1 = New System.Windows.Forms.TextBox()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorAddress1 = New System.Windows.Forms.TextBox()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorContactInfo1 = New System.Windows.Forms.TextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower1 = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorName1 = New System.Windows.Forms.TextBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.txtAddNewLoanGuarantorIDReference2 = New System.Windows.Forms.TextBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorOccupation2 = New System.Windows.Forms.TextBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorAddress2 = New System.Windows.Forms.TextBox()
+        Me.Label30 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorContactInfo2 = New System.Windows.Forms.TextBox()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower2 = New System.Windows.Forms.TextBox()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.txtAddNewLoanGuarantorName2 = New System.Windows.Forms.TextBox()
+        Me.Label33 = New System.Windows.Forms.Label()
         Me.txtAddNewLoanPayableFor = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.dgvRepaymentSchedule = New System.Windows.Forms.DataGridView()
@@ -74,7 +101,7 @@ Partial Class Add_New_Loan
         Me.cmbAddNewLoanProduct = New System.Windows.Forms.ComboBox()
         Me.cmbAddNewLoanBorrower = New System.Windows.Forms.ComboBox()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.btnAddNewBorrowerSave = New System.Windows.Forms.Button()
+        Me.btnAddNewLoanSave = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.cmbAddNewLoanStatus = New System.Windows.Forms.ComboBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -86,43 +113,16 @@ Partial Class Add_New_Loan
         Me.lblPersonalInformation = New System.Windows.Forms.Label()
         Me.btnBackToLoansList = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
-        Me.TabControl2 = New System.Windows.Forms.TabControl()
-        Me.txtAddNewLoanGuarantorIDReference1 = New System.Windows.Forms.TextBox()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.txtAddNewLoanGuarantorOccupation1 = New System.Windows.Forms.TextBox()
-        Me.Label25 = New System.Windows.Forms.Label()
-        Me.txtAddNewLoanGuarantorAddress1 = New System.Windows.Forms.TextBox()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.txtAddNewLoanGuarantorContactInfo1 = New System.Windows.Forms.TextBox()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.txtAddNewLoanGuarantorRelationshipToBorrower1 = New System.Windows.Forms.TextBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.txtAddNewLoanGuarantorName1 = New System.Windows.Forms.TextBox()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label29 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label30 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label31 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.Label32 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label33 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.picAddNewLoanCollateralImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.dgvRepaymentSchedule, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TabPage4.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
         Me.TabControl2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
+        CType(Me.dgvRepaymentSchedule, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -158,7 +158,7 @@ Partial Class Add_New_Loan
         Me.Panel2.Controls.Add(Me.cmbAddNewLoanProduct)
         Me.Panel2.Controls.Add(Me.cmbAddNewLoanBorrower)
         Me.Panel2.Controls.Add(Me.Panel3)
-        Me.Panel2.Controls.Add(Me.btnAddNewBorrowerSave)
+        Me.Panel2.Controls.Add(Me.btnAddNewLoanSave)
         Me.Panel2.Controls.Add(Me.Label10)
         Me.Panel2.Controls.Add(Me.cmbAddNewLoanStatus)
         Me.Panel2.Controls.Add(Me.Label6)
@@ -408,6 +408,280 @@ Partial Class Add_New_Loan
         Me.TabPage2.Text = "Guarantor"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
+        'TabControl2
+        '
+        Me.TabControl2.Alignment = System.Windows.Forms.TabAlignment.Right
+        Me.TabControl2.Controls.Add(Me.TabPage3)
+        Me.TabControl2.Controls.Add(Me.TabPage4)
+        Me.TabControl2.Location = New System.Drawing.Point(3, 6)
+        Me.TabControl2.Multiline = True
+        Me.TabControl2.Name = "TabControl2"
+        Me.TabControl2.SelectedIndex = 0
+        Me.TabControl2.Size = New System.Drawing.Size(728, 338)
+        Me.TabControl2.TabIndex = 63
+        '
+        'TabPage3
+        '
+        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorIDReference1)
+        Me.TabPage3.Controls.Add(Me.Label26)
+        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorOccupation1)
+        Me.TabPage3.Controls.Add(Me.Label25)
+        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorAddress1)
+        Me.TabPage3.Controls.Add(Me.Label24)
+        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorContactInfo1)
+        Me.TabPage3.Controls.Add(Me.Label22)
+        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorRelationshipToBorrower1)
+        Me.TabPage3.Controls.Add(Me.Label21)
+        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorName1)
+        Me.TabPage3.Controls.Add(Me.Label20)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 4)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(696, 330)
+        Me.TabPage3.TabIndex = 0
+        Me.TabPage3.Text = "TabPage3"
+        Me.TabPage3.UseVisualStyleBackColor = True
+        '
+        'txtAddNewLoanGuarantorIDReference1
+        '
+        Me.txtAddNewLoanGuarantorIDReference1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorIDReference1.Location = New System.Drawing.Point(363, 249)
+        Me.txtAddNewLoanGuarantorIDReference1.Name = "txtAddNewLoanGuarantorIDReference1"
+        Me.txtAddNewLoanGuarantorIDReference1.Size = New System.Drawing.Size(316, 31)
+        Me.txtAddNewLoanGuarantorIDReference1.TabIndex = 74
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(357, 222)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(204, 24)
+        Me.Label26.TabIndex = 73
+        Me.Label26.Text = "ID / Reference Number"
+        '
+        'txtAddNewLoanGuarantorOccupation1
+        '
+        Me.txtAddNewLoanGuarantorOccupation1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorOccupation1.Location = New System.Drawing.Point(10, 249)
+        Me.txtAddNewLoanGuarantorOccupation1.Name = "txtAddNewLoanGuarantorOccupation1"
+        Me.txtAddNewLoanGuarantorOccupation1.Size = New System.Drawing.Size(345, 31)
+        Me.txtAddNewLoanGuarantorOccupation1.TabIndex = 72
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(6, 222)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(107, 24)
+        Me.Label25.TabIndex = 71
+        Me.Label25.Text = "Occupation"
+        '
+        'txtAddNewLoanGuarantorAddress1
+        '
+        Me.txtAddNewLoanGuarantorAddress1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorAddress1.Location = New System.Drawing.Point(361, 124)
+        Me.txtAddNewLoanGuarantorAddress1.Multiline = True
+        Me.txtAddNewLoanGuarantorAddress1.Name = "txtAddNewLoanGuarantorAddress1"
+        Me.txtAddNewLoanGuarantorAddress1.Size = New System.Drawing.Size(318, 95)
+        Me.txtAddNewLoanGuarantorAddress1.TabIndex = 70
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label24.Location = New System.Drawing.Point(355, 97)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(80, 24)
+        Me.Label24.TabIndex = 69
+        Me.Label24.Text = "Address"
+        '
+        'txtAddNewLoanGuarantorContactInfo1
+        '
+        Me.txtAddNewLoanGuarantorContactInfo1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorContactInfo1.Location = New System.Drawing.Point(10, 186)
+        Me.txtAddNewLoanGuarantorContactInfo1.Name = "txtAddNewLoanGuarantorContactInfo1"
+        Me.txtAddNewLoanGuarantorContactInfo1.Size = New System.Drawing.Size(345, 31)
+        Me.txtAddNewLoanGuarantorContactInfo1.TabIndex = 68
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label22.Location = New System.Drawing.Point(6, 159)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(170, 24)
+        Me.Label22.TabIndex = 67
+        Me.Label22.Text = "Contact Information"
+        '
+        'txtAddNewLoanGuarantorRelationshipToBorrower1
+        '
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.Location = New System.Drawing.Point(12, 124)
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.Name = "txtAddNewLoanGuarantorRelationshipToBorrower1"
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.Size = New System.Drawing.Size(343, 31)
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.TabIndex = 66
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(6, 97)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(215, 24)
+        Me.Label21.TabIndex = 65
+        Me.Label21.Text = "Relationship to Borrower"
+        '
+        'txtAddNewLoanGuarantorName1
+        '
+        Me.txtAddNewLoanGuarantorName1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorName1.Location = New System.Drawing.Point(10, 63)
+        Me.txtAddNewLoanGuarantorName1.Name = "txtAddNewLoanGuarantorName1"
+        Me.txtAddNewLoanGuarantorName1.Size = New System.Drawing.Size(669, 31)
+        Me.txtAddNewLoanGuarantorName1.TabIndex = 64
+        '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(6, 37)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(61, 24)
+        Me.Label20.TabIndex = 63
+        Me.Label20.Text = "Name"
+        '
+        'TabPage4
+        '
+        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorIDReference2)
+        Me.TabPage4.Controls.Add(Me.Label28)
+        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorOccupation2)
+        Me.TabPage4.Controls.Add(Me.Label29)
+        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorAddress2)
+        Me.TabPage4.Controls.Add(Me.Label30)
+        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorContactInfo2)
+        Me.TabPage4.Controls.Add(Me.Label31)
+        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorRelationshipToBorrower2)
+        Me.TabPage4.Controls.Add(Me.Label32)
+        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorName2)
+        Me.TabPage4.Controls.Add(Me.Label33)
+        Me.TabPage4.Location = New System.Drawing.Point(4, 4)
+        Me.TabPage4.Name = "TabPage4"
+        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage4.Size = New System.Drawing.Size(696, 330)
+        Me.TabPage4.TabIndex = 1
+        Me.TabPage4.Text = "TabPage4"
+        Me.TabPage4.UseVisualStyleBackColor = True
+        '
+        'txtAddNewLoanGuarantorIDReference2
+        '
+        Me.txtAddNewLoanGuarantorIDReference2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorIDReference2.Location = New System.Drawing.Point(363, 249)
+        Me.txtAddNewLoanGuarantorIDReference2.Name = "txtAddNewLoanGuarantorIDReference2"
+        Me.txtAddNewLoanGuarantorIDReference2.Size = New System.Drawing.Size(316, 31)
+        Me.txtAddNewLoanGuarantorIDReference2.TabIndex = 86
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(357, 222)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(204, 24)
+        Me.Label28.TabIndex = 85
+        Me.Label28.Text = "ID / Reference Number"
+        '
+        'txtAddNewLoanGuarantorOccupation2
+        '
+        Me.txtAddNewLoanGuarantorOccupation2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorOccupation2.Location = New System.Drawing.Point(10, 249)
+        Me.txtAddNewLoanGuarantorOccupation2.Name = "txtAddNewLoanGuarantorOccupation2"
+        Me.txtAddNewLoanGuarantorOccupation2.Size = New System.Drawing.Size(345, 31)
+        Me.txtAddNewLoanGuarantorOccupation2.TabIndex = 84
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label29.Location = New System.Drawing.Point(6, 222)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(107, 24)
+        Me.Label29.TabIndex = 83
+        Me.Label29.Text = "Occupation"
+        '
+        'txtAddNewLoanGuarantorAddress2
+        '
+        Me.txtAddNewLoanGuarantorAddress2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorAddress2.Location = New System.Drawing.Point(361, 124)
+        Me.txtAddNewLoanGuarantorAddress2.Multiline = True
+        Me.txtAddNewLoanGuarantorAddress2.Name = "txtAddNewLoanGuarantorAddress2"
+        Me.txtAddNewLoanGuarantorAddress2.Size = New System.Drawing.Size(318, 95)
+        Me.txtAddNewLoanGuarantorAddress2.TabIndex = 82
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label30.Location = New System.Drawing.Point(355, 97)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(80, 24)
+        Me.Label30.TabIndex = 81
+        Me.Label30.Text = "Address"
+        '
+        'txtAddNewLoanGuarantorContactInfo2
+        '
+        Me.txtAddNewLoanGuarantorContactInfo2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorContactInfo2.Location = New System.Drawing.Point(10, 186)
+        Me.txtAddNewLoanGuarantorContactInfo2.Name = "txtAddNewLoanGuarantorContactInfo2"
+        Me.txtAddNewLoanGuarantorContactInfo2.Size = New System.Drawing.Size(345, 31)
+        Me.txtAddNewLoanGuarantorContactInfo2.TabIndex = 80
+        '
+        'Label31
+        '
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label31.Location = New System.Drawing.Point(6, 159)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(170, 24)
+        Me.Label31.TabIndex = 79
+        Me.Label31.Text = "Contact Information"
+        '
+        'txtAddNewLoanGuarantorRelationshipToBorrower2
+        '
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower2.Location = New System.Drawing.Point(12, 124)
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower2.Name = "txtAddNewLoanGuarantorRelationshipToBorrower2"
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower2.Size = New System.Drawing.Size(343, 31)
+        Me.txtAddNewLoanGuarantorRelationshipToBorrower2.TabIndex = 78
+        '
+        'Label32
+        '
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label32.Location = New System.Drawing.Point(6, 97)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(215, 24)
+        Me.Label32.TabIndex = 77
+        Me.Label32.Text = "Relationship to Borrower"
+        '
+        'txtAddNewLoanGuarantorName2
+        '
+        Me.txtAddNewLoanGuarantorName2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanGuarantorName2.Location = New System.Drawing.Point(10, 63)
+        Me.txtAddNewLoanGuarantorName2.Name = "txtAddNewLoanGuarantorName2"
+        Me.txtAddNewLoanGuarantorName2.Size = New System.Drawing.Size(669, 31)
+        Me.txtAddNewLoanGuarantorName2.TabIndex = 76
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(6, 37)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(61, 24)
+        Me.Label33.TabIndex = 75
+        Me.Label33.Text = "Name"
+        '
         'txtAddNewLoanPayableFor
         '
         Me.txtAddNewLoanPayableFor.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -431,17 +705,17 @@ Partial Class Add_New_Loan
         '
         Me.dgvRepaymentSchedule.AllowUserToAddRows = False
         Me.dgvRepaymentSchedule.AllowUserToDeleteRows = False
-        DataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvRepaymentSchedule.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle33
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvRepaymentSchedule.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvRepaymentSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle34.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRepaymentSchedule.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle34
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRepaymentSchedule.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvRepaymentSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRepaymentSchedule.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colLoansRepaymentsScheduleDate, Me.colLoansRepaymentsAmountToPay, Me.colLoansRepaymentsPrincipalAmount, Me.colLoansRepaymentsInterest, Me.colLoansRepaymentsBalance, Me.colLoansRepaymentsStatus})
         Me.dgvRepaymentSchedule.Location = New System.Drawing.Point(14, 518)
@@ -453,8 +727,8 @@ Partial Class Add_New_Loan
         '
         'colLoansRepaymentsScheduleDate
         '
-        DataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsScheduleDate.DefaultCellStyle = DataGridViewCellStyle35
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsScheduleDate.DefaultCellStyle = DataGridViewCellStyle3
         Me.colLoansRepaymentsScheduleDate.FillWeight = 152.2843!
         Me.colLoansRepaymentsScheduleDate.HeaderText = "Date"
         Me.colLoansRepaymentsScheduleDate.Name = "colLoansRepaymentsScheduleDate"
@@ -462,8 +736,8 @@ Partial Class Add_New_Loan
         '
         'colLoansRepaymentsAmountToPay
         '
-        DataGridViewCellStyle36.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsAmountToPay.DefaultCellStyle = DataGridViewCellStyle36
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsAmountToPay.DefaultCellStyle = DataGridViewCellStyle4
         Me.colLoansRepaymentsAmountToPay.FillWeight = 73.85786!
         Me.colLoansRepaymentsAmountToPay.HeaderText = "Amount to Pay"
         Me.colLoansRepaymentsAmountToPay.Name = "colLoansRepaymentsAmountToPay"
@@ -471,8 +745,8 @@ Partial Class Add_New_Loan
         '
         'colLoansRepaymentsPrincipalAmount
         '
-        DataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsPrincipalAmount.DefaultCellStyle = DataGridViewCellStyle37
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsPrincipalAmount.DefaultCellStyle = DataGridViewCellStyle5
         Me.colLoansRepaymentsPrincipalAmount.FillWeight = 73.85786!
         Me.colLoansRepaymentsPrincipalAmount.HeaderText = "Principal Amount"
         Me.colLoansRepaymentsPrincipalAmount.Name = "colLoansRepaymentsPrincipalAmount"
@@ -482,24 +756,24 @@ Partial Class Add_New_Loan
         '
         'colLoansRepaymentsInterest
         '
-        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsInterest.DefaultCellStyle = DataGridViewCellStyle38
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsInterest.DefaultCellStyle = DataGridViewCellStyle6
         Me.colLoansRepaymentsInterest.HeaderText = "Interest"
         Me.colLoansRepaymentsInterest.Name = "colLoansRepaymentsInterest"
         Me.colLoansRepaymentsInterest.ReadOnly = True
         '
         'colLoansRepaymentsBalance
         '
-        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsBalance.DefaultCellStyle = DataGridViewCellStyle39
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsBalance.DefaultCellStyle = DataGridViewCellStyle7
         Me.colLoansRepaymentsBalance.HeaderText = "Balance"
         Me.colLoansRepaymentsBalance.Name = "colLoansRepaymentsBalance"
         Me.colLoansRepaymentsBalance.ReadOnly = True
         '
         'colLoansRepaymentsStatus
         '
-        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsStatus.DefaultCellStyle = DataGridViewCellStyle40
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsStatus.DefaultCellStyle = DataGridViewCellStyle8
         Me.colLoansRepaymentsStatus.HeaderText = "Status"
         Me.colLoansRepaymentsStatus.Name = "colLoansRepaymentsStatus"
         Me.colLoansRepaymentsStatus.ReadOnly = True
@@ -628,17 +902,17 @@ Partial Class Add_New_Loan
         Me.Panel3.Size = New System.Drawing.Size(1355, 10)
         Me.Panel3.TabIndex = 30
         '
-        'btnAddNewBorrowerSave
+        'btnAddNewLoanSave
         '
-        Me.btnAddNewBorrowerSave.BackColor = System.Drawing.Color.RoyalBlue
-        Me.btnAddNewBorrowerSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAddNewBorrowerSave.ForeColor = System.Drawing.Color.White
-        Me.btnAddNewBorrowerSave.Location = New System.Drawing.Point(1222, 796)
-        Me.btnAddNewBorrowerSave.Name = "btnAddNewBorrowerSave"
-        Me.btnAddNewBorrowerSave.Size = New System.Drawing.Size(151, 46)
-        Me.btnAddNewBorrowerSave.TabIndex = 4
-        Me.btnAddNewBorrowerSave.Text = "Save"
-        Me.btnAddNewBorrowerSave.UseVisualStyleBackColor = False
+        Me.btnAddNewLoanSave.BackColor = System.Drawing.Color.RoyalBlue
+        Me.btnAddNewLoanSave.Font = New System.Drawing.Font("Microsoft Sans Serif", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNewLoanSave.ForeColor = System.Drawing.Color.White
+        Me.btnAddNewLoanSave.Location = New System.Drawing.Point(1222, 796)
+        Me.btnAddNewLoanSave.Name = "btnAddNewLoanSave"
+        Me.btnAddNewLoanSave.Size = New System.Drawing.Size(151, 46)
+        Me.btnAddNewLoanSave.TabIndex = 4
+        Me.btnAddNewLoanSave.Text = "Save"
+        Me.btnAddNewLoanSave.UseVisualStyleBackColor = False
         '
         'Label10
         '
@@ -755,280 +1029,6 @@ Partial Class Add_New_Loan
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Add New Loan"
         '
-        'TabPage4
-        '
-        Me.TabPage4.Controls.Add(Me.TextBox1)
-        Me.TabPage4.Controls.Add(Me.Label28)
-        Me.TabPage4.Controls.Add(Me.TextBox2)
-        Me.TabPage4.Controls.Add(Me.Label29)
-        Me.TabPage4.Controls.Add(Me.TextBox3)
-        Me.TabPage4.Controls.Add(Me.Label30)
-        Me.TabPage4.Controls.Add(Me.TextBox4)
-        Me.TabPage4.Controls.Add(Me.Label31)
-        Me.TabPage4.Controls.Add(Me.TextBox5)
-        Me.TabPage4.Controls.Add(Me.Label32)
-        Me.TabPage4.Controls.Add(Me.TextBox6)
-        Me.TabPage4.Controls.Add(Me.Label33)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 4)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(696, 330)
-        Me.TabPage4.TabIndex = 1
-        Me.TabPage4.Text = "TabPage4"
-        Me.TabPage4.UseVisualStyleBackColor = True
-        '
-        'TabPage3
-        '
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorIDReference1)
-        Me.TabPage3.Controls.Add(Me.Label26)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorOccupation1)
-        Me.TabPage3.Controls.Add(Me.Label25)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorAddress1)
-        Me.TabPage3.Controls.Add(Me.Label24)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorContactInfo1)
-        Me.TabPage3.Controls.Add(Me.Label22)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorRelationshipToBorrower1)
-        Me.TabPage3.Controls.Add(Me.Label21)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorName1)
-        Me.TabPage3.Controls.Add(Me.Label20)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 4)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(696, 330)
-        Me.TabPage3.TabIndex = 0
-        Me.TabPage3.Text = "TabPage3"
-        Me.TabPage3.UseVisualStyleBackColor = True
-        '
-        'TabControl2
-        '
-        Me.TabControl2.Alignment = System.Windows.Forms.TabAlignment.Right
-        Me.TabControl2.Controls.Add(Me.TabPage3)
-        Me.TabControl2.Controls.Add(Me.TabPage4)
-        Me.TabControl2.Location = New System.Drawing.Point(3, 6)
-        Me.TabControl2.Multiline = True
-        Me.TabControl2.Name = "TabControl2"
-        Me.TabControl2.SelectedIndex = 0
-        Me.TabControl2.Size = New System.Drawing.Size(728, 338)
-        Me.TabControl2.TabIndex = 63
-        '
-        'txtAddNewLoanGuarantorIDReference1
-        '
-        Me.txtAddNewLoanGuarantorIDReference1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddNewLoanGuarantorIDReference1.Location = New System.Drawing.Point(363, 249)
-        Me.txtAddNewLoanGuarantorIDReference1.Name = "txtAddNewLoanGuarantorIDReference1"
-        Me.txtAddNewLoanGuarantorIDReference1.Size = New System.Drawing.Size(316, 31)
-        Me.txtAddNewLoanGuarantorIDReference1.TabIndex = 74
-        '
-        'Label26
-        '
-        Me.Label26.AutoSize = True
-        Me.Label26.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label26.Location = New System.Drawing.Point(357, 222)
-        Me.Label26.Name = "Label26"
-        Me.Label26.Size = New System.Drawing.Size(204, 24)
-        Me.Label26.TabIndex = 73
-        Me.Label26.Text = "ID / Reference Number"
-        '
-        'txtAddNewLoanGuarantorOccupation1
-        '
-        Me.txtAddNewLoanGuarantorOccupation1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddNewLoanGuarantorOccupation1.Location = New System.Drawing.Point(10, 249)
-        Me.txtAddNewLoanGuarantorOccupation1.Name = "txtAddNewLoanGuarantorOccupation1"
-        Me.txtAddNewLoanGuarantorOccupation1.Size = New System.Drawing.Size(345, 31)
-        Me.txtAddNewLoanGuarantorOccupation1.TabIndex = 72
-        '
-        'Label25
-        '
-        Me.Label25.AutoSize = True
-        Me.Label25.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label25.Location = New System.Drawing.Point(6, 222)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(107, 24)
-        Me.Label25.TabIndex = 71
-        Me.Label25.Text = "Occupation"
-        '
-        'txtAddNewLoanGuarantorAddress1
-        '
-        Me.txtAddNewLoanGuarantorAddress1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddNewLoanGuarantorAddress1.Location = New System.Drawing.Point(361, 124)
-        Me.txtAddNewLoanGuarantorAddress1.Multiline = True
-        Me.txtAddNewLoanGuarantorAddress1.Name = "txtAddNewLoanGuarantorAddress1"
-        Me.txtAddNewLoanGuarantorAddress1.Size = New System.Drawing.Size(318, 95)
-        Me.txtAddNewLoanGuarantorAddress1.TabIndex = 70
-        '
-        'Label24
-        '
-        Me.Label24.AutoSize = True
-        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label24.Location = New System.Drawing.Point(355, 97)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(80, 24)
-        Me.Label24.TabIndex = 69
-        Me.Label24.Text = "Address"
-        '
-        'txtAddNewLoanGuarantorContactInfo1
-        '
-        Me.txtAddNewLoanGuarantorContactInfo1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddNewLoanGuarantorContactInfo1.Location = New System.Drawing.Point(10, 186)
-        Me.txtAddNewLoanGuarantorContactInfo1.Name = "txtAddNewLoanGuarantorContactInfo1"
-        Me.txtAddNewLoanGuarantorContactInfo1.Size = New System.Drawing.Size(345, 31)
-        Me.txtAddNewLoanGuarantorContactInfo1.TabIndex = 68
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label22.Location = New System.Drawing.Point(6, 159)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(170, 24)
-        Me.Label22.TabIndex = 67
-        Me.Label22.Text = "Contact Information"
-        '
-        'txtAddNewLoanGuarantorRelationshipToBorrower1
-        '
-        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.Location = New System.Drawing.Point(12, 124)
-        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.Name = "txtAddNewLoanGuarantorRelationshipToBorrower1"
-        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.Size = New System.Drawing.Size(343, 31)
-        Me.txtAddNewLoanGuarantorRelationshipToBorrower1.TabIndex = 66
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label21.Location = New System.Drawing.Point(6, 97)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(215, 24)
-        Me.Label21.TabIndex = 65
-        Me.Label21.Text = "Relationship to Borrower"
-        '
-        'txtAddNewLoanGuarantorName1
-        '
-        Me.txtAddNewLoanGuarantorName1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddNewLoanGuarantorName1.Location = New System.Drawing.Point(10, 63)
-        Me.txtAddNewLoanGuarantorName1.Name = "txtAddNewLoanGuarantorName1"
-        Me.txtAddNewLoanGuarantorName1.Size = New System.Drawing.Size(669, 31)
-        Me.txtAddNewLoanGuarantorName1.TabIndex = 64
-        '
-        'Label20
-        '
-        Me.Label20.AutoSize = True
-        Me.Label20.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label20.Location = New System.Drawing.Point(6, 37)
-        Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(61, 24)
-        Me.Label20.TabIndex = 63
-        Me.Label20.Text = "Name"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(363, 249)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(316, 31)
-        Me.TextBox1.TabIndex = 86
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = True
-        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label28.Location = New System.Drawing.Point(357, 222)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(204, 24)
-        Me.Label28.TabIndex = 85
-        Me.Label28.Text = "ID / Reference Number"
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(10, 249)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(345, 31)
-        Me.TextBox2.TabIndex = 84
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = True
-        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label29.Location = New System.Drawing.Point(6, 222)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(107, 24)
-        Me.Label29.TabIndex = 83
-        Me.Label29.Text = "Occupation"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(361, 124)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(318, 95)
-        Me.TextBox3.TabIndex = 82
-        '
-        'Label30
-        '
-        Me.Label30.AutoSize = True
-        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label30.Location = New System.Drawing.Point(355, 97)
-        Me.Label30.Name = "Label30"
-        Me.Label30.Size = New System.Drawing.Size(80, 24)
-        Me.Label30.TabIndex = 81
-        Me.Label30.Text = "Address"
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(10, 186)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(345, 31)
-        Me.TextBox4.TabIndex = 80
-        '
-        'Label31
-        '
-        Me.Label31.AutoSize = True
-        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label31.Location = New System.Drawing.Point(6, 159)
-        Me.Label31.Name = "Label31"
-        Me.Label31.Size = New System.Drawing.Size(170, 24)
-        Me.Label31.TabIndex = 79
-        Me.Label31.Text = "Contact Information"
-        '
-        'TextBox5
-        '
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(12, 124)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(343, 31)
-        Me.TextBox5.TabIndex = 78
-        '
-        'Label32
-        '
-        Me.Label32.AutoSize = True
-        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label32.Location = New System.Drawing.Point(6, 97)
-        Me.Label32.Name = "Label32"
-        Me.Label32.Size = New System.Drawing.Size(215, 24)
-        Me.Label32.TabIndex = 77
-        Me.Label32.Text = "Relationship to Borrower"
-        '
-        'TextBox6
-        '
-        Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(10, 63)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(669, 31)
-        Me.TextBox6.TabIndex = 76
-        '
-        'Label33
-        '
-        Me.Label33.AutoSize = True
-        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label33.Location = New System.Drawing.Point(6, 37)
-        Me.Label33.Name = "Label33"
-        Me.Label33.Size = New System.Drawing.Size(61, 24)
-        Me.Label33.TabIndex = 75
-        Me.Label33.Text = "Name"
-        '
         'Add_New_Loan
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1053,12 +1053,12 @@ Partial Class Add_New_Loan
         Me.TabPage1.PerformLayout()
         CType(Me.picAddNewLoanCollateralImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
-        CType(Me.dgvRepaymentSchedule, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
+        Me.TabControl2.ResumeLayout(False)
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
-        Me.TabControl2.ResumeLayout(False)
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
+        CType(Me.dgvRepaymentSchedule, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1083,7 +1083,7 @@ Partial Class Add_New_Loan
     Friend WithEvents cmbAddNewLoanProduct As ComboBox
     Friend WithEvents cmbAddNewLoanBorrower As ComboBox
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents btnAddNewBorrowerSave As Button
+    Friend WithEvents btnAddNewLoanSave As Button
     Friend WithEvents Label10 As Label
     Friend WithEvents cmbAddNewLoanStatus As ComboBox
     Friend WithEvents Label6 As Label
@@ -1134,16 +1134,16 @@ Partial Class Add_New_Loan
     Friend WithEvents txtAddNewLoanGuarantorName1 As TextBox
     Friend WithEvents Label20 As Label
     Friend WithEvents TabPage4 As TabPage
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtAddNewLoanGuarantorIDReference2 As TextBox
     Friend WithEvents Label28 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtAddNewLoanGuarantorOccupation2 As TextBox
     Friend WithEvents Label29 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtAddNewLoanGuarantorAddress2 As TextBox
     Friend WithEvents Label30 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtAddNewLoanGuarantorContactInfo2 As TextBox
     Friend WithEvents Label31 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtAddNewLoanGuarantorRelationshipToBorrower2 As TextBox
     Friend WithEvents Label32 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents txtAddNewLoanGuarantorName2 As TextBox
     Friend WithEvents Label33 As Label
 End Class

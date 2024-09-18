@@ -49,12 +49,12 @@ Public Class Loans
                                     END
                                 ) AS Name, 
                                 l.LoanReleaseDate, 
-                                l.AppliedAmount, 
+                                l.LoanAppliedAmount, 
                                 l.LoanStatus
                             FROM 
                                 Names n
                             INNER JOIN 
-                                Loans l ON n.NameID = l.BorrowerID;"
+                                Loans l ON n.NameID = l.LoanBorrowerID;"
 
         Dim dt As New DataTable()
 
@@ -74,7 +74,7 @@ Public Class Loans
         dgvLoanList.Columns("colSideLoansLoanProduct").DataPropertyName = "LoanProduct"
         dgvLoanList.Columns("colSideLoansBorrower").DataPropertyName = "Name"
         dgvLoanList.Columns("colSideLoansReleaseDate").DataPropertyName = "LoanReleaseDate"
-        dgvLoanList.Columns("colSideLoansAppliedAmount").DataPropertyName = "AppliedAmount"
+        dgvLoanList.Columns("colSideLoansAppliedAmount").DataPropertyName = "LoanAppliedAmount"
         dgvLoanList.Columns("colSideLoansStatus").DataPropertyName = "LoanStatus"
 
         ' Bind the DataTable to the DataGridView

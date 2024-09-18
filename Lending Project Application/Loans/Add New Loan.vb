@@ -1,5 +1,7 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Net.Mail
 Imports System.Text
+Imports System.IO
 
 Public Class Add_New_Loan
     ' Connection string for your SQL Server
@@ -43,11 +45,15 @@ Public Class Add_New_Loan
 
                 ' Loop through the results and add each name to the ComboBox
                 While reader.Read()
-                    ' Get the full name from the "Name" column of the query
+                    ' Get the full name and BorrowerID from the query
+                    Dim borrowerID As String = reader("BorrowerID").ToString()
                     Dim fullName As String = reader("Name").ToString()
 
-                    ' Add the full name to the ComboBox items
-                    cmbAddNewLoanBorrower.Items.Add(fullName)
+                    ' Create a KeyValuePair for BorrowerID (key) and fullName (value)
+                    Dim item As New KeyValuePair(Of String, String)(borrowerID, fullName)
+
+                    ' Add the KeyValuePair to the ComboBox
+                    cmbAddNewLoanBorrower.Items.Add(item)
                 End While
 
                 ' Close the reader
@@ -304,4 +310,140 @@ Public Class Add_New_Loan
         End If
     End Sub
 
+    ' Function to convert the image to a base64 string
+    Private Function ImageToBase64(picBox As PictureBox) As String
+        If picBox.Image IsNot Nothing Then
+            Using ms As New MemoryStream()
+                ' Save the image to the memory stream in the format you want (e.g., PNG)
+                picBox.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png)
+                ' Convert the byte array to a base64 string
+                Return Convert.ToBase64String(ms.ToArray())
+            End Using
+        Else
+            Return String.Empty ' Return an empty string if no image is loaded
+        End If
+    End Function
+
+    Private Sub btnAddNewLoanSave_Click(sender As Object, e As EventArgs) Handles btnAddNewLoanSave.Click
+        Dim loanid As String = txtAddNewLoanID.Text
+        Dim loanproduct As String = If(cmbAddNewLoanProduct.SelectedItem IsNot Nothing, cmbAddNewLoanProduct.SelectedItem.ToString(), "")
+        Dim loanborrowerid As String = If(cmbAddNewLoanBorrower.SelectedItem IsNot Nothing, cmbAddNewLoanBorrower.SelectedItem.ToString(), "")
+        Dim loanmodeofpayment As String = If(cmbAddNewLoanModeOfPayment.SelectedItem IsNot Nothing, cmbAddNewLoanModeOfPayment.SelectedItem.ToString(), "")
+        Dim loanappliedamount As String = txtAddNewLoanAppliedAmount.Text
+        Dim loaninterestrate As String = txtAddNewLoanInterestRate.Text
+        Dim loanfirstpaymentdate As Date = dtpAddNewLoanFirstPaymentDate.Value ' assuming you are using a datetimepicker
+        Dim loanreleasedate As Date = dtpAddNewLoanReleaseDate.Value ' assuming you are using a datetimepicker
+        Dim loanpayablefor As String = txtAddNewLoanPayableFor.Text
+        Dim loanstatus As String = If(cmbAddNewLoanStatus.SelectedItem IsNot Nothing, cmbAddNewLoanStatus.SelectedItem.ToString(), "")
+
+        Dim collateraltype As String = If(cmbAddNewLoanCollateralType.SelectedItem IsNot Nothing, cmbAddNewLoanCollateralType.SelectedItem.ToString(), "")
+        Dim collateralestimatedvalue As String = txtAddNewLoanCollateralEstimatedValue.Text
+        Dim collateraldescription As String = txtAddNewLoanCollateralDescription.Text
+        Dim collateralownershipinfo As String = txtAddNewLoanCollateralOwnershipInfo.Text
+        Dim collaterallocation As String = txtAddNewLoanCollateralLocation.Text
+        Dim collateralcondition As String = If(cmbAddNewLoanCollateralCondition.SelectedItem IsNot Nothing, cmbAddNewLoanCollateralCondition.SelectedItem.ToString(), "")
+        Dim collateralimage As String = ImageToBase64(picAddNewLoanCollateralImage)
+
+        Dim guarantorname As String = txtAddNewLoanGuarantorName1.Text
+        Dim guarantorrelationshiptoborrower As String = txtAddNewLoanGuarantorRelationshipToBorrower1.Text
+        Dim guarantorcontactinfo As String = txtAddNewLoanGuarantorContactInfo1.Text
+        Dim guarantoraddress As String = txtAddNewLoanGuarantorAddress1.Text
+        Dim guarantoroccupation As String = txtAddNewLoanGuarantorOccupation1.Text
+        Dim guarantoridreference As String = txtAddNewLoanGuarantorIDReference1.Text
+
+        Dim guarantorname2 As String = txtAddNewLoanGuarantorName2.Text
+        Dim guarantorrelationshiptoborrower2 As String = txtAddNewLoanGuarantorRelationshipToBorrower2.Text
+        Dim guarantorcontactinfo2 As String = txtAddNewLoanGuarantorContactInfo2.Text
+        Dim guarantoraddress2 As String = txtAddNewLoanGuarantorAddress2.Text
+        Dim guarantoroccupation2 As String = txtAddNewLoanGuarantorOccupation2.Text
+        Dim guarantoridreference2 As String = txtAddNewLoanGuarantorIDReference2.Text
+    End Sub
+
+    Public Sub InsertLoanCollateralAndGuarantor(ByVal loanid As String, ByVal loanproduct As String, ByVal loanborrowerid As String,
+                                                ByVal loanmodeofpayment As String, ByVal loanappliedamount As String, ByVal loaninterestrate As String,
+                                                ByVal loanfirstpaymentdate As Date, ByVal loanreleasedate As Date, ByVal loanpayablefor As String,
+                                                ByVal loanstatus As String, ByVal collateraltype As String, ByVal collateralestimatedvalue As String,
+                                                ByVal collateraldescription As String, ByVal collateralownershipinfo As String, ByVal collaterallocation As String,
+                                                ByVal collateralcondition As String, ByVal collateralimage As String, ByVal guarantorname As String,
+                                                ByVal guarantorrelationshiptoborrower As String, ByVal guarantorcontactinfo As String, ByVal guarantoraddress As String,
+                                                ByVal guarantoroccupation As String, ByVal guarantoridreference As String, ByVal guarantorname2 As String,
+                                                ByVal guarantorrelationshiptoborrower2 As String, ByVal guarantorcontactinfo2 As String, ByVal guarantoraddress2 As String,
+                                                ByVal guarantoroccupation2 As String, ByVal guarantoridreference2 As String)
+
+        ' Create a connection to SQL Server
+        Using conn As New SqlConnection(connectionString)
+            conn.Open()
+
+            ' SQL Transaction to ensure both inserts happen together
+            Dim transaction As SqlTransaction = conn.BeginTransaction()
+
+            Try
+                Dim loanInsertQuery As String = "INSERT INTO Loans (loanid, loanproduct, loanborrowerid, loanmodeofpayment, loanappliedamount, loaninterestrate, loanfirstpaymentdate, loanreleasedate, loanpayablefor, loanstatus)" &
+                                                "VALUES (@LoanID, @LoanProduct, @LoanBorrowerID, @LoanModeOfPayment, @LoanAppliedAmount, @LoanInterestRate, @LoanFirstPaymentDate, @LoanReleaseDate, @PayableFor, @LoanStatus); "
+
+                Using cmd As New SqlCommand(loanInsertQuery, conn, transaction)
+                    cmd.Parameters.AddWithValue("@LoanID", loanid)
+                    cmd.Parameters.AddWithValue("@LoanProduct", loanproduct)
+                    cmd.Parameters.AddWithValue("@LoanBorrowerID", loanborrowerid)
+                    cmd.Parameters.AddWithValue("@LoanModeOfPayment", loanmodeofpayment)
+                    cmd.Parameters.AddWithValue("@LoanAppliedAmount", loanappliedamount)
+                    cmd.Parameters.AddWithValue("@LoanInterestRate", loaninterestrate)
+                    cmd.Parameters.AddWithValue("@LoanFirstPaymentDate", loanfirstpaymentdate)
+                    cmd.Parameters.AddWithValue("@LoanReleaseDate", loanreleasedate)
+                    cmd.Parameters.AddWithValue("@LoanPayableFor", loanpayablefor)
+                    cmd.Parameters.AddWithValue("@LoanStatus", loanstatus)
+
+                    ' Execute the query and get the generated NameID
+                    'nameID = Convert.ToInt32(cmd.ExecuteScalar())
+                    cmd.ExecuteNonQuery()
+                End Using
+
+                ' Step 2: Insert into the collateral table using the LoanID
+                Dim collateralInsertQuery As String = "INSERT INTO Collaterals (loanid, collateraltype, collateralestimatedvalue, collateraldescription, collateralownershipinfo, collaterallocation, collateralcondition, collateralimage) " &
+                                                    "VALUES (@CollateralLoanID, @CollateralType, @CollateralEstimatedValue, @CollateralDescription, @CollateralOwnershipInformation, @CollateralAddress, @CollateralCondition, @CollateralImage);"
+
+                Using cmd2 As New SqlCommand(collateralInsertQuery, conn, transaction)
+                    'cmd2.Parameters.AddWithValue("@CollateralID", nameID)
+                    cmd2.Parameters.AddWithValue("@CollateralLoanID", loanid)
+                    cmd2.Parameters.AddWithValue("@CollateralType", collateraltype)
+                    cmd2.Parameters.AddWithValue("@CollateralEstimatedValue", collateralestimatedvalue)
+                    cmd2.Parameters.AddWithValue("@CollateralDescription", collateraldescription)
+                    cmd2.Parameters.AddWithValue("@CollateralOwnershipInformation", collateralownershipinfo)
+                    cmd2.Parameters.AddWithValue("@CollateralAddress", collaterallocation)
+                    cmd2.Parameters.AddWithValue("@CollateralCondition", collateralcondition)
+                    cmd2.Parameters.AddWithValue("@CollateralImage", collateralimage)
+
+                    ' Execute the insert query
+                    cmd2.ExecuteNonQuery()
+                End Using
+
+                ' Step 2: Insert into the Guarantor table using the LoanID
+                Dim GuarantorInsertQuery As String = "INSERT INTO Guarantors (loanid, guarantorname, guarantorrelationshiptoborrower, guarantorcontactinfo, guarantoraddress, guarantoroccupation, guarantoridreference) " &
+                                                    "VALUES (@GuarantorLoanID, @GuarantorName, @GuarantorRelationshipToBorrower, @GuarantorContactInformation, @GuarantorAddress, @GuarantorOccupation, @GuarantorIDReferenceNumber);"
+
+                Using cmd3 As New SqlCommand(GuarantorInsertQuery, conn, transaction)
+                    cmd3.Parameters.AddWithValue("@GuarantorLoanID", loanid)
+                    cmd3.Parameters.AddWithValue("@GuarantorName", guarantorname)
+                    cmd3.Parameters.AddWithValue("@GuarantorRelationshipToBorrower", guarantorrelationshiptoborrower)
+                    cmd3.Parameters.AddWithValue("@GuarantorContactInformation", guarantorcontactinfo)
+                    cmd3.Parameters.AddWithValue("@GuarantorAddress", guarantoraddress)
+                    cmd3.Parameters.AddWithValue("@GuarantorOccupation", guarantoroccupation)
+                    cmd3.Parameters.AddWithValue("@GuarantorIDReferenceNumber", guarantoridreference)
+
+                    ' Execute the insert query
+                    cmd3.ExecuteNonQuery()
+                End Using
+
+                ' If everything is successful, commit the transaction
+                transaction.Commit()
+
+                'MessageBox.Show("Borrower and Name added successfully!")
+
+            Catch ex As Exception
+                ' If any error occurs, roll back the transaction
+                transaction.Rollback()
+                MessageBox.Show("Error: " & ex.Message)
+            End Try
+        End Using
+    End Sub
 End Class
