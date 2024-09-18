@@ -22,10 +22,19 @@ Partial Class Add_New_Loan
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle9 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle10 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle11 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle12 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle16 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtAddNewLoanTotal = New System.Windows.Forms.TextBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.btnAddNewLoanGenerateRepaymentSchedule = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.Label19 = New System.Windows.Forms.Label()
@@ -60,13 +69,7 @@ Partial Class Add_New_Loan
         Me.Label20 = New System.Windows.Forms.Label()
         Me.txtAddNewLoanPayableFor = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.dgwRepaymentSchedule = New System.Windows.Forms.DataGridView()
-        Me.colLoansRepaymentsScheduleDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansRepaymentsAmountToPay = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansRepaymentsPrincipalAmount = New System.Windows.Forms.DataGridViewButtonColumn()
-        Me.colLoansRepaymentsInterest = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansRepaymentsBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.colLoansRepaymentsStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.dgvRepaymentSchedule = New System.Windows.Forms.DataGridView()
         Me.dtpAddNewLoanReleaseDate = New System.Windows.Forms.DateTimePicker()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.txtAddNewLoanInterestRate = New System.Windows.Forms.TextBox()
@@ -91,15 +94,20 @@ Partial Class Add_New_Loan
         Me.lblPersonalInformation = New System.Windows.Forms.Label()
         Me.btnBackToLoansList = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label27 = New System.Windows.Forms.Label()
-        Me.txtAddNewLoanTotal = New System.Windows.Forms.TextBox()
+        Me.colLoansRepaymentsScheduleDate = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansRepaymentsAmountToPay = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansRepaymentsPrincipalAmount = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansRepaymentsInterest = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansRepaymentsBalance = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.colLoansRepaymentsStatus = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.picAddNewLoanCollateralImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
-        CType(Me.dgwRepaymentSchedule, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvRepaymentSchedule, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
@@ -116,13 +124,14 @@ Partial Class Add_New_Loan
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.White
+        Me.Panel2.Controls.Add(Me.TextBox1)
         Me.Panel2.Controls.Add(Me.txtAddNewLoanTotal)
         Me.Panel2.Controls.Add(Me.Label27)
-        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.btnAddNewLoanGenerateRepaymentSchedule)
         Me.Panel2.Controls.Add(Me.TabControl1)
         Me.Panel2.Controls.Add(Me.txtAddNewLoanPayableFor)
         Me.Panel2.Controls.Add(Me.Label11)
-        Me.Panel2.Controls.Add(Me.dgwRepaymentSchedule)
+        Me.Panel2.Controls.Add(Me.dgvRepaymentSchedule)
         Me.Panel2.Controls.Add(Me.dtpAddNewLoanReleaseDate)
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.txtAddNewLoanInterestRate)
@@ -150,21 +159,40 @@ Partial Class Add_New_Loan
         Me.Panel2.Size = New System.Drawing.Size(1382, 847)
         Me.Panel2.TabIndex = 10
         '
-        'Button1
+        'txtAddNewLoanTotal
         '
-        Me.Button1.BackColor = System.Drawing.Color.DarkOrange
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Image = Global.Lending_Project_Application.My.Resources.Resources.arrows_rotate_solid
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(974, 466)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Button1.Size = New System.Drawing.Size(399, 46)
-        Me.Button1.TabIndex = 45
-        Me.Button1.Text = "Generate Repayment Schedule"
-        Me.Button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.txtAddNewLoanTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtAddNewLoanTotal.Location = New System.Drawing.Point(311, 370)
+        Me.txtAddNewLoanTotal.Name = "txtAddNewLoanTotal"
+        Me.txtAddNewLoanTotal.Size = New System.Drawing.Size(291, 47)
+        Me.txtAddNewLoanTotal.TabIndex = 47
+        Me.txtAddNewLoanTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(183, 378)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(120, 39)
+        Me.Label27.TabIndex = 46
+        Me.Label27.Text = "Total: "
+        '
+        'btnAddNewLoanGenerateRepaymentSchedule
+        '
+        Me.btnAddNewLoanGenerateRepaymentSchedule.BackColor = System.Drawing.Color.DarkOrange
+        Me.btnAddNewLoanGenerateRepaymentSchedule.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnAddNewLoanGenerateRepaymentSchedule.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAddNewLoanGenerateRepaymentSchedule.Image = Global.Lending_Project_Application.My.Resources.Resources.arrows_rotate_solid
+        Me.btnAddNewLoanGenerateRepaymentSchedule.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAddNewLoanGenerateRepaymentSchedule.Location = New System.Drawing.Point(974, 466)
+        Me.btnAddNewLoanGenerateRepaymentSchedule.Name = "btnAddNewLoanGenerateRepaymentSchedule"
+        Me.btnAddNewLoanGenerateRepaymentSchedule.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.btnAddNewLoanGenerateRepaymentSchedule.Size = New System.Drawing.Size(399, 46)
+        Me.btnAddNewLoanGenerateRepaymentSchedule.TabIndex = 45
+        Me.btnAddNewLoanGenerateRepaymentSchedule.Text = "Generate Repayment Schedule"
+        Me.btnAddNewLoanGenerateRepaymentSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.btnAddNewLoanGenerateRepaymentSchedule.UseVisualStyleBackColor = False
         '
         'TabControl1
         '
@@ -523,62 +551,35 @@ Partial Class Add_New_Loan
         Me.Label11.TabIndex = 42
         Me.Label11.Text = "Payable for (Prin/Int.)"
         '
-        'dgwRepaymentSchedule
+        'dgvRepaymentSchedule
         '
-        Me.dgwRepaymentSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgwRepaymentSchedule.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
-        Me.dgwRepaymentSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgwRepaymentSchedule.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colLoansRepaymentsScheduleDate, Me.colLoansRepaymentsAmountToPay, Me.colLoansRepaymentsPrincipalAmount, Me.colLoansRepaymentsInterest, Me.colLoansRepaymentsBalance, Me.colLoansRepaymentsStatus})
-        Me.dgwRepaymentSchedule.Location = New System.Drawing.Point(14, 518)
-        Me.dgwRepaymentSchedule.Name = "dgwRepaymentSchedule"
-        Me.dgwRepaymentSchedule.RowHeadersVisible = False
-        Me.dgwRepaymentSchedule.Size = New System.Drawing.Size(1359, 272)
-        Me.dgwRepaymentSchedule.TabIndex = 39
-        '
-        'colLoansRepaymentsScheduleDate
-        '
-        Me.colLoansRepaymentsScheduleDate.FillWeight = 152.2843!
-        Me.colLoansRepaymentsScheduleDate.HeaderText = "Date"
-        Me.colLoansRepaymentsScheduleDate.Name = "colLoansRepaymentsScheduleDate"
-        '
-        'colLoansRepaymentsAmountToPay
-        '
-        Me.colLoansRepaymentsAmountToPay.FillWeight = 73.85786!
-        Me.colLoansRepaymentsAmountToPay.HeaderText = "Amount to Pay"
-        Me.colLoansRepaymentsAmountToPay.Name = "colLoansRepaymentsAmountToPay"
-        '
-        'colLoansRepaymentsPrincipalAmount
-        '
-        Me.colLoansRepaymentsPrincipalAmount.FillWeight = 73.85786!
-        Me.colLoansRepaymentsPrincipalAmount.HeaderText = "Principal Amount"
-        Me.colLoansRepaymentsPrincipalAmount.Name = "colLoansRepaymentsPrincipalAmount"
-        '
-        'colLoansRepaymentsInterest
-        '
-        Me.colLoansRepaymentsInterest.HeaderText = "Interest"
-        Me.colLoansRepaymentsInterest.Name = "colLoansRepaymentsInterest"
-        '
-        'colLoansRepaymentsBalance
-        '
-        Me.colLoansRepaymentsBalance.HeaderText = "Balance"
-        Me.colLoansRepaymentsBalance.Name = "colLoansRepaymentsBalance"
-        '
-        'colLoansRepaymentsStatus
-        '
-        Me.colLoansRepaymentsStatus.HeaderText = "Status"
-        Me.colLoansRepaymentsStatus.Name = "colLoansRepaymentsStatus"
+        Me.dgvRepaymentSchedule.AllowUserToAddRows = False
+        Me.dgvRepaymentSchedule.AllowUserToDeleteRows = False
+        DataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvRepaymentSchedule.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle9
+        Me.dgvRepaymentSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        DataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRepaymentSchedule.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle10
+        Me.dgvRepaymentSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvRepaymentSchedule.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colLoansRepaymentsScheduleDate, Me.colLoansRepaymentsAmountToPay, Me.colLoansRepaymentsPrincipalAmount, Me.colLoansRepaymentsInterest, Me.colLoansRepaymentsBalance, Me.colLoansRepaymentsStatus})
+        Me.dgvRepaymentSchedule.Location = New System.Drawing.Point(14, 518)
+        Me.dgvRepaymentSchedule.Name = "dgvRepaymentSchedule"
+        Me.dgvRepaymentSchedule.ReadOnly = True
+        Me.dgvRepaymentSchedule.RowHeadersVisible = False
+        Me.dgvRepaymentSchedule.Size = New System.Drawing.Size(1359, 272)
+        Me.dgvRepaymentSchedule.TabIndex = 39
         '
         'dtpAddNewLoanReleaseDate
         '
+        Me.dtpAddNewLoanReleaseDate.CustomFormat = "MM/dd/yyyy"
         Me.dtpAddNewLoanReleaseDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpAddNewLoanReleaseDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpAddNewLoanReleaseDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpAddNewLoanReleaseDate.Location = New System.Drawing.Point(14, 312)
         Me.dtpAddNewLoanReleaseDate.Name = "dtpAddNewLoanReleaseDate"
         Me.dtpAddNewLoanReleaseDate.Size = New System.Drawing.Size(290, 31)
@@ -648,7 +649,7 @@ Partial Class Add_New_Loan
         Me.cmbAddNewLoanModeOfPayment.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cmbAddNewLoanModeOfPayment.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cmbAddNewLoanModeOfPayment.FormattingEnabled = True
-        Me.cmbAddNewLoanModeOfPayment.Items.AddRange(New Object() {"Monthly", "Weekly", "Bi-Weekly", "Semi-Monthly", "Quarterly", "Annually", "Lump-Sum", "Daily"})
+        Me.cmbAddNewLoanModeOfPayment.Items.AddRange(New Object() {"Monthly", "Semi-Monthly", "Lump-Sum"})
         Me.cmbAddNewLoanModeOfPayment.Location = New System.Drawing.Point(310, 151)
         Me.cmbAddNewLoanModeOfPayment.Name = "cmbAddNewLoanModeOfPayment"
         Me.cmbAddNewLoanModeOfPayment.Size = New System.Drawing.Size(290, 33)
@@ -755,8 +756,9 @@ Partial Class Add_New_Loan
         '
         'dtpAddNewLoanFirstPaymentDate
         '
+        Me.dtpAddNewLoanFirstPaymentDate.CustomFormat = "MM/dd/yyyy"
         Me.dtpAddNewLoanFirstPaymentDate.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dtpAddNewLoanFirstPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dtpAddNewLoanFirstPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dtpAddNewLoanFirstPaymentDate.Location = New System.Drawing.Point(311, 312)
         Me.dtpAddNewLoanFirstPaymentDate.Name = "dtpAddNewLoanFirstPaymentDate"
         Me.dtpAddNewLoanFirstPaymentDate.Size = New System.Drawing.Size(291, 31)
@@ -824,24 +826,65 @@ Partial Class Add_New_Loan
         Me.Label1.TabIndex = 8
         Me.Label1.Text = "Add New Loan"
         '
-        'Label27
+        'colLoansRepaymentsScheduleDate
         '
-        Me.Label27.AutoSize = True
-        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label27.Location = New System.Drawing.Point(183, 378)
-        Me.Label27.Name = "Label27"
-        Me.Label27.Size = New System.Drawing.Size(120, 39)
-        Me.Label27.TabIndex = 46
-        Me.Label27.Text = "Total: "
+        DataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsScheduleDate.DefaultCellStyle = DataGridViewCellStyle11
+        Me.colLoansRepaymentsScheduleDate.FillWeight = 152.2843!
+        Me.colLoansRepaymentsScheduleDate.HeaderText = "Date"
+        Me.colLoansRepaymentsScheduleDate.Name = "colLoansRepaymentsScheduleDate"
+        Me.colLoansRepaymentsScheduleDate.ReadOnly = True
         '
-        'txtAddNewLoanTotal
+        'colLoansRepaymentsAmountToPay
         '
-        Me.txtAddNewLoanTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtAddNewLoanTotal.Location = New System.Drawing.Point(311, 370)
-        Me.txtAddNewLoanTotal.Name = "txtAddNewLoanTotal"
-        Me.txtAddNewLoanTotal.Size = New System.Drawing.Size(291, 47)
-        Me.txtAddNewLoanTotal.TabIndex = 47
-        Me.txtAddNewLoanTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        DataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsAmountToPay.DefaultCellStyle = DataGridViewCellStyle12
+        Me.colLoansRepaymentsAmountToPay.FillWeight = 73.85786!
+        Me.colLoansRepaymentsAmountToPay.HeaderText = "Amount to Pay"
+        Me.colLoansRepaymentsAmountToPay.Name = "colLoansRepaymentsAmountToPay"
+        Me.colLoansRepaymentsAmountToPay.ReadOnly = True
+        '
+        'colLoansRepaymentsPrincipalAmount
+        '
+        DataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsPrincipalAmount.DefaultCellStyle = DataGridViewCellStyle13
+        Me.colLoansRepaymentsPrincipalAmount.FillWeight = 73.85786!
+        Me.colLoansRepaymentsPrincipalAmount.HeaderText = "Principal Amount"
+        Me.colLoansRepaymentsPrincipalAmount.Name = "colLoansRepaymentsPrincipalAmount"
+        Me.colLoansRepaymentsPrincipalAmount.ReadOnly = True
+        Me.colLoansRepaymentsPrincipalAmount.Resizable = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.colLoansRepaymentsPrincipalAmount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable
+        '
+        'colLoansRepaymentsInterest
+        '
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsInterest.DefaultCellStyle = DataGridViewCellStyle14
+        Me.colLoansRepaymentsInterest.HeaderText = "Interest"
+        Me.colLoansRepaymentsInterest.Name = "colLoansRepaymentsInterest"
+        Me.colLoansRepaymentsInterest.ReadOnly = True
+        '
+        'colLoansRepaymentsBalance
+        '
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsBalance.DefaultCellStyle = DataGridViewCellStyle15
+        Me.colLoansRepaymentsBalance.HeaderText = "Balance"
+        Me.colLoansRepaymentsBalance.Name = "colLoansRepaymentsBalance"
+        Me.colLoansRepaymentsBalance.ReadOnly = True
+        '
+        'colLoansRepaymentsStatus
+        '
+        DataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsStatus.DefaultCellStyle = DataGridViewCellStyle16
+        Me.colLoansRepaymentsStatus.HeaderText = "Status"
+        Me.colLoansRepaymentsStatus.Name = "colLoansRepaymentsStatus"
+        Me.colLoansRepaymentsStatus.ReadOnly = True
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(473, 31)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox1.TabIndex = 48
         '
         'Add_New_Loan
         '
@@ -868,25 +911,19 @@ Partial Class Add_New_Loan
         CType(Me.picAddNewLoanCollateralImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
-        CType(Me.dgwRepaymentSchedule, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvRepaymentSchedule, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel2 As Panel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnAddNewLoanGenerateRepaymentSchedule As Button
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage2 As TabPage
     Friend WithEvents txtAddNewLoanPayableFor As TextBox
     Friend WithEvents Label11 As Label
-    Friend WithEvents dgwRepaymentSchedule As DataGridView
-    Friend WithEvents colLoansRepaymentsScheduleDate As DataGridViewTextBoxColumn
-    Friend WithEvents colLoansRepaymentsAmountToPay As DataGridViewTextBoxColumn
-    Friend WithEvents colLoansRepaymentsPrincipalAmount As DataGridViewButtonColumn
-    Friend WithEvents colLoansRepaymentsInterest As DataGridViewTextBoxColumn
-    Friend WithEvents colLoansRepaymentsBalance As DataGridViewTextBoxColumn
-    Friend WithEvents colLoansRepaymentsStatus As DataGridViewTextBoxColumn
+    Friend WithEvents dgvRepaymentSchedule As DataGridView
     Friend WithEvents dtpAddNewLoanReleaseDate As DateTimePicker
     Friend WithEvents Label9 As Label
     Friend WithEvents txtAddNewLoanInterestRate As TextBox
@@ -943,4 +980,11 @@ Partial Class Add_New_Loan
     Friend WithEvents Label26 As Label
     Friend WithEvents txtAddNewLoanTotal As TextBox
     Friend WithEvents Label27 As Label
+    Friend WithEvents colLoansRepaymentsScheduleDate As DataGridViewTextBoxColumn
+    Friend WithEvents colLoansRepaymentsAmountToPay As DataGridViewTextBoxColumn
+    Friend WithEvents colLoansRepaymentsPrincipalAmount As DataGridViewTextBoxColumn
+    Friend WithEvents colLoansRepaymentsInterest As DataGridViewTextBoxColumn
+    Friend WithEvents colLoansRepaymentsBalance As DataGridViewTextBoxColumn
+    Friend WithEvents colLoansRepaymentsStatus As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox1 As TextBox
 End Class

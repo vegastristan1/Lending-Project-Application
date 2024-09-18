@@ -132,26 +132,24 @@ Public Class Add_New_Loan
             Select Case modeOfPayment
                 Case "Monthly"
                     totalLoan = appliedAmount + (monthlyInterest * payableFor)
-                Case "Weekly"
-                    totalLoan = appliedAmount + (monthlyInterest * (payableFor * 4)) ' Assuming 4 weeks in a month
-                Case "Bi-Weekly"
-                    totalLoan = appliedAmount + (monthlyInterest * (payableFor * 2)) ' Assuming 2 bi-weekly periods in a month
+
                 Case "Semi-Monthly"
-                    totalLoan = appliedAmount + (monthlyInterest * (payableFor * 2))
-                Case "Quarterly"
-                    totalLoan = appliedAmount + (monthlyInterest * (payableFor / 3)) ' Quarterly payments
-                Case "Annually"
-                    totalLoan = appliedAmount + (monthlyInterest * (payableFor / 12)) ' Annual payments
+                    ' For Semi-Monthly payments, interest is divided into two payments per month
+                    Dim semiMonthlyInterest As Decimal = monthlyInterest / 2
+                    totalLoan = appliedAmount + (semiMonthlyInterest * (payableFor * 2)) ' payableFor represents the number of months
+
+                    ' Optionally, display the semi-monthly interest
+                    TextBox1.Text = semiMonthlyInterest.ToString("C2") ' Format as currency
+
                 Case "Lump-Sum"
                     totalLoan = appliedAmount + monthlyInterest ' One-time payment
-                Case "Daily"
-                    totalLoan = appliedAmount + (monthlyInterest * (payableFor * 30)) ' Assuming 30 days in a month
             End Select
 
             ' Display the total in the txtAddNewLoanTotal
             txtAddNewLoanTotal.Text = totalLoan.ToString("C2") ' Format as currency
         End If
     End Sub
+
 
     ' Add event handlers to call CalculateLoanTotal when inputs change
     Private Sub txtAddNewLoanAppliedAmount_TextChanged(sender As Object, e As EventArgs) Handles txtAddNewLoanAppliedAmount.TextChanged
@@ -169,5 +167,100 @@ Public Class Add_New_Loan
     Private Sub cmbAddNewLoanModeOfPayment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbAddNewLoanModeOfPayment.SelectedIndexChanged
         CalculateLoanTotal()
     End Sub
+
+    Private Sub btnAddNewLoanGenerateRepaymentSchedule_Click(sender As Object, e As EventArgs) Handles btnAddNewLoanGenerateRepaymentSchedule.Click
+        ' Clear the DataGridView before generating a new schedule
+        dgvRepaymentSchedule.Rows.Clear()
+
+        ' Get values from the input fields
+        Dim appliedAmount As Decimal
+        Dim interestRate As Decimal
+        Dim payableFor As Integer
+        Dim modeOfPayment As String
+        Dim firstPaymentDate As Date
+        Dim monthlyInterest As Decimal
+        Dim balance As Decimal
+
+        ' Validate and parse input
+        If Decimal.TryParse(txtAddNewLoanAppliedAmount.Text, appliedAmount) AndAlso
+           Decimal.TryParse(txtAddNewLoanInterestRate.Text, interestRate) AndAlso
+           Integer.TryParse(txtAddNewLoanPayableFor.Text, payableFor) AndAlso
+           Date.TryParse(dtpAddNewLoanFirstPaymentDate.Value.ToString(), firstPaymentDate) Then
+
+            modeOfPayment = cmbAddNewLoanModeOfPayment.SelectedItem.ToString()
+            balance = appliedAmount
+            monthlyInterest = (appliedAmount * interestRate / 100)
+
+            Dim totalPayments As Integer = If(modeOfPayment = "Semi-Monthly", payableFor * 2, payableFor)
+
+            ' Generate repayment schedule
+            For i As Integer = 1 To totalPayments
+                Dim paymentDate As Date = CalculateNextPaymentDate(firstPaymentDate, modeOfPayment, i)
+                Dim interest As Decimal = monthlyInterest ' Monthly interest remains the same for simplicity
+                Dim principalPayment As Decimal = appliedAmount / totalPayments ' Adjusted for total payments
+                Dim amountToPay As Decimal = principalPayment + interest
+                balance -= principalPayment
+
+                ' Add the repayment row to the DataGridView
+                dgvRepaymentSchedule.Rows.Add(paymentDate.ToString("MM/dd/yyyy"),
+                                           amountToPay.ToString("C2"),
+                                           principalPayment.ToString("C2"),
+                                           interest.ToString("C2"),
+                                           balance.ToString("C2"),
+                                           "Pending")
+            Next
+        Else
+            MessageBox.Show("Please ensure all loan details are correctly filled.")
+        End If
+    End Sub
+
+
+    ' Function to calculate the next payment date based on the mode of payment
+    Private Function CalculateNextPaymentDate(startDate As Date, modeOfPayment As String, paymentNumber As Integer) As Date
+        Select Case modeOfPayment
+            Case "Monthly"
+                Return startDate.AddMonths(paymentNumber - 1)
+            Case "Semi-Monthly"
+                Dim paymentDaySelected As Integer = Date.TryParse(dtpAddNewLoanFirstPaymentDate.Value.ToString(), startDate)
+                Dim monthOffset As Integer = (paymentNumber - 1) \ 2 ' Calculate the number of months to add
+                Dim newMonth As Integer = startDate.Month + monthOffset
+                Dim newYear As Integer = startDate.Year
+
+                ' Adjust the year and month
+                If newMonth > 12 Then
+                    newYear += newMonth \ 12
+                    newMonth = newMonth Mod 12
+                    If newMonth = 0 Then
+                        newMonth = 12
+                        newYear -= 1
+                    End If
+                End If
+
+                ' Set the day for odd/even payment numbers
+                Dim paymentDay As Integer
+                Dim paymentDate As Date = startDate
+
+                If paymentNumber Mod 2 = 1 Then ' Odd payment numbers
+                    paymentDay = startDate.Day
+                Else ' Even payment numbers
+                    ' Add 15 days to the start date and let DateAdd handle month transitions
+                    paymentDate = DateAdd(DateInterval.Day, 15, startDate)
+                    paymentDay = paymentDate.Day
+                End If
+
+                ' Ensure the day is valid for the new month
+                If paymentDay > Date.DaysInMonth(newYear, newMonth) Then
+                    paymentDay = Date.DaysInMonth(newYear, newMonth) ' Set to last valid day of the month
+                End If
+
+                Return New Date(newYear, newMonth, paymentDay)
+
+            Case "Lump-Sum"
+                Return startDate ' Only one payment date for lump-sum
+            Case Else
+                Return startDate ' Default to no date change
+        End Select
+    End Function
+
 
 End Class
