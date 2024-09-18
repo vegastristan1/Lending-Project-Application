@@ -138,9 +138,6 @@ Public Class Add_New_Loan
                     Dim semiMonthlyInterest As Decimal = monthlyInterest / 2
                     totalLoan = appliedAmount + (semiMonthlyInterest * (payableFor * 2)) ' payableFor represents the number of months
 
-                    ' Optionally, display the semi-monthly interest
-                    TextBox1.Text = semiMonthlyInterest.ToString("C2") ' Format as currency
-
                 Case "Lump-Sum"
                     totalLoan = appliedAmount + monthlyInterest ' One-time payment
             End Select
@@ -165,7 +162,13 @@ Public Class Add_New_Loan
     End Sub
 
     Private Sub cmbAddNewLoanModeOfPayment_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbAddNewLoanModeOfPayment.SelectedIndexChanged
-        CalculateLoanTotal()
+        If cmbAddNewLoanModeOfPayment.SelectedItem = "Lump-Sum" Then
+            txtAddNewLoanPayableFor.Enabled = False
+            txtAddNewLoanPayableFor.Text = 1
+        Else
+            txtAddNewLoanPayableFor.Enabled = True
+            CalculateLoanTotal()
+        End If
     End Sub
 
     Private Sub btnAddNewLoanGenerateRepaymentSchedule_Click(sender As Object, e As EventArgs) Handles btnAddNewLoanGenerateRepaymentSchedule.Click
