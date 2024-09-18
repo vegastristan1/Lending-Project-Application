@@ -214,53 +214,74 @@ Public Class Add_New_Loan
         End If
     End Sub
 
-
-    ' Function to calculate the next payment date based on the mode of payment
+    ' Function to calculate the next payment date with improved error handling for invalid dates
     Private Function CalculateNextPaymentDate(startDate As Date, modeOfPayment As String, paymentNumber As Integer) As Date
-        Select Case modeOfPayment
-            Case "Monthly"
-                Return startDate.AddMonths(paymentNumber - 1)
-            Case "Semi-Monthly"
-                Dim paymentDaySelected As Integer = Date.TryParse(dtpAddNewLoanFirstPaymentDate.Value.ToString(), startDate)
-                Dim monthOffset As Integer = (paymentNumber - 1) \ 2 ' Calculate the number of months to add
-                Dim newMonth As Integer = startDate.Month + monthOffset
-                Dim newYear As Integer = startDate.Year
-
-                ' Adjust the year and month
-                If newMonth > 12 Then
-                    newYear += newMonth \ 12
-                    newMonth = newMonth Mod 12
-                    If newMonth = 0 Then
-                        newMonth = 12
-                        newYear -= 1
+        Try
+            Select Case modeOfPayment
+                Case "Monthly"
+                    ' Monthly payments - simply add months based on the payment number
+                    Dim newDate As Date = startDate.AddMonths(paymentNumber - 1)
+                    ' Validate day for the new date month (leap year handling)
+                    Dim daysInMonth As Integer = DateTime.DaysInMonth(newDate.Year, newDate.Month)
+                    If newDate.Day > daysInMonth Then
+                        newDate = New Date(newDate.Year, newDate.Month, daysInMonth)
                     End If
-                End If
+                    Return newDate
 
-                ' Set the day for odd/even payment numbers
-                Dim paymentDay As Integer
-                Dim paymentDate As Date = startDate
+                Case "Semi-Monthly"
+                    ' For semi-monthly payments
+                    Dim isOddPayment As Boolean = paymentNumber Mod 2 = 1 ' Odd or even payment
+                    Dim monthOffset As Integer = (paymentNumber - 1) \ 2 ' How many months to add
 
-                If paymentNumber Mod 2 = 1 Then ' Odd payment numbers
-                    paymentDay = startDate.Day
-                Else ' Even payment numbers
-                    ' Add 15 days to the start date and let DateAdd handle month transitions
-                    paymentDate = DateAdd(DateInterval.Day, 15, startDate)
-                    paymentDay = paymentDate.Day
-                End If
+                    If isOddPayment Then
+                        ' Odd payments use the start date or monthly basis
+                        If paymentNumber = 1 Then
+                            Return startDate ' First payment on the starting date
+                        Else
+                            ' Add months for odd payment numbers
+                            Dim newDate As Date = startDate.AddMonths(monthOffset)
+                            Dim daysInMonth As Integer = DateTime.DaysInMonth(newDate.Year, newDate.Month)
+                            If newDate.Day > daysInMonth Then
+                                newDate = New Date(newDate.Year, newDate.Month, daysInMonth)
+                            End If
+                            Return newDate
+                        End If
+                    Else
+                        ' Even payments: 15 days after the odd payment
+                        Dim newDate As Date = startDate.AddMonths(monthOffset).AddDays(15)
+                        Dim daysInMonth As Integer = DateTime.DaysInMonth(newDate.Year, newDate.Month)
 
-                ' Ensure the day is valid for the new month
-                If paymentDay > Date.DaysInMonth(newYear, newMonth) Then
-                    paymentDay = Date.DaysInMonth(newYear, newMonth) ' Set to last valid day of the month
-                End If
+                        ' If the new date exceeds the days in the month, adjust to the last valid day
+                        If newDate.Day > daysInMonth Then
+                            newDate = New Date(newDate.Year, newDate.Month, daysInMonth)
+                        End If
 
-                Return New Date(newYear, newMonth, paymentDay)
+                        ' Ensure the second payment doesn't create a past date (if before startDate)
+                        If newDate < startDate Then
+                            Return newDate.AddMonths(1) ' Skip to next month
+                        Else
+                            Return newDate
+                        End If
+                    End If
 
-            Case "Lump-Sum"
-                Return startDate ' Only one payment date for lump-sum
-            Case Else
-                Return startDate ' Default to no date change
-        End Select
+                Case "Lump-Sum"
+                    ' Lump sum payments occur on the start date
+                    Return startDate
+
+                Case Else
+                    ' Default case: no date change
+                    Return startDate
+            End Select
+
+        Catch ex As Exception
+            ' Display error details for easier debugging
+            MessageBox.Show("An error occurred in CalculateNextPaymentDate: " & ex.Message & vbCrLf & "Stack Trace: " & ex.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Return Date.MinValue ' Return a default invalid date in case of error
+        End Try
     End Function
+
+
+
 
 
 End Class
