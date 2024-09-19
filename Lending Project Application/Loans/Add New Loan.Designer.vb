@@ -54,7 +54,7 @@ Partial Class Add_New_Loan
         Me.Label12 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.TabControl2 = New System.Windows.Forms.TabControl()
-        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.TabGuarantor1 = New System.Windows.Forms.TabPage()
         Me.txtAddNewLoanGuarantorIDReference1 = New System.Windows.Forms.TextBox()
         Me.Label26 = New System.Windows.Forms.Label()
         Me.txtAddNewLoanGuarantorOccupation1 = New System.Windows.Forms.TextBox()
@@ -67,7 +67,7 @@ Partial Class Add_New_Loan
         Me.Label21 = New System.Windows.Forms.Label()
         Me.txtAddNewLoanGuarantorName1 = New System.Windows.Forms.TextBox()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.TabPage4 = New System.Windows.Forms.TabPage()
+        Me.TabGuarantor2 = New System.Windows.Forms.TabPage()
         Me.txtAddNewLoanGuarantorIDReference2 = New System.Windows.Forms.TextBox()
         Me.Label28 = New System.Windows.Forms.Label()
         Me.txtAddNewLoanGuarantorOccupation2 = New System.Windows.Forms.TextBox()
@@ -120,8 +120,8 @@ Partial Class Add_New_Loan
         CType(Me.picAddNewLoanCollateralImage, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.TabControl2.SuspendLayout()
-        Me.TabPage3.SuspendLayout()
-        Me.TabPage4.SuspendLayout()
+        Me.TabGuarantor1.SuspendLayout()
+        Me.TabGuarantor2.SuspendLayout()
         CType(Me.dgvRepaymentSchedule, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -411,8 +411,8 @@ Partial Class Add_New_Loan
         'TabControl2
         '
         Me.TabControl2.Alignment = System.Windows.Forms.TabAlignment.Right
-        Me.TabControl2.Controls.Add(Me.TabPage3)
-        Me.TabControl2.Controls.Add(Me.TabPage4)
+        Me.TabControl2.Controls.Add(Me.TabGuarantor1)
+        Me.TabControl2.Controls.Add(Me.TabGuarantor2)
         Me.TabControl2.Location = New System.Drawing.Point(3, 6)
         Me.TabControl2.Multiline = True
         Me.TabControl2.Name = "TabControl2"
@@ -420,27 +420,27 @@ Partial Class Add_New_Loan
         Me.TabControl2.Size = New System.Drawing.Size(728, 338)
         Me.TabControl2.TabIndex = 63
         '
-        'TabPage3
+        'TabGuarantor1
         '
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorIDReference1)
-        Me.TabPage3.Controls.Add(Me.Label26)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorOccupation1)
-        Me.TabPage3.Controls.Add(Me.Label25)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorAddress1)
-        Me.TabPage3.Controls.Add(Me.Label24)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorContactInfo1)
-        Me.TabPage3.Controls.Add(Me.Label22)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorRelationshipToBorrower1)
-        Me.TabPage3.Controls.Add(Me.Label21)
-        Me.TabPage3.Controls.Add(Me.txtAddNewLoanGuarantorName1)
-        Me.TabPage3.Controls.Add(Me.Label20)
-        Me.TabPage3.Location = New System.Drawing.Point(4, 4)
-        Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(696, 330)
-        Me.TabPage3.TabIndex = 0
-        Me.TabPage3.Text = "TabPage3"
-        Me.TabPage3.UseVisualStyleBackColor = True
+        Me.TabGuarantor1.Controls.Add(Me.txtAddNewLoanGuarantorIDReference1)
+        Me.TabGuarantor1.Controls.Add(Me.Label26)
+        Me.TabGuarantor1.Controls.Add(Me.txtAddNewLoanGuarantorOccupation1)
+        Me.TabGuarantor1.Controls.Add(Me.Label25)
+        Me.TabGuarantor1.Controls.Add(Me.txtAddNewLoanGuarantorAddress1)
+        Me.TabGuarantor1.Controls.Add(Me.Label24)
+        Me.TabGuarantor1.Controls.Add(Me.txtAddNewLoanGuarantorContactInfo1)
+        Me.TabGuarantor1.Controls.Add(Me.Label22)
+        Me.TabGuarantor1.Controls.Add(Me.txtAddNewLoanGuarantorRelationshipToBorrower1)
+        Me.TabGuarantor1.Controls.Add(Me.Label21)
+        Me.TabGuarantor1.Controls.Add(Me.txtAddNewLoanGuarantorName1)
+        Me.TabGuarantor1.Controls.Add(Me.Label20)
+        Me.TabGuarantor1.Location = New System.Drawing.Point(4, 4)
+        Me.TabGuarantor1.Name = "TabGuarantor1"
+        Me.TabGuarantor1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabGuarantor1.Size = New System.Drawing.Size(696, 330)
+        Me.TabGuarantor1.TabIndex = 0
+        Me.TabGuarantor1.Text = "TabPage3"
+        Me.TabGuarantor1.UseVisualStyleBackColor = True
         '
         'txtAddNewLoanGuarantorIDReference1
         '
@@ -551,27 +551,27 @@ Partial Class Add_New_Loan
         Me.Label20.TabIndex = 63
         Me.Label20.Text = "Name"
         '
-        'TabPage4
+        'TabGuarantor2
         '
-        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorIDReference2)
-        Me.TabPage4.Controls.Add(Me.Label28)
-        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorOccupation2)
-        Me.TabPage4.Controls.Add(Me.Label29)
-        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorAddress2)
-        Me.TabPage4.Controls.Add(Me.Label30)
-        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorContactInfo2)
-        Me.TabPage4.Controls.Add(Me.Label31)
-        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorRelationshipToBorrower2)
-        Me.TabPage4.Controls.Add(Me.Label32)
-        Me.TabPage4.Controls.Add(Me.txtAddNewLoanGuarantorName2)
-        Me.TabPage4.Controls.Add(Me.Label33)
-        Me.TabPage4.Location = New System.Drawing.Point(4, 4)
-        Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(696, 330)
-        Me.TabPage4.TabIndex = 1
-        Me.TabPage4.Text = "TabPage4"
-        Me.TabPage4.UseVisualStyleBackColor = True
+        Me.TabGuarantor2.Controls.Add(Me.txtAddNewLoanGuarantorIDReference2)
+        Me.TabGuarantor2.Controls.Add(Me.Label28)
+        Me.TabGuarantor2.Controls.Add(Me.txtAddNewLoanGuarantorOccupation2)
+        Me.TabGuarantor2.Controls.Add(Me.Label29)
+        Me.TabGuarantor2.Controls.Add(Me.txtAddNewLoanGuarantorAddress2)
+        Me.TabGuarantor2.Controls.Add(Me.Label30)
+        Me.TabGuarantor2.Controls.Add(Me.txtAddNewLoanGuarantorContactInfo2)
+        Me.TabGuarantor2.Controls.Add(Me.Label31)
+        Me.TabGuarantor2.Controls.Add(Me.txtAddNewLoanGuarantorRelationshipToBorrower2)
+        Me.TabGuarantor2.Controls.Add(Me.Label32)
+        Me.TabGuarantor2.Controls.Add(Me.txtAddNewLoanGuarantorName2)
+        Me.TabGuarantor2.Controls.Add(Me.Label33)
+        Me.TabGuarantor2.Location = New System.Drawing.Point(4, 4)
+        Me.TabGuarantor2.Name = "TabGuarantor2"
+        Me.TabGuarantor2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabGuarantor2.Size = New System.Drawing.Size(696, 330)
+        Me.TabGuarantor2.TabIndex = 1
+        Me.TabGuarantor2.Text = "TabPage4"
+        Me.TabGuarantor2.UseVisualStyleBackColor = True
         '
         'txtAddNewLoanGuarantorIDReference2
         '
@@ -1054,10 +1054,10 @@ Partial Class Add_New_Loan
         CType(Me.picAddNewLoanCollateralImage, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabControl2.ResumeLayout(False)
-        Me.TabPage3.ResumeLayout(False)
-        Me.TabPage3.PerformLayout()
-        Me.TabPage4.ResumeLayout(False)
-        Me.TabPage4.PerformLayout()
+        Me.TabGuarantor1.ResumeLayout(False)
+        Me.TabGuarantor1.PerformLayout()
+        Me.TabGuarantor2.ResumeLayout(False)
+        Me.TabGuarantor2.PerformLayout()
         CType(Me.dgvRepaymentSchedule, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -1120,7 +1120,7 @@ Partial Class Add_New_Loan
     Friend WithEvents colLoansRepaymentsBalance As DataGridViewTextBoxColumn
     Friend WithEvents colLoansRepaymentsStatus As DataGridViewTextBoxColumn
     Friend WithEvents TabControl2 As TabControl
-    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents TabGuarantor1 As TabPage
     Friend WithEvents txtAddNewLoanGuarantorIDReference1 As TextBox
     Friend WithEvents Label26 As Label
     Friend WithEvents txtAddNewLoanGuarantorOccupation1 As TextBox
@@ -1133,7 +1133,7 @@ Partial Class Add_New_Loan
     Friend WithEvents Label21 As Label
     Friend WithEvents txtAddNewLoanGuarantorName1 As TextBox
     Friend WithEvents Label20 As Label
-    Friend WithEvents TabPage4 As TabPage
+    Friend WithEvents TabGuarantor2 As TabPage
     Friend WithEvents txtAddNewLoanGuarantorIDReference2 As TextBox
     Friend WithEvents Label28 As Label
     Friend WithEvents txtAddNewLoanGuarantorOccupation2 As TextBox

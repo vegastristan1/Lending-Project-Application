@@ -418,8 +418,8 @@ Public Class Add_New_Loan
 
             Try
                 ' Insert into Loans table
-                Dim loanInsertQuery As String = "INSERT INTO Loans (loanid, loanproduct, loanborrowerid, loanmodeofpayment, loanappliedamount, loaninterestrate, loanfirstpaymentdate, loanreleasedate, loanpayablefor, loanstatus) " &
-                                                "VALUES (@LoanID, @LoanProduct, @LoanBorrowerID, @LoanModeOfPayment, @LoanAppliedAmount, @LoanInterestRate, @LoanFirstPaymentDate, @LoanReleaseDate, @PayableFor, @LoanStatus);"
+                Dim loanInsertQuery As String = "INSERT INTO Loans (LoanID, LoanProduct, LoanBorrowerID, LoanModeOfPayment, LoanAppliedAmount, LoanInterestRate, LoanFirstPaymentDate, LoanReleaseDate, LoanPayableFor, LoanStatus) " &
+                                                "VALUES (@LoanID, @LoanProduct, @LoanBorrowerID, @LoanModeOfPayment, @LoanAppliedAmount, @LoanInterestRate, @LoanFirstPaymentDate, @LoanReleaseDate, @LoanPayableFor, @LoanStatus);"
 
                 Using cmd As New SqlCommand(loanInsertQuery, conn, transaction)
                     cmd.Parameters.AddWithValue("@LoanID", loanid)
@@ -430,7 +430,7 @@ Public Class Add_New_Loan
                     cmd.Parameters.AddWithValue("@LoanInterestRate", loaninterestrate)
                     cmd.Parameters.AddWithValue("@LoanFirstPaymentDate", loanfirstpaymentdate)
                     cmd.Parameters.AddWithValue("@LoanReleaseDate", loanreleasedate)
-                    cmd.Parameters.AddWithValue("@PayableFor", loanpayablefor)
+                    cmd.Parameters.AddWithValue("@LoanPayableFor", loanpayablefor)
                     cmd.Parameters.AddWithValue("@LoanStatus", loanstatus)
 
                     ' Execute the query
@@ -438,7 +438,7 @@ Public Class Add_New_Loan
                 End Using
 
                 ' Insert into the Collaterals table
-                Dim collateralInsertQuery As String = "INSERT INTO Collaterals (loanid, collateraltype, collateralestimatedvalue, collateraldescription, collateralownershipinfo, collaterallocation, collateralcondition, collateralimage) " &
+                Dim collateralInsertQuery As String = "INSERT INTO Collaterals (CollateralLoanID, CollateralType, CollateralEstimatedValue, CollateralDescription, CollateralOwnershipInformation, CollateralAddress, CollateralCondition, CollateralImage) " &
                                                     "VALUES (@CollateralLoanID, @CollateralType, @CollateralEstimatedValue, @CollateralDescription, @CollateralOwnershipInformation, @CollateralAddress, @CollateralCondition, @CollateralImage);"
 
                 Using cmd2 As New SqlCommand(collateralInsertQuery, conn, transaction)
@@ -455,22 +455,48 @@ Public Class Add_New_Loan
                     cmd2.ExecuteNonQuery()
                 End Using
 
-                ' Insert into the Guarantors table
-                Dim GuarantorInsertQuery As String = "INSERT INTO Guarantors (loanid, guarantorname, guarantorrelationshiptoborrower, guarantorcontactinfo, guarantoraddress, guarantoroccupation, guarantoridreference) " &
-                                                    "VALUES (@GuarantorLoanID, @GuarantorName, @GuarantorRelationshipToBorrower, @GuarantorContactInformation, @GuarantorAddress, @GuarantorOccupation, @GuarantorIDReferenceNumber);"
 
-                Using cmd3 As New SqlCommand(GuarantorInsertQuery, conn, transaction)
-                    cmd3.Parameters.AddWithValue("@GuarantorLoanID", loanid)
-                    cmd3.Parameters.AddWithValue("@GuarantorName", guarantorname)
-                    cmd3.Parameters.AddWithValue("@GuarantorRelationshipToBorrower", guarantorrelationshiptoborrower)
-                    cmd3.Parameters.AddWithValue("@GuarantorContactInformation", guarantorcontactinfo)
-                    cmd3.Parameters.AddWithValue("@GuarantorAddress", guarantoraddress)
-                    cmd3.Parameters.AddWithValue("@GuarantorOccupation", guarantoroccupation)
-                    cmd3.Parameters.AddWithValue("@GuarantorIDReferenceNumber", guarantoridreference)
+                If Not String.IsNullOrWhiteSpace(guarantorname) AndAlso
+                   Not String.IsNullOrWhiteSpace(guarantorrelationshiptoborrower) Then
 
-                    ' Execute the insert query
-                    cmd3.ExecuteNonQuery()
-                End Using
+                    ' Insert into the Guarantors table
+                    Dim GuarantorInsertQuery1 As String = "INSERT INTO Guarantors (GuarantorLoanID, GuarantorName, GuarantorRelationshipToBorrower, GuarantorContactInformation, GuarantorAddress, GuarantorOccupation, GuarantorIDReferenceNumber) " &
+                      "VALUES (@GuarantorLoanID, @GuarantorName, @GuarantorRelationshipToBorrower, @GuarantorContactInformation, @GuarantorAddress, @GuarantorOccupation, @GuarantorIDReferenceNumber);"
+
+                    Using cmdGuarantor1 As New SqlCommand(GuarantorInsertQuery1, conn, transaction)
+                        cmdGuarantor1.Parameters.AddWithValue("@GuarantorLoanID", loanid)
+                        cmdGuarantor1.Parameters.AddWithValue("@GuarantorName", guarantorname)
+                        cmdGuarantor1.Parameters.AddWithValue("@GuarantorRelationshipToBorrower", guarantorrelationshiptoborrower)
+                        cmdGuarantor1.Parameters.AddWithValue("@GuarantorContactInformation", guarantorcontactinfo)
+                        cmdGuarantor1.Parameters.AddWithValue("@GuarantorAddress", guarantoraddress)
+                        cmdGuarantor1.Parameters.AddWithValue("@GuarantorOccupation", guarantoroccupation)
+                        cmdGuarantor1.Parameters.AddWithValue("@GuarantorIDReferenceNumber", guarantoridreference)
+
+                        'Execute the insert query
+                        cmdGuarantor1.ExecuteNonQuery()
+                    End Using
+                End If
+
+                ' Tab 2 - Second Guarantor (optional)
+                If TabGuarantor2.Enabled AndAlso
+                   Not String.IsNullOrWhiteSpace(guarantorname2) AndAlso
+                   Not String.IsNullOrWhiteSpace(guarantorrelationshiptoborrower2) Then
+
+                    Dim GuarantorInsertQuery2 As String = "INSERT INTO Guarantors (GuarantorLoanID, GuarantorName, GuarantorRelationshipToBorrower, GuarantorContactInformation, GuarantorAddress, GuarantorOccupation, GuarantorIDReferenceNumber) " &
+                      "VALUES (@GuarantorLoanID, @GuarantorName, @GuarantorRelationshipToBorrower, @GuarantorContactInformation, @GuarantorAddress, @GuarantorOccupation, @GuarantorIDReferenceNumber);"
+
+                    Using cmdGuarantor2 As New SqlCommand(GuarantorInsertQuery2, conn, transaction)
+                        cmdGuarantor2.Parameters.AddWithValue("@GuarantorLoanID", loanid)
+                        cmdGuarantor2.Parameters.AddWithValue("@GuarantorName", guarantorname2)
+                        cmdGuarantor2.Parameters.AddWithValue("@GuarantorRelationshipToBorrower", guarantorrelationshiptoborrower2)
+                        cmdGuarantor2.Parameters.AddWithValue("@GuarantorContactInformation", If(String.IsNullOrWhiteSpace(guarantorcontactinfo2), DBNull.Value, guarantorcontactinfo2))
+                        cmdGuarantor2.Parameters.AddWithValue("@GuarantorAddress", If(String.IsNullOrWhiteSpace(guarantoraddress2), DBNull.Value, guarantoraddress2))
+                        cmdGuarantor2.Parameters.AddWithValue("@GuarantorOccupation", If(String.IsNullOrWhiteSpace(guarantoroccupation2), DBNull.Value, guarantoroccupation2))
+                        cmdGuarantor2.Parameters.AddWithValue("@GuarantorIDReferenceNumber", If(String.IsNullOrWhiteSpace(guarantoridreference2), DBNull.Value, guarantoridreference2))
+
+                        cmdGuarantor2.ExecuteNonQuery()
+                    End Using
+                End If
 
                 ' If everything is successful, commit the transaction
                 transaction.Commit()
