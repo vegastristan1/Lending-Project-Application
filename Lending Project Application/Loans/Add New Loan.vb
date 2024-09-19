@@ -15,21 +15,21 @@ Public Class Add_New_Loan
     Private Sub Add_New_Loan_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ' SQL query to retrieve borrower data
         Dim query As String = "
-                SELECT 
-                    b.BorrowerID, 
-                    CONCAT(
-                        n.LastName, ', ', 
-                        n.FirstName, ' ', 
-                        n.MiddleName, ' ', 
-                        CASE 
-                            WHEN n.SuffixName IS NULL OR n.SuffixName = 'NA' OR n.SuffixName = 'N/A' THEN '' 
-                            ELSE n.SuffixName 
-                        END
-                    ) AS Name
-                FROM 
-                    Names n
-                INNER JOIN 
-                    Borrowers b ON n.NameID = b.NameID;"
+            SELECT 
+                b.BorrowerID, 
+                CONCAT(
+                    n.LastName, ', ', 
+                    n.FirstName, ' ', 
+                    n.MiddleName, ' ', 
+                    CASE 
+                        WHEN n.SuffixName IS NULL OR n.SuffixName = 'NA' OR n.SuffixName = 'N/A' THEN '' 
+                        ELSE n.SuffixName 
+                    END
+                ) AS Name
+            FROM 
+                Names n
+            INNER JOIN 
+                Borrowers b ON n.NameID = b.NameID;"
 
         ' Create a new SQL connection
         Using connection As New SqlConnection(connectionString)
@@ -45,8 +45,12 @@ Public Class Add_New_Loan
 
                 ' Loop through the results and add each name to the ComboBox
                 While reader.Read()
+                    'Dim borrowerID As Integer = Convert.ToInt32(reader("BorrowerID"))
+                    ' Use borrowerID where an integer is expected
+                    'Dim fullName As String = reader("Name").ToString()
+
                     ' Get the full name and BorrowerID from the query
-                    Dim borrowerID As String = reader("BorrowerID").ToString()
+                    Dim borrowerID As String = reader("BorrowerID").ToString() ' Store as string
                     Dim fullName As String = reader("Name").ToString()
 
                     ' Create a KeyValuePair for BorrowerID (key) and fullName (value)
@@ -54,6 +58,7 @@ Public Class Add_New_Loan
 
                     ' Add the KeyValuePair to the ComboBox
                     cmbAddNewLoanBorrower.Items.Add(item)
+                    'cmbAddNewLoanBorrower.Items.Add(fullName)
                 End While
 
                 ' Close the reader
@@ -65,27 +70,34 @@ Public Class Add_New_Loan
     End Sub
 
     Private Sub cmbAddNewLoanProduct_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbAddNewLoanProduct.SelectedIndexChanged
-        Dim selectedLoanProduct As String = cmbAddNewLoanProduct.SelectedItem.ToString()
-        Dim prefix As String = ""
+        ' Check if an item is selected
+        If cmbAddNewLoanProduct.SelectedItem IsNot Nothing Then
+            Dim selectedLoanProduct As String = cmbAddNewLoanProduct.SelectedItem.ToString()
+            Dim prefix As String = ""
 
-        ' Set the prefix based on the selected loan product
-        Select Case selectedLoanProduct
-            Case "Education Loan"
-                prefix = "EL"
-            Case "General Loan"
-                prefix = "GL"
-            Case "Business Loan"
-                prefix = "BL"
-            Case "Personal Loan"
-                prefix = "PL"
-        End Select
+            ' Set the prefix based on the selected loan product
+            Select Case selectedLoanProduct
+                Case "Education Loan"
+                    prefix = "EL"
+                Case "General Loan"
+                    prefix = "GL"
+                Case "Business Loan"
+                    prefix = "BL"
+                Case "Personal Loan"
+                    prefix = "PL"
+            End Select
 
-        ' Generate the next LoanID based on the prefix
-        Dim newLoanID As String = GenerateNextLoanID(prefix)
+            ' Generate the next LoanID based on the prefix
+            Dim newLoanID As String = GenerateNextLoanID(prefix)
 
-        ' Set the new LoanID in the txtAddNewLoanID textbox
-        txtAddNewLoanID.Text = newLoanID
+            ' Set the new LoanID in the txtAddNewLoanID textbox
+            txtAddNewLoanID.Text = newLoanID
+        Else
+            ' Optional: Handle the case where no item is selected
+            MessageBox.Show("Please select a loan product.")
+        End If
     End Sub
+
 
     Private Function GenerateNextLoanID(prefix As String) As String
         Dim nextLoanID As String = ""
@@ -95,23 +107,23 @@ Public Class Add_New_Loan
         Dim query As String = "SELECT MAX(LoanID) FROM Loans WHERE LoanID LIKE @Prefix + '%'"
 
         Using conn As New SqlConnection(connectionString)
-            Using cmd As New SqlCommand(query, conn)
-                cmd.Parameters.AddWithValue("@Prefix", prefix)
-                conn.Open()
-                maxLoanID = Convert.ToString(cmd.ExecuteScalar())
+                Using cmd As New SqlCommand(query, conn)
+                    cmd.Parameters.AddWithValue("@Prefix", prefix)
+                    conn.Open()
+                    maxLoanID = Convert.ToString(cmd.ExecuteScalar())
+                End Using
             End Using
-        End Using
 
-        ' If no LoanID exists for this product, start from 1
-        If String.IsNullOrEmpty(maxLoanID) Then
-            nextLoanID = prefix & "00001"
-        Else
-            ' Extract the numeric part of the LoanID, increment it, and format the new ID
-            Dim numericPart As Integer = Convert.ToInt32(maxLoanID.Substring(2)) + 1
-            nextLoanID = prefix & numericPart.ToString("D5")
-        End If
+            ' If no LoanID exists for this product, start from 1
+            If String.IsNullOrEmpty(maxLoanID) Then
+                nextLoanID = prefix & "00001"
+            Else
+                ' Extract the numeric part of the LoanID, increment it, and format the new ID
+                Dim numericPart As Integer = Convert.ToInt32(maxLoanID.Substring(2)) + 1
+                    nextLoanID = prefix & numericPart.ToString("D5")
+            End If
 
-        Return nextLoanID
+            Return nextLoanID
     End Function
 
     ' Function to calculate total loan with interest
@@ -125,8 +137,8 @@ Public Class Add_New_Loan
 
         ' Validate and parse input
         If Decimal.TryParse(txtAddNewLoanAppliedAmount.Text, appliedAmount) AndAlso
-       Decimal.TryParse(txtAddNewLoanInterestRate.Text, interestRate) AndAlso
-       Integer.TryParse(txtAddNewLoanPayableFor.Text, payableFor) Then
+           Decimal.TryParse(txtAddNewLoanInterestRate.Text, interestRate) AndAlso
+           Integer.TryParse(txtAddNewLoanPayableFor.Text, payableFor) Then
 
             ' Get mode of payment from the combo box
             modeOfPayment = cmbAddNewLoanModeOfPayment.SelectedItem.ToString()
@@ -178,50 +190,63 @@ Public Class Add_New_Loan
     End Sub
 
     Private Sub btnAddNewLoanGenerateRepaymentSchedule_Click(sender As Object, e As EventArgs) Handles btnAddNewLoanGenerateRepaymentSchedule.Click
-        ' Clear the DataGridView before generating a new schedule
-        dgvRepaymentSchedule.Rows.Clear()
+        Try
+            ' Clear the DataGridView before generating a new schedule
+            dgvRepaymentSchedule.Rows.Clear()
 
-        ' Get values from the input fields
-        Dim appliedAmount As Decimal
-        Dim interestRate As Decimal
-        Dim payableFor As Integer
-        Dim modeOfPayment As String
-        Dim firstPaymentDate As Date
-        Dim monthlyInterest As Decimal
-        Dim balance As Decimal
+            ' Get values from the input fields
+            Dim appliedAmount As Decimal
+            Dim interestRate As Decimal
+            Dim payableFor As Integer
+            Dim modeOfPayment As String
+            Dim firstPaymentDate As Date
+            Dim monthlyInterest As Decimal
+            Dim balance As Decimal
 
-        ' Validate and parse input
-        If Decimal.TryParse(txtAddNewLoanAppliedAmount.Text, appliedAmount) AndAlso
+            ' Validate and parse input
+            If Decimal.TryParse(txtAddNewLoanAppliedAmount.Text, appliedAmount) AndAlso
            Decimal.TryParse(txtAddNewLoanInterestRate.Text, interestRate) AndAlso
            Integer.TryParse(txtAddNewLoanPayableFor.Text, payableFor) AndAlso
            Date.TryParse(dtpAddNewLoanFirstPaymentDate.Value.ToString(), firstPaymentDate) Then
 
-            modeOfPayment = cmbAddNewLoanModeOfPayment.SelectedItem.ToString()
-            balance = appliedAmount
-            monthlyInterest = (appliedAmount * interestRate / 100)
+                Try
+                    ' Ensure mode of payment is selected
+                    modeOfPayment = cmbAddNewLoanModeOfPayment.SelectedItem.ToString()
+                    balance = appliedAmount
+                    monthlyInterest = (appliedAmount * interestRate / 100)
 
-            Dim totalPayments As Integer = If(modeOfPayment = "Semi-Monthly", payableFor * 2, payableFor)
+                    Dim totalPayments As Integer = If(modeOfPayment = "Semi-Monthly", payableFor * 2, payableFor)
 
-            ' Generate repayment schedule
-            For i As Integer = 1 To totalPayments
-                Dim paymentDate As Date = CalculateNextPaymentDate(firstPaymentDate, modeOfPayment, i)
-                Dim interest As Decimal = monthlyInterest ' Monthly interest remains the same for simplicity
-                Dim principalPayment As Decimal = appliedAmount / totalPayments ' Adjusted for total payments
-                Dim amountToPay As Decimal = principalPayment + interest
-                balance -= principalPayment
+                    ' Generate repayment schedule
+                    For i As Integer = 1 To totalPayments
+                        Dim paymentDate As Date = CalculateNextPaymentDate(firstPaymentDate, modeOfPayment, i)
+                        Dim interest As Decimal = monthlyInterest ' Monthly interest remains the same for simplicity
+                        Dim principalPayment As Decimal = appliedAmount / totalPayments ' Adjusted for total payments
+                        Dim amountToPay As Decimal = principalPayment + interest
+                        balance -= principalPayment
 
-                ' Add the repayment row to the DataGridView
-                dgvRepaymentSchedule.Rows.Add(paymentDate.ToString("MM/dd/yyyy"),
-                                           amountToPay.ToString("C2"),
-                                           principalPayment.ToString("C2"),
-                                           interest.ToString("C2"),
-                                           balance.ToString("C2"),
-                                           "Pending")
-            Next
-        Else
-            MessageBox.Show("Please ensure all loan details are correctly filled.")
-        End If
+                        ' Add the repayment row to the DataGridView
+                        dgvRepaymentSchedule.Rows.Add(paymentDate.ToString("MM/dd/yyyy"),
+                                               amountToPay.ToString("C2"),
+                                               principalPayment.ToString("C2"),
+                                               interest.ToString("C2"),
+                                               balance.ToString("C2"),
+                                               "Pending")
+                    Next
+                Catch ex As NullReferenceException
+                    MessageBox.Show("Please select a mode of payment.", "Input Error")
+                Catch ex As Exception
+                    MessageBox.Show("An error occurred while generating the repayment schedule: " & ex.Message, "Error")
+                End Try
+            Else
+                MessageBox.Show("Please ensure all loan details are correctly filled.", "Input Error")
+            End If
+
+        Catch ex As Exception
+            MessageBox.Show("An unexpected error occurred: " & ex.Message, "Error")
+        End Try
     End Sub
+
 
     ' Function to calculate the next payment date with improved error handling for invalid dates
     Private Function CalculateNextPaymentDate(startDate As Date, modeOfPayment As String, paymentNumber As Integer) As Date
@@ -327,7 +352,11 @@ Public Class Add_New_Loan
     Private Sub btnAddNewLoanSave_Click(sender As Object, e As EventArgs) Handles btnAddNewLoanSave.Click
         Dim loanid As String = txtAddNewLoanID.Text
         Dim loanproduct As String = If(cmbAddNewLoanProduct.SelectedItem IsNot Nothing, cmbAddNewLoanProduct.SelectedItem.ToString(), "")
-        Dim loanborrowerid As String = If(cmbAddNewLoanBorrower.SelectedItem IsNot Nothing, cmbAddNewLoanBorrower.SelectedItem.ToString(), "")
+        'Dim loanborrowerid As String = If(cmbAddNewLoanBorrower.SelectedItem IsNot Nothing, cmbAddNewLoanBorrower.SelectedItem.ToString(), "")
+        Dim selectedBorrower As KeyValuePair(Of String, String) = CType(cmbAddNewLoanBorrower.SelectedItem, KeyValuePair(Of String, String))
+        Dim loanborrowerid As String = selectedBorrower.Key
+
+
         Dim loanmodeofpayment As String = If(cmbAddNewLoanModeOfPayment.SelectedItem IsNot Nothing, cmbAddNewLoanModeOfPayment.SelectedItem.ToString(), "")
         Dim loanappliedamount As String = txtAddNewLoanAppliedAmount.Text
         Dim loaninterestrate As String = txtAddNewLoanInterestRate.Text
@@ -357,18 +386,28 @@ Public Class Add_New_Loan
         Dim guarantoraddress2 As String = txtAddNewLoanGuarantorAddress2.Text
         Dim guarantoroccupation2 As String = txtAddNewLoanGuarantorOccupation2.Text
         Dim guarantoridreference2 As String = txtAddNewLoanGuarantorIDReference2.Text
+
+        InsertLoanCollateralAndGuarantor(loanid, loanproduct, loanborrowerid, loanmodeofpayment, loanappliedamount, loaninterestrate, loanfirstpaymentdate,
+                                         loanreleasedate, loanpayablefor, loanstatus, collateraltype, collateralestimatedvalue, collateraldescription,
+                                         collateralownershipinfo, collaterallocation, collateralcondition, collateralimage,
+                                         guarantorname, guarantorrelationshiptoborrower, guarantorcontactinfo, guarantoraddress, guarantoroccupation, guarantoridreference,
+                                         guarantorname2, guarantorrelationshiptoborrower2, guarantorcontactinfo2, guarantoraddress2, guarantoroccupation2, guarantoridreference2)
+
+
+        Clearformfields()
+        Loans.LoadsListData()
     End Sub
 
     Public Sub InsertLoanCollateralAndGuarantor(ByVal loanid As String, ByVal loanproduct As String, ByVal loanborrowerid As String,
-                                                ByVal loanmodeofpayment As String, ByVal loanappliedamount As String, ByVal loaninterestrate As String,
-                                                ByVal loanfirstpaymentdate As Date, ByVal loanreleasedate As Date, ByVal loanpayablefor As String,
-                                                ByVal loanstatus As String, ByVal collateraltype As String, ByVal collateralestimatedvalue As String,
-                                                ByVal collateraldescription As String, ByVal collateralownershipinfo As String, ByVal collaterallocation As String,
-                                                ByVal collateralcondition As String, ByVal collateralimage As String, ByVal guarantorname As String,
-                                                ByVal guarantorrelationshiptoborrower As String, ByVal guarantorcontactinfo As String, ByVal guarantoraddress As String,
-                                                ByVal guarantoroccupation As String, ByVal guarantoridreference As String, ByVal guarantorname2 As String,
-                                                ByVal guarantorrelationshiptoborrower2 As String, ByVal guarantorcontactinfo2 As String, ByVal guarantoraddress2 As String,
-                                                ByVal guarantoroccupation2 As String, ByVal guarantoridreference2 As String)
+                                            ByVal loanmodeofpayment As String, ByVal loanappliedamount As String, ByVal loaninterestrate As String,
+                                            ByVal loanfirstpaymentdate As Date, ByVal loanreleasedate As Date, ByVal loanpayablefor As String,
+                                            ByVal loanstatus As String, ByVal collateraltype As String, ByVal collateralestimatedvalue As String,
+                                            ByVal collateraldescription As String, ByVal collateralownershipinfo As String, ByVal collaterallocation As String,
+                                            ByVal collateralcondition As String, ByVal collateralimage As String, ByVal guarantorname As String,
+                                            ByVal guarantorrelationshiptoborrower As String, ByVal guarantorcontactinfo As String, ByVal guarantoraddress As String,
+                                            ByVal guarantoroccupation As String, ByVal guarantoridreference As String, ByVal guarantorname2 As String,
+                                            ByVal guarantorrelationshiptoborrower2 As String, ByVal guarantorcontactinfo2 As String, ByVal guarantoraddress2 As String,
+                                            ByVal guarantoroccupation2 As String, ByVal guarantoridreference2 As String)
 
         ' Create a connection to SQL Server
         Using conn As New SqlConnection(connectionString)
@@ -378,8 +417,9 @@ Public Class Add_New_Loan
             Dim transaction As SqlTransaction = conn.BeginTransaction()
 
             Try
-                Dim loanInsertQuery As String = "INSERT INTO Loans (loanid, loanproduct, loanborrowerid, loanmodeofpayment, loanappliedamount, loaninterestrate, loanfirstpaymentdate, loanreleasedate, loanpayablefor, loanstatus)" &
-                                                "VALUES (@LoanID, @LoanProduct, @LoanBorrowerID, @LoanModeOfPayment, @LoanAppliedAmount, @LoanInterestRate, @LoanFirstPaymentDate, @LoanReleaseDate, @PayableFor, @LoanStatus); "
+                ' Insert into Loans table
+                Dim loanInsertQuery As String = "INSERT INTO Loans (loanid, loanproduct, loanborrowerid, loanmodeofpayment, loanappliedamount, loaninterestrate, loanfirstpaymentdate, loanreleasedate, loanpayablefor, loanstatus) " &
+                                                "VALUES (@LoanID, @LoanProduct, @LoanBorrowerID, @LoanModeOfPayment, @LoanAppliedAmount, @LoanInterestRate, @LoanFirstPaymentDate, @LoanReleaseDate, @PayableFor, @LoanStatus);"
 
                 Using cmd As New SqlCommand(loanInsertQuery, conn, transaction)
                     cmd.Parameters.AddWithValue("@LoanID", loanid)
@@ -390,20 +430,18 @@ Public Class Add_New_Loan
                     cmd.Parameters.AddWithValue("@LoanInterestRate", loaninterestrate)
                     cmd.Parameters.AddWithValue("@LoanFirstPaymentDate", loanfirstpaymentdate)
                     cmd.Parameters.AddWithValue("@LoanReleaseDate", loanreleasedate)
-                    cmd.Parameters.AddWithValue("@LoanPayableFor", loanpayablefor)
+                    cmd.Parameters.AddWithValue("@PayableFor", loanpayablefor)
                     cmd.Parameters.AddWithValue("@LoanStatus", loanstatus)
 
-                    ' Execute the query and get the generated NameID
-                    'nameID = Convert.ToInt32(cmd.ExecuteScalar())
+                    ' Execute the query
                     cmd.ExecuteNonQuery()
                 End Using
 
-                ' Step 2: Insert into the collateral table using the LoanID
+                ' Insert into the Collaterals table
                 Dim collateralInsertQuery As String = "INSERT INTO Collaterals (loanid, collateraltype, collateralestimatedvalue, collateraldescription, collateralownershipinfo, collaterallocation, collateralcondition, collateralimage) " &
                                                     "VALUES (@CollateralLoanID, @CollateralType, @CollateralEstimatedValue, @CollateralDescription, @CollateralOwnershipInformation, @CollateralAddress, @CollateralCondition, @CollateralImage);"
 
                 Using cmd2 As New SqlCommand(collateralInsertQuery, conn, transaction)
-                    'cmd2.Parameters.AddWithValue("@CollateralID", nameID)
                     cmd2.Parameters.AddWithValue("@CollateralLoanID", loanid)
                     cmd2.Parameters.AddWithValue("@CollateralType", collateraltype)
                     cmd2.Parameters.AddWithValue("@CollateralEstimatedValue", collateralestimatedvalue)
@@ -417,7 +455,7 @@ Public Class Add_New_Loan
                     cmd2.ExecuteNonQuery()
                 End Using
 
-                ' Step 2: Insert into the Guarantor table using the LoanID
+                ' Insert into the Guarantors table
                 Dim GuarantorInsertQuery As String = "INSERT INTO Guarantors (loanid, guarantorname, guarantorrelationshiptoborrower, guarantorcontactinfo, guarantoraddress, guarantoroccupation, guarantoridreference) " &
                                                     "VALUES (@GuarantorLoanID, @GuarantorName, @GuarantorRelationshipToBorrower, @GuarantorContactInformation, @GuarantorAddress, @GuarantorOccupation, @GuarantorIDReferenceNumber);"
 
@@ -437,7 +475,7 @@ Public Class Add_New_Loan
                 ' If everything is successful, commit the transaction
                 transaction.Commit()
 
-                'MessageBox.Show("Borrower and Name added successfully!")
+                MessageBox.Show("Loan, collateral, and guarantor information added successfully!")
 
             Catch ex As Exception
                 ' If any error occurs, roll back the transaction
@@ -445,5 +483,40 @@ Public Class Add_New_Loan
                 MessageBox.Show("Error: " & ex.Message)
             End Try
         End Using
+    End Sub
+
+    Private Sub Clearformfields()
+        txtAddNewLoanID.Clear()
+        cmbAddNewLoanProduct.SelectedIndex = 1
+        cmbAddNewLoanBorrower.SelectedIndex = -1
+        cmbAddNewLoanModeOfPayment.SelectedIndex = 1 ' reset combobox 1
+        txtAddNewLoanAppliedAmount.Clear()
+        txtAddNewLoanInterestRate.Clear()
+        dtpAddNewLoanFirstPaymentDate.Value = DateTime.Now ' reset to today's date
+        dtpAddNewLoanReleaseDate.Value = DateTime.Now ' reset to today's date
+        cmbAddNewLoanStatus.SelectedIndex = -1
+
+        cmbAddNewLoanCollateralType.SelectedIndex = -1
+        txtAddNewLoanCollateralEstimatedValue.Clear()
+        txtAddNewLoanCollateralDescription.Clear()
+        txtAddNewLoanCollateralOwnershipInfo.Clear()
+        txtAddNewLoanCollateralLocation.Clear()
+        cmbAddNewLoanCollateralCondition.SelectedIndex = -1
+        ' Set the PictureBox image to the default placeholder image
+        picAddNewLoanCollateralImage.Image = Lending_Project_Application.My.Resources.Resources.collateral_placeholder
+
+        txtAddNewLoanGuarantorName1.Clear()
+        txtAddNewLoanGuarantorRelationshipToBorrower1.Clear()
+        txtAddNewLoanGuarantorContactInfo1.Clear()
+        txtAddNewLoanGuarantorAddress1.Clear()
+        txtAddNewLoanGuarantorOccupation1.Clear()
+        txtAddNewLoanGuarantorIDReference1.Clear()
+
+        txtAddNewLoanGuarantorName2.Clear()
+        txtAddNewLoanGuarantorRelationshipToBorrower2.Clear()
+        txtAddNewLoanGuarantorContactInfo2.Clear()
+        txtAddNewLoanGuarantorAddress2.Clear()
+        txtAddNewLoanGuarantorOccupation2.Clear()
+        txtAddNewLoanGuarantorIDReference2.Clear()
     End Sub
 End Class
