@@ -90,7 +90,7 @@ Public Class Loans
             Dim selectedLoanID As String = CStr(dgvLoanList.Rows(e.RowIndex).Cells("colSideLoansID").Value)
 
             ' Create an instance of the View_Borrower form
-            Dim viewLoanDetails As New View_Loan_Detials()
+            Dim viewLoanDetails As New View_Loan_Details()
 
             ' Pass the BorrowerID to the View_Borrower form (create a property in View_Borrower to receive it)
             viewLoanDetails.HoldLoanID = selectedLoanID

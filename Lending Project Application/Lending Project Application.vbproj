@@ -132,10 +132,10 @@
     <Compile Include="Loans\Loans.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Loans\View Loan Detials.Designer.vb">
-      <DependentUpon>View Loan Detials.vb</DependentUpon>
+    <Compile Include="Loans\View Loan Details.Designer.vb">
+      <DependentUpon>View Loan Details.vb</DependentUpon>
     </Compile>
-    <Compile Include="Loans\View Loan Detials.vb">
+    <Compile Include="Loans\View Loan Details.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.vb">
@@ -193,8 +193,8 @@
     <EmbeddedResource Include="Loans\Loans.resx">
       <DependentUpon>Loans.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Loans\View Loan Detials.resx">
-      <DependentUpon>View Loan Detials.vb</DependentUpon>
+    <EmbeddedResource Include="Loans\View Loan Details.resx">
+      <DependentUpon>View Loan Details.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>

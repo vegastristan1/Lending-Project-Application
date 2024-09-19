@@ -1,4 +1,4 @@
-﻿Public Class View_Loan_Detials
+﻿Public Class View_Loan_Details
 
     Public Property HoldLoanID As String
     Private Sub btnBackToLoansList_Click(sender As Object, e As EventArgs)

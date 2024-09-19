@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class View_Loan_Detials
+Partial Class View_Loan_Details
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,14 +22,14 @@ Partial Class View_Loan_Detials
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle17 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle18 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle19 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle20 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle21 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle22 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle23 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle24 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle7 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle8 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.txtAddNewLoanGuarantorAddress1 = New System.Windows.Forms.TextBox()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.dgvRepaymentSchedule = New System.Windows.Forms.DataGridView()
@@ -148,17 +148,17 @@ Partial Class View_Loan_Detials
         '
         Me.dgvRepaymentSchedule.AllowUserToAddRows = False
         Me.dgvRepaymentSchedule.AllowUserToDeleteRows = False
-        DataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.dgvRepaymentSchedule.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle17
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.dgvRepaymentSchedule.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvRepaymentSchedule.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
-        DataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control
-        DataGridViewCellStyle18.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText
-        DataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.dgvRepaymentSchedule.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle18
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvRepaymentSchedule.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle2
         Me.dgvRepaymentSchedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvRepaymentSchedule.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colLoansRepaymentsScheduleDate, Me.colLoansRepaymentsAmountToPay, Me.colLoansRepaymentsPrincipalAmount, Me.colLoansRepaymentsInterest, Me.colLoansRepaymentsBalance, Me.colLoansRepaymentsStatus})
         Me.dgvRepaymentSchedule.Location = New System.Drawing.Point(14, 518)
@@ -170,8 +170,8 @@ Partial Class View_Loan_Detials
         '
         'colLoansRepaymentsScheduleDate
         '
-        DataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsScheduleDate.DefaultCellStyle = DataGridViewCellStyle19
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsScheduleDate.DefaultCellStyle = DataGridViewCellStyle3
         Me.colLoansRepaymentsScheduleDate.FillWeight = 152.2843!
         Me.colLoansRepaymentsScheduleDate.HeaderText = "Date"
         Me.colLoansRepaymentsScheduleDate.Name = "colLoansRepaymentsScheduleDate"
@@ -179,8 +179,8 @@ Partial Class View_Loan_Detials
         '
         'colLoansRepaymentsAmountToPay
         '
-        DataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsAmountToPay.DefaultCellStyle = DataGridViewCellStyle20
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsAmountToPay.DefaultCellStyle = DataGridViewCellStyle4
         Me.colLoansRepaymentsAmountToPay.FillWeight = 73.85786!
         Me.colLoansRepaymentsAmountToPay.HeaderText = "Amount to Pay"
         Me.colLoansRepaymentsAmountToPay.Name = "colLoansRepaymentsAmountToPay"
@@ -188,8 +188,8 @@ Partial Class View_Loan_Detials
         '
         'colLoansRepaymentsPrincipalAmount
         '
-        DataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsPrincipalAmount.DefaultCellStyle = DataGridViewCellStyle21
+        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsPrincipalAmount.DefaultCellStyle = DataGridViewCellStyle5
         Me.colLoansRepaymentsPrincipalAmount.FillWeight = 73.85786!
         Me.colLoansRepaymentsPrincipalAmount.HeaderText = "Principal Amount"
         Me.colLoansRepaymentsPrincipalAmount.Name = "colLoansRepaymentsPrincipalAmount"
@@ -199,24 +199,24 @@ Partial Class View_Loan_Detials
         '
         'colLoansRepaymentsInterest
         '
-        DataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsInterest.DefaultCellStyle = DataGridViewCellStyle22
+        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsInterest.DefaultCellStyle = DataGridViewCellStyle6
         Me.colLoansRepaymentsInterest.HeaderText = "Interest"
         Me.colLoansRepaymentsInterest.Name = "colLoansRepaymentsInterest"
         Me.colLoansRepaymentsInterest.ReadOnly = True
         '
         'colLoansRepaymentsBalance
         '
-        DataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsBalance.DefaultCellStyle = DataGridViewCellStyle23
+        DataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsBalance.DefaultCellStyle = DataGridViewCellStyle7
         Me.colLoansRepaymentsBalance.HeaderText = "Balance"
         Me.colLoansRepaymentsBalance.Name = "colLoansRepaymentsBalance"
         Me.colLoansRepaymentsBalance.ReadOnly = True
         '
         'colLoansRepaymentsStatus
         '
-        DataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        Me.colLoansRepaymentsStatus.DefaultCellStyle = DataGridViewCellStyle24
+        DataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        Me.colLoansRepaymentsStatus.DefaultCellStyle = DataGridViewCellStyle8
         Me.colLoansRepaymentsStatus.HeaderText = "Status"
         Me.colLoansRepaymentsStatus.Name = "colLoansRepaymentsStatus"
         Me.colLoansRepaymentsStatus.ReadOnly = True
@@ -372,7 +372,7 @@ Partial Class View_Loan_Detials
         Me.TabPage4.Location = New System.Drawing.Point(4, 4)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(701, 330)
+        Me.TabPage4.Size = New System.Drawing.Size(696, 330)
         Me.TabPage4.TabIndex = 1
         Me.TabPage4.Text = "TabPage4"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -1029,7 +1029,7 @@ Partial Class View_Loan_Detials
         Me.lblPersonalInformation.TabIndex = 1
         Me.lblPersonalInformation.Text = "Loan Details"
         '
-        'View_Loan_Detials
+        'View_Loan_Details
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1039,7 +1039,7 @@ Partial Class View_Loan_Detials
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.MaximizeBox = False
         Me.MinimizeBox = False
-        Me.Name = "View_Loan_Detials"
+        Me.Name = "View_Loan_Details"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "View Loan Detials"
